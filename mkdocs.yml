@@ -4,6 +4,7 @@ site_url: https://docs.opencloud.aqara.cn/
 repo_url: https://github.com/aqara/opencloud-docs/
 copyright: Copyright 2016-2017, aqara.cn, All Rights Reserved. <br />粤ICP备15041247号-13 深圳绿米联创科技有限公司
 docs_dir: zh
+theme: cinder
 
 pages:
 - 简介: index.md
