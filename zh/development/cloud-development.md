@@ -96,13 +96,14 @@ AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式�
 
 OAuth 2.0 详细授权流程如下：
 
-##### 步骤1 请求授权码
+#### 步骤1 请求授权码
 
 首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara APP账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
 
 - **URL：**  https://aiot-oauth2.aqara.cn/authorize?client_id=xxx&response_type=code&redirect_uri=xxxx&state=xxx&theme=x
 - **请求方式：** HTTP GET
-- **请求参数**
+- **请求参数** 
+
 | 参数名           | 是否必须 | 描述                            |
 | ------------- | ---- | ----------------------------- |
 | client_id     | 是    | 第三方应用ID，AppID                 |
@@ -110,18 +111,19 @@ OAuth 2.0 详细授权流程如下：
 | redirect_uri  | 是    | 第三方应用注册的重定向URI                |
 | state         | 否    | 取值为任意字符串，认证服务器将原样返回该参数        |
 | theme         | 否    | 页面主题，目前支持0、1、2三套主题，默认为主题0     |
+
 - **返回说明**
 ```
 GET  HTTP/1.1 302 Found
 Location: https://redirect_uri?code=xxx&state=xxx
 ```
 
-##### 步骤2 获取访问令牌
+#### 步骤2 获取访问令牌
 获得授权码后，第三方应用访问以下URL，用授权码换取访问令牌（AccessToken）。
 
 - **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
-- **请求参数**
+- **请求参数**  
 | 参数名           | 是否必须 | 描述                                     |
 | ------------- | ---- | -------------------------------------- |
 | client_id     | 是    | 第三方应用ID，AppID                          |
@@ -150,19 +152,21 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | refresh_token | 刷新令牌，用于刷新访问令牌，有效期为30天      |
 | state         | 取值为任意字符串，认证服务器将原样返回该参数     |
 
-##### 步骤3 刷新访问令牌
+#### 步骤3 刷新访问令牌
 
 由于访问令牌的有效期只有2个小时，所以开发者需要在访问令牌过期前使用刷新令牌进行刷新，建议的刷新周期为1个半小时。
 
 - **URL：** https://aiot-oauth2.aqara.cn/refresh_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
 - **请求参数**
+
 | 参数名           | 是否必须 | 描述                                |
 | ------------- | ---- | --------------------------------- |
 | client_id     | 是    | 第三方应用ID，AppID                     |
 | client_secret | 是    | 第三方应用秘钥，AppKey                    |
 | grant_type    | 是    | 根据OAuth 2.0 标准，取值为`refresh_token` |
 | refresh_token | 是    | 上一步请求获得的刷新令牌                      |
+
 - **返回示例（状态码200）**
 ```
 {
