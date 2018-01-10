@@ -42,6 +42,7 @@ AIOT开放平台提供了非常完善的接口，包括：
 ### 创建应用
 
 登录[AIOT开放平台](https://opencloud.aqara.cn/)，单击“新建应用”。创建应用时，开发者需要设置应用的相关参数，包括：
+
 - 应用名称
 - 行业类型
 - 简介
@@ -123,7 +124,8 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 - **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
-- **请求参数**  
+- **请求参数**
+
 | 参数名           | 是否必须 | 描述                                     |
 | ------------- | ---- | -------------------------------------- |
 | client_id     | 是    | 第三方应用ID，AppID                          |
@@ -131,6 +133,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | grant_type    | 是    | 根据OAuth 2.0 标准，取值为`authorization_code` |
 | code          | 是    | 上一步请求获得的授权码                            |
 | redirect_uri  | 是    | 上一步请求中设置的redirect_uri参数                |
+
 - **返回示例（状态码200）**
 ```
 {
@@ -143,6 +146,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 }
 ```
 - **返回参数**
+
 | 参数名           | 描述                         |
 | ------------- | -------------------------- |
 | access_token  | 访问令牌，第三方应用访问AIOT开放服务的凭证    |
@@ -179,6 +183,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 }
 ```
 - **返回参数**
+
 | 参数名           | 描述                         |
 | ------------- | -------------------------- |
 | access_token  | 访问令牌，第三方应用访问AIOT开放服务的凭证    |
@@ -201,11 +206,13 @@ Location: https://redirect_uri?code=xxx&state=xxx
 3. 接口的请求body和返回结果都采用JSON格式，如果开发者采用其他格式，会提示“请求参数错误”。
 
 4. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
+
 5. 所有功能的详细API定义请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->API访问”页面。
 
 ### 调用示例
 
 例如，通过调用接口查询一个设备的详细信息，调用方法如下：
+
 - 请求URL：https://rpc.opencloud.aqara.cn/open/device/query
 
 - 请求方式： HTTP POST （application/json）
@@ -262,10 +269,11 @@ Location: https://redirect_uri?code=xxx&state=xxx
 4. 根据消息格式实现业务逻辑。
 
 特别注意，第三方应用在正常接收消息后必须按照规定的格式返回JSON报文，格式如下：
+
 ```
 {
-"code": 0|ErrorCode,
-"result": "自定义内容"
+	"code": 0|ErrorCode,
+	"result": "自定义内容"
 }
 ```
 
@@ -277,9 +285,12 @@ Location: https://redirect_uri?code=xxx&state=xxx
 2. **Token**：由开发者任意填写，用于生成签名；
 3. **EncodingAESKey：**随机生成或由开发者手动填写，将用来对消息体进行加解密；
 4. **消息加解密方式**：分为明文模式、兼容模式和安全模式，更改消息加解密方式后会立即生效，请开发者谨慎修改。
-   - 明文模式：不对消息体进行加密，安全系数低；
-   - 兼容模式：消息体同时包含明文和密文，方便开发者调试和维护；
-   - 安全模式：消息体为纯密文，需要开发者加密和解密，安全系数高。
+
+详细说明下消息加解密方式的区别：
+
+- 明文模式：不对消息体进行加密，安全系数低；
+- 兼容模式：消息体同时包含明文和密文，方便开发者调试和维护；
+- 安全模式：消息体为纯密文，需要开发者加密和解密，安全系数高。
 
 > 注意：目前仅支持“明文模式”，请开发者使用明文模式。
 
