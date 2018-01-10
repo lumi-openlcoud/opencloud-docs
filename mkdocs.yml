@@ -6,7 +6,7 @@ copyright: Copyright 2016-2017, aqara.cn, All Rights Reserved. <br />粤ICP备15
 docs_dir: zh
 
 # 自定义主题，支持mkdoc | readthedocs | cinder
-theme: readthedocs
+theme: cinder
 
 pages:
 - 简介: index.md
