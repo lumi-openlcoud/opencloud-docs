@@ -2,7 +2,7 @@
 site_name: 'AIOT开放平台文档中心'
 site_description: 'AIOT开放平台的官方文档，帮助开发基于AIOT平台的物联网应用'
 site_author: 'Penny & Forrest'
-site_url: 'https://docs.opencloud.aqara.cn/'
+site_url: 'http://docs.opencloud.aqara.cn'
 docs_dir: zh
 
 # Repository
@@ -25,6 +25,8 @@ extra:
     language: 'en'
   disqus: 'mkdocs-material'
   social:
+    - type: 'globe'
+      link: 'https://opencloud.aqara.cn'
     - type: 'github'
       link: 'https://github.com/aqara'
     - type: 'weibo'
@@ -42,8 +44,8 @@ markdown_extensions:
 
 # Contents
 pages:
-- 简介: index.md
 - 新手帮助: 
+  - 简介: index.md
   - 产品介绍: guideline/product-discription.md
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
@@ -52,4 +54,6 @@ pages:
 - 部署与运维:
   - 安装与配置指南: blank.md
   - 故障诊断指南: blank.md
-- 常见问题: blank.md
+- 常见问题: 
+  - 开发问题: blank.md
+  - 运维问题: blank.md
