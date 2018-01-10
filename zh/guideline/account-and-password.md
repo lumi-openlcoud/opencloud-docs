@@ -29,8 +29,6 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
   ![个人信息](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signup2-personal.png)
 
-> 注意：请确保企业和个人信息的真实性，否则可能审核不通过。
-
 **步骤4 **信息提交后，我们将在三个工作日内完成审核，请耐心等待审核结果。
 
 > 注意：在审核过程中或审核未通过时，用户可以登录AIOT开放平台并修改企业或个人信息，重新提交申请。
@@ -65,8 +63,6 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 - 个人开发者：主要面向不以盈利为目的的极客、米粉等，需提供真实姓名和身份信息。
 
   ![个人信息](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signup2-personal.png)
-
-> 注意：请确保企业和个人信息的真实性，否则可能审核不通过。
 
 **步骤4** 信息提交后，我们将在三个工作日内完成审核，请耐心等待审核结果。
 
