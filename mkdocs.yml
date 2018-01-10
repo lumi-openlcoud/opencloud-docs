@@ -22,7 +22,7 @@ theme:
 # Customization
 extra:
   search: 
-    language: 'zh, en'
+    language: 'en'
   disqus: 'mkdocs-material'
   social:
     - type: 'github'
