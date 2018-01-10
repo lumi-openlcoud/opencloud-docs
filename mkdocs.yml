@@ -1,14 +1,46 @@
-site_name: AIOT开放平台文档中心
-site_author: AIOT Open Cloud Group
-site_url: https://docs.opencloud.aqara.cn/
-repo_url: https://github.com/aqara/opencloud-docs/
-copyright: Copyright 2016-2017, aqara.cn, All Rights Reserved. <br />粤ICP备15041247号-13 深圳绿米联创科技有限公司
+# Project information
+site_name: 'AIOT开放平台文档中心'
+site_description: 'AIOT开放平台的官方文档，帮助开发基于AIOT平台的物联网应用'
+site_author: 'Penny & Forrest'
+site_url: 'https://docs.opencloud.aqara.cn/'
 docs_dir: zh
 
-# 自定义主题，支持mkdoc | readthedocs | cinder
+# Repository
+repo_name: 'aqara/opencloud-docs'
+repo_url: 'https://github.com/aqara/opencloud-docs/'
+
+# Copyright
+copyright: '版权所有 &copy; 2017 - 2018 深圳绿米联创科技有限公司'
+
+# Theme Configuration 
 theme:
   name: 'material'
+  language: 'zh'
+  feature:
+    tabs: true
 
+# Customization
+extra:
+  search: 
+    language: 'zh, en'
+  disqus: 'mkdocs-material'
+  social:
+    - type: 'github'
+      link: 'https://github.com/aqara'
+    - type: 'weibo'
+      link: 'https://weibo.com/u/5232002130'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+# Contents
 pages:
 - 简介: index.md
 - 新手帮助: 
