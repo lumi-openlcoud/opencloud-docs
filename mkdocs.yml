@@ -45,7 +45,7 @@ markdown_extensions:
 # Contents
 pages:
 - 新手帮助: 
-  - 简介: index.md
+  - AIOT开放平台介绍: index.md
   - 产品介绍: guideline/product-discription.md
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
@@ -55,5 +55,5 @@ pages:
   - 安装与配置指南: blank.md
   - 故障诊断指南: blank.md
 - 常见问题: 
-  - 开发问题: blank.md
-  - 运维问题: blank.md
+  - 应用开发: blank.md
+  - 部署与运维: blank.md

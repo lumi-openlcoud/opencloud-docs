@@ -1,8 +1,9 @@
-# **账号注册**
+## **账号注册**
 
 AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注册后，开发者可以登录平台并创建第三方应用，开始开发前的准备工作。
 
-## **手机号注册流程**
+
+### **手机号注册流程**
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[注册](https://opencloud.aqara.cn/register)】按钮。
 
@@ -36,8 +37,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 ![审核](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signup3.png)
 
 
-
-## **邮箱注册流程**
+### **邮箱注册流程**
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[注册](https://opencloud.aqara.cn/register)】按钮。
 
@@ -72,11 +72,12 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 
 
-# **账号安全**
+## **账号安全**
 
 账号审核通过后，可登录AIOT开放平台对账号的密码、手机号等安全信息进行更改。
 
-## **账号登录**
+
+### **账号登录**
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[登录](https://opencloud.aqara.cn/login)】按钮。
 
@@ -94,8 +95,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 ![个人中心](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin2.png)
 
 
-
-## 找回密码
+### 找回密码
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[登录](https://opencloud.aqara.cn/login)】按钮。
 
@@ -114,8 +114,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 **步骤5** 密码重置成功，返回登录页面。
 
  
-
-## **修改密码**
+### **修改密码**
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[登录](https://opencloud.aqara.cn/login)】按钮。
 
@@ -136,8 +135,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 ![更改密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/modifypw3.png)
 
 
-
-## 修改绑定邮箱
+### 修改绑定邮箱
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[登录](https://opencloud.aqara.cn/login)】按钮。
 
@@ -156,8 +154,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 **步骤5** 输入新邮箱和验证码，单击【提交】。
 
  
-
-## **修改手机号码**
+### **修改手机号码**
 
 **步骤1** 访问[AIOT开放平台](https://opencloud.aqara.cn/)网站，单击页面右上方【[登录](https://opencloud.aqara.cn/login)】按钮。
 
