@@ -1,4 +1,7 @@
-# **首页**
+# 产品介绍
+
+
+## **首页**
 
 作为小米生态链企业，绿米同小米公司一起，从智能硬件、物联网和云计算三个方面着手，研发和创造“每个人都能玩的”智能产品，共同推动智能产品在智能家庭和物联网领域的普及和应用。
 
@@ -23,11 +26,11 @@
 
 
 
-# 网关类产品
+## 网关类产品
 
 网关类产品是用于连接与管理多种智能传感器和控制器的中心枢纽。
 
-## **多功能网关**
+### **多功能网关**
 
 ![多功能网关](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.gateway.png)
 
@@ -64,7 +67,7 @@
 - 工作湿度：0-95%RH，无冷凝
 - 执行标准：Q/QLML001-2015
 
-## 空调伴侣
+### 空调伴侣
 
 ![空调伴侣](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.acpartner.png)
 
@@ -100,7 +103,7 @@
 - 工作湿度：0~95%RH，无冷凝
 - 执行标准：Q/QLML010-2016
 
-## 智能摄像机
+### 智能摄像机
 
 ![摄像机](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.camera.png)
 
@@ -125,11 +128,11 @@
 - 执行标准：Q/QLML018-2017
 - 储存支持：Micro SD卡（支持8G以上SD卡）
 
-# 控制类产品
+## 控制类产品
 
 控制类产品是根据指令产生各种操作控制信号，来协调和指挥整个系统的操作。
 
-## 墙壁插座（ZigBee版）
+### 墙壁插座（ZigBee版）
 
 ![墙壁插座](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.86plug.png)
 
@@ -154,7 +157,7 @@
 - 最大负载：10A/2500W
 - 功率精度：100W以下5%、100W以上1%
 
-## 智能插座（ZigBee版）
+### 智能插座（ZigBee版）
 
 ![智能插座](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.plug.png)
 
@@ -172,7 +175,7 @@
 
 智能插座的基本参数如下：
 
-- ##### 产品尺寸：57 x 40 x 31mm
+- ###### 产品尺寸：57 x 40 x 31mm
 
 - 无线连接：ZigBee
 
@@ -184,7 +187,7 @@
 
 - 执行标准：Q/QLML005-2016
 
-## 墙壁开关（零火单键/双键版）
+### 墙壁开关（零火单键/双键版）
 
 ![墙壁开关单键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_neutral1.png)![墙壁开关双键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_neutral2.png)
 
@@ -209,7 +212,7 @@
 - 电源输入：10A MAX，250V AC
 - 负载输出：总负载最大2500W
 
-## 墙壁开关（单火单键/双键版）
+### 墙壁开关（单火单键/双键版）
 
 ![墙壁开关单键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_neutral1.png)![墙壁开关双键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_neutral2.png)
 
@@ -238,7 +241,7 @@
 
 - 负载输出：≤800W/每路，最小3W节能灯/5W LED灯/16W荧光灯
 
-## 智能窗帘电机
+### 智能窗帘电机
 
 ![智能窗帘电机](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.curtain.png)
 
@@ -272,7 +275,7 @@
 - 无线嫌疑：ZigBee
 - 轨道承重：最大50kg
 
-## 智能门锁
+### 智能门锁
 
 ![智能门锁](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.lock.png)
 
@@ -313,7 +316,7 @@
 - 锁体：6068标准锁体，6066霸王锁体
 - 适配手机：iOS 8.0及以上/Android 4.4及以上
 
-## 空调温控器
+### 空调温控器
 
 ![空调控制器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_hvac.png)
 
@@ -335,7 +338,7 @@
 - 电源输入：100V~250VAC，50Hz/60Hz，单火线供电；100V~250VAC，50Hz/60Hz，零火线供电
 - 负载输出：2A/通道
 
-## 双路控制器
+### 双路控制器
 
 ![双路控制器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_dualchn.png)
 
@@ -359,7 +362,7 @@
 - 工作湿度：0~95%，无冷凝
 - 产品认证：SRRC，CQC，企标（EMC等）
 
-## 调光控制器
+### 调光控制器
 
 ![调光控制器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.ctrl_dimmer3.png)
 
@@ -387,11 +390,11 @@
 - 电源输入：12-24VDC，70mA（Max） ；12-24VDC，50mA（Max）
 - 控制输出：N Mosfet开漏极恒压PWM共地输出，接双色温共阳LED，5A/通道，24Vmax 180W@12VDC或360W@24VDC
 
-# 传感类产品
+## 传感类产品
 
 传感类产品是通过温度、湿度、光敏、位移等感知功能，来实现自动检测和自动控制。
 
-## 门窗传感器
+### 门窗传感器
 
 ![门窗传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_magnet.png)
 
@@ -416,7 +419,7 @@
 - 工作湿度：5%~95%RH，无冷凝
 - 执行标准：Q/QLML003-2015
 
-## 人体传感器
+### 人体传感器
 
 ![人体传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_motion.png)
 
@@ -444,7 +447,7 @@
 - 工作湿度：5%~95%RH，无冷凝
 - 执行标准：Q/QLML002-2015
 
-## 温湿度传感器
+### 温湿度传感器
 
 ![温湿度传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.weather.png)
 
@@ -468,7 +471,7 @@
 - 工作湿度：0%~100%RH，无冷凝
 - 执行标准：Q/QLML006-2016
 
-## 水浸传感器
+### 水浸传感器
 
 ![水浸传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_wleak.png)
 
@@ -491,7 +494,7 @@
 - 工作湿度：0~100%RH，无冷凝
 - 执行标准：Q/QLML015-2017
 
-## 天然气报警器
+### 天然气报警器
 
 ![天然气报警器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_natgas.png)
 
@@ -521,7 +524,7 @@
 - 声强输出：70~115dB
 - 继电器输出：2A@30VDC,2A@220VAC
 
-## 烟雾报警器
+### 烟雾报警器
 
 ![烟雾报警器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_smoke.png)
 
@@ -554,7 +557,7 @@
 - 供电方式：3VDC锂电池
 - 使用电池容量：1450mAh
 
-## 魔方控制器
+### 魔方控制器
 
 ![魔方控制器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_cube.png)
 
@@ -585,7 +588,7 @@
 - 工作湿度：5%~95%RH，无冷凝
 - 执行标准：Q/QLML008-2016
 
-## 无线开关
+### 无线开关
 
 ![无线开关](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.wireless%20_switch.png)
 
@@ -609,7 +612,7 @@
 - 工作湿度：5%~95%RH，无冷凝
 - 执行标准：Q/QLML004-2015
 
-## 无线开关（贴墙式）
+### 无线开关（贴墙式）
 
 ![无线开关单键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_86sw1.png)![无线开关双键](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_86sw2.png)
 

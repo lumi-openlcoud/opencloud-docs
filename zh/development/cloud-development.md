@@ -1,6 +1,9 @@
-# 首页
+# 云端开发手册
 
-## 概述
+
+## 首页
+
+### 概述
 
 AIOT是一个物联网云平台，提供用户管理、设备管理、数据采集与远程控制等服务。通过智能设备采集的数据存储在AIOT云端数据库中，比如：功率、温湿度、开关状态、门窗状态等。同时，AIOT云端可以通过下发控制命令来远程控制设备。那开发者如何获得采集数据呢？又如何远程控制自己的设备呢？
 
@@ -18,7 +21,7 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 下面，本手册将介绍下如何基于云端对接方式开发第三方应用，包括应用的创建、配置和开发等。
 
-## 写在前面
+### 写在前面
 
 一个好的软件开发流程加上一个好的软件系统架构，会给软件开发带来事半功倍的效果。因此，为了帮助开发者开发得更加顺畅，在前面交代些重要的事。如果你是一个经验丰富的开发者，可以跳过这一小节。
 
@@ -34,9 +37,9 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 > 注意：使用Postman时请关闭SSL验证（SSL certifacate verification）。
 
-# 应用创建与配置
+## 应用创建与配置
 
-## 创建应用
+### 创建应用
 
 登录[AIOT开放平台](https://opencloud.aqara.cn/)，单击“新建应用”。创建应用时，开发者需要设置应用的相关参数，包括：
 - 应用名称
@@ -47,7 +50,7 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 > 注意：请开发者务必妥善保管AppKey，以防泄露，同时建议定期重置AppKey。
 
-## 申请资源权限
+### 申请资源权限
 
 资源是一种抽象的说法，在这里指由设备产生的数据，包括设备的设置参数与实时状态。一个设备具有多个资源，不同的资源表示不同含义的数据。例如，开关状态（plug_status）是智能插座的一个资源，表示智能插座当前是否通电。通过访问该资源，开发者可以查询插座的当前状态和远程开关插座。
 
@@ -62,7 +65,7 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 ![资源授权页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-resource.png)
 
-## 申请API权限
+### 申请API权限
 
 API是AIOT开放平台对外提供数据的接口，也是开发者查询与控制设备的主要方式。在开发应用前，开发者请根据自己的需求来申请API的权限。默认情况下，应用会自动分配常用API的权限。
 
@@ -75,7 +78,7 @@ API是AIOT开放平台对外提供数据的接口，也是开发者查询与控�
 
 ![API访问页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-api.png)
 
-# 账号授权
+## 账号授权
 
 在设备入网后，设备绑定到唯一的AIOT账号，也就是Aqara APP的登录账号。只有获得AIOT账号的授权许可，第三方应用才能访问与控制该账号下的设备，同时AIOT平台才会把设备消息推送到第三方服务器。
 
@@ -83,7 +86,7 @@ API是AIOT开放平台对外提供数据的接口，也是开发者查询与控�
 
 目前，AIOT开放平台只提供一种授权方式：OAuth 2.0，后续会提供更多的授权方式。
 
-## OAuth2.0
+### OAuth2.0
 
 OAuth2.0 是一个开放标准，允许用户让第三方应用访问该用户在某一网站（或物联网平台）上存储的私密资源（如用户信息、照片、视频、设备数据等），而无需将用户名和密码提供给第三方应用。如果您想对OAuth2.0开放标准进行扩展阅读，请参考 [理解OAuth2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html) | [OAuth标准（英文）](https://oauth.net/2/)。
 
@@ -93,7 +96,7 @@ AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式�
 
 OAuth 2.0 详细授权流程如下：
 
-#### 步骤1 请求授权码
+##### 步骤1 请求授权码
 
 首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara APP账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
 
@@ -113,7 +116,7 @@ GET  HTTP/1.1 302 Found
 Location: https://redirect_uri?code=xxx&state=xxx
 ```
 
-#### 步骤2 获取访问令牌
+##### 步骤2 获取访问令牌
 获得授权码后，第三方应用访问以下URL，用授权码换取访问令牌（AccessToken）。
 
 - **URL：** https://aiot-oauth2.aqara.cn/access_token
@@ -147,7 +150,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | refresh_token | 刷新令牌，用于刷新访问令牌，有效期为30天      |
 | state         | 取值为任意字符串，认证服务器将原样返回该参数     |
 
-#### 步骤3 刷新访问令牌
+##### 步骤3 刷新访问令牌
 
 由于访问令牌的有效期只有2个小时，所以开发者需要在访问令牌过期前使用刷新令牌进行刷新，建议的刷新周期为1个半小时。
 
@@ -183,9 +186,9 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 > 注意：如果刷新访问令牌时出现非正常返回的情况，请重试！
 
-# API调用
+## API调用
 
-## API调用规范
+### API调用规范
 
 1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，统一域名为：**https://rpc.opencloud.aqara.cn**。
 
@@ -196,7 +199,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 4. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
 5. 所有功能的详细API定义请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->API访问”页面。
 
-## 调用示例
+### 调用示例
 
 例如，通过调用接口查询一个设备的详细信息，调用方法如下：
 - 请求URL：https://rpc.opencloud.aqara.cn/open/device/query
@@ -245,7 +248,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
   }
 ```
 
-# 消息推送
+## 消息推送
 
 如果第三方应用需要接收设备消息，开发者需要按照如下步骤启用消息推送功能：
 
@@ -262,7 +265,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 }
 ```
 
-## 服务器配置
+### 服务器配置
 
 访问“应用管理->消息推送”页面，单击右上角的“编辑”按钮，填写配置信息：
 
@@ -278,7 +281,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ![消息服务器配置](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/message-subscribe.png)
 
-## 验证服务器
+### 验证服务器
 
 **明文模式**
 
@@ -316,7 +319,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 2. 将三个参数字符串拼接成一个字符串进行sha1加密；
 3. 开发者获得加密后的字符串可与signature对比，标识该请求来源于AIOT服务器。
 
-## 消息格式
+### 消息格式
 
 目前，AIOT开放平台支持以下两类消息：
 - 资源消息：资源的变化消息，比如温度变化、功率变化等；
@@ -386,7 +389,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | SUB\_DEV\_OFFLINE  | 子设备离线  |
 | DEV\_INFO\_CHANGED | 设备信息改变 |
 
-# 返回码说明
+## 返回码说明
 
 第三方应用每次调用接口时，可能获得正确或错误的返回码，开发者可以根据返回码信息调试接口以及排查错误。
 
