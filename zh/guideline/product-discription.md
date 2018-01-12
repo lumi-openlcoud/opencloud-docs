@@ -31,7 +31,7 @@
 
 网关类产品是用于连接与管理多种智能传感器和控制器的中心枢纽。
 
-### **多功能网关**
+### 多功能网关
 
 ![多功能网关](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.gateway.png)
 
