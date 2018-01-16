@@ -50,7 +50,7 @@ pages:
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
-  - 网关局域网通讯协议: blank.md
+  - 网关局域网通讯协议: development/gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
