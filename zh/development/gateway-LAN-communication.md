@@ -59,13 +59,21 @@
 以组播方式向网关发送“whois”命令：
 
 ```
-{"cmd":"whois"}
+{
+   "cmd":"whois"
+}
 ```
 
 所有网关收到“whois”命令都要应答且回复自己的IP信息，以**单播**的形式回复：
 
 ```
-{"cmd":"iam","ip":"192.168.0.42","protocal":"UDP","port":"9898","model":"gateway",.....}
+{
+   "cmd":"iam",
+   "ip":"192.168.0.42",   //网关IP地址
+   "protocal":"UDP",
+   "port":"9898",
+   "model":"gateway.v3",......
+}
 ```
 
  
@@ -79,13 +87,20 @@
 以单播方式向网关发送“discovery”命令：
 
 ```
-{"cmd":"discovery"}
+{
+   "cmd":"discovery"
+}
 ```
 
 网关以单播方式回复，网关返回子设备的设备id：
 
 ```
-{"cmd":"discovery_rsp","sid":"f0b429b3c9d9","token":"TahkC7dalbIhXG22","dev_list":[{"sid":"158d0000f1a750","model":"plug"},{"sid":"158d00010fd645","model":"sensor_switch.aq2"}]}
+{
+   "cmd":"discovery_rsp",
+   "sid":"f0b429b3c9d9",
+   "token":"TahkC7dalbIhXG22",
+   "dev_list":[{"sid":"158d0000f1a750","model":"plug"},      {"sid":"158d00010fd645","model":"sensor_switch.aq2"}]
+}
 ```
 
 其中外层的“sid”为网关did，“dev_list”里面包含的“sid”为子设备did。
@@ -101,7 +116,12 @@
 门窗传感器上报窗户的开关状态，格式如下：
 
 ```
-{"cmd":"report","model":"sensor_magnet.aq2","sid":"158d0000123456","params":[{"window_status":"open"}] }
+{
+   "cmd":"report",
+   "model":"sensor_magnet.aq2",
+   "sid":"158d0000123456",
+   "params":[{"window_status":"open"}] 
+}
 ```
 
 
@@ -113,7 +133,13 @@
 网关心跳以**组播**方式发送给（**IP：224.0.0.50，Port：9898**）。网关每10秒钟发送一次心跳报文，用来告诉PC网关正常工作。若间隔65s以上未收到心跳包即表示网关处于离线状态。网关设备心跳格式如下：
 
 ```
-{"cmd":"heartbeat","model":"gateway.v3","sid":"f0b429b3c9d965","token":"1234567890abcdef","params":[{"ip":"172.22.4.130"}]}
+{
+    "cmd":"heartbeat",
+    "model":"gateway.v3",
+    "sid":"f0b429b3c9d965",
+    "token":"1234567890abcdef",
+    "params":[{"ip":"172.22.4.130"}]
+ }
 ```
 
 其中，“token”为网关生成的随机字符串，用户可用此token来生成写设备时的“key”。
@@ -125,7 +151,12 @@
 子设备心跳以**组播**方式发送给（**IP：224.0.0.50，Port：9898**）。子设备通过心跳告诉PC：子设备正常工作（心跳上报频率：一般睡眠设备是一个小时一次，插电设备是每10分钟一次）。子设备心跳格式如下：
 
 ```
-{"cmd":"heartbeat","model":"sensor_magnet.aq2","sid":"158d000065a271","params":[{"window_status":"open"}]}
+{
+   "cmd":"heartbeat",
+   "model":"sensor_magnet.aq2",
+   "sid":"158d000065a271",
+   "params":[{"window_status":"open"}]
+}
 ```
 
 子设备心跳中可能包含子设备的属性状态，如格式中的`"window_status":"open"`。在设置心跳的时候，需看此属性状态的具体使用场景。
@@ -146,13 +177,21 @@
 使用“read”命令读取墙壁开关的状态：
 
 ```
-{"cmd":"read","sid":"158d0000123456"}
+{
+   "cmd":"read",
+   "sid":"158d0000123456"
+}
 ```
 
 网关以**单播**方式回复，格式如下：
 
 ```
-{"cmd":"read_rsp","model":"ctrl_neutral2","sid":"158d0000123456","params":[{"channel_0":"on"},{"channel_1":"off"}]}
+{
+   "cmd":"read_rsp",
+   "model":"ctrl_neutral2",
+   "sid":"158d0000123456",
+   "params":[{"channel_0":"on"},{"channel_1":"off"}]
+}
 ```
 
 其中，sid为墙壁开关的设备id，channel_0和channel_1为墙壁开关双键当前的开关状态。
@@ -162,13 +201,21 @@
 使用“read”命令读取网关的状态：
 
 ```
-{"cmd":"read","sid":"f0b429b3c9d9"}
+{
+   "cmd":"read",
+   "sid":"f0b429b3c9d9"
+}
 ```
 
 网关以**单播**方式回复，格式：
 
 ```
-{"cmd":"read_rsp","model":"gateway.v3","sid":"f0b429b3c9d9","params":[{"rgb":0},{"illumination":350},{"proto_version":"2.0.0"}}
+{
+   "cmd":"read_rsp",
+   "model":"gateway.v3",
+   "sid":"f0b429b3c9d9",
+   "params":[{"rgb":0},{"illumination":350},{"proto_version":"2.0.0"}
+}
 ```
 
 其中，sid为网关的设备id，rgb是网关夜灯的颜色值，illumination是光照度，proto_version是网关所用的通信协议版本号。
@@ -184,19 +231,35 @@
 将墙壁开关（单火单键）的状态改为关闭，使用write命令：
 
 ```
-{"cmd":"write","model":"ctrl_neutral1","sid":"158d0000123456","key":"3EB43E37C20AFF4C5872CC0D04D81314","params":[{"channel_0":"off"}]}
+{
+    "cmd":"write",
+    "model":"ctrl_neutral1",
+    "sid":"158d0000123456",
+    "key":"3EB43E37C20AFF4C5872CC0D04D81314",
+    "params":[{"channel_0":"off"}]
+ }
 ```
 
 网关以**单播**方式回复格式：
 
 ```
-{"cmd":"write_rsp","model":"ctrl_neutral1","sid":"158d0000123456","params":[{"channel_0":"on"}]}
+{
+   "cmd":"write_rsp",
+   "model":"ctrl_neutral1",
+   "sid":"158d0000123456",
+   "params":[{"channel_0":"on"}]
+}
 ```
 
 该“write_rsp”只代表网关收到了write命令，params里的属性状态为当前的设备最新状态，不是write之后的最终设备状态。最终的设备状态靠report报文进行上报。
 
 ```
-{"cmd":"report","model":"ctrl_neutral1","sid":"158d0000123456","params":[{"channel_0":"off"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_neutral1",
+   "sid":"158d0000123456",
+   "params":[{"channel_0":"off"}]
+}
 ```
 
 
@@ -213,10 +276,10 @@ JSON报文的基本格式：
 
 ```
 {
-	"cmd":"write",     //命令类型，支持write/read/write_rsp/read_rsp/report/heartbeat
-	"model":"ctrl_neutral2",   //设备类型别名
-	"sid":"158d0000123456",    //设备的did
-	"params":[{"channel_0":"on"},{"channel_1":"off"}]  //params的内容里可以包含同一个设备的多个属性 
+   "cmd":"write",     //命令类型，支持write/read/write_rsp/read_rsp/report/heartbeat
+   "model":"ctrl_neutral2",   //设备别名
+   "sid":"158d0000123456",    //设备的did
+   "params":[{"channel_0":"on"},{"channel_1":"off"}]  //params里可以包含同一个设备的多个属性 
 }
 ```
 
@@ -239,10 +302,16 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（网关夜灯颜色为绿色，光照度为500）：
+属性上报：
 
 ```
-{"cmd":"report","model":"gateway.v3","sid":"640980123456","params":[{"rgb":4278255360,"illumination:500,"proto_version":"2.0.0"}]}
+{
+   "cmd":"report",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"rgb":4278255360,"illumination:500,"proto_version":"2.0.0"}]
+   //网关夜灯颜色为绿色，光照度为500，通信协议版本号为2.0.0
+}
 ```
 
  
@@ -252,7 +321,12 @@ JSON报文的基本格式：
 修改夜灯颜色：
 
 ```
-{"cmd":"write","model":"gateway.v3","sid":"640980123456","params":[{"rgb":4278255360}]}
+{
+   "cmd":"write",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"rgb":4278255360}]
+}
 ```
 
  
@@ -260,7 +334,12 @@ JSON报文的基本格式：
 播放mid为10005的自定义铃声：
 
 ```
-{"cmd":"write","model":"gateway.v3","sid":"640980123456","params":[{"mid":10005}]}
+{
+   "cmd":"write",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"mid":10005}]
+}
 ```
 
 
@@ -268,7 +347,12 @@ JSON报文的基本格式：
 停止播放网关铃声：
 
 ```
-{"cmd":"write","model":"gateway.v3","sid":"640980123456","params":[{"mid":10000}]}
+{
+   "cmd":"write",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"mid":10000}]
+}
 ```
 
  
@@ -276,15 +360,25 @@ JSON报文的基本格式：
 允许添加子设备：
 
 ```
-{"cmd":"write","model":"gateway.v3","sid":"640980123456","params":[{"join_permission":"yes"}]}
+{
+   "cmd":"write",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"join_permission":"yes"}]
+}
 ```
 
  
 
-删除某个子设备：
+删除网关下的某个子设备：
 
 ```
-{"cmd":"write","model":"gateway.v3","sid":"640980123456","params":[{"remove_device":"158d0000fc1234"}]}
+{
+   "cmd":"write",
+   "model":"gateway.v3",
+   "sid":"640980123456",
+   "params":[{"remove_device":"158d0000fc1234"}]
+}
 ```
 
 
@@ -303,10 +397,16 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（光照度为500）：
+属性上报：
 
 ```
-{"cmd":"report","model":"acpartner.v3","sid":"640980123456","params":["illumination:500,"proto_version":"2.0.0"}]}
+{
+   "cmd":"report",
+   "model":"acpartner.v3",
+   "sid":"640980123456",
+   "params":["illumination:500,"proto_version":"2.0.0"}]
+   //光照度为500，通信协议版本为2.0.0。
+}
 ```
 
  
@@ -316,7 +416,12 @@ JSON报文的基本格式：
 播放mid为10005的自定义铃声：
 
 ```
-{"cmd":"write","model":"acpartner.v3","sid":"640980123456","params":[{"mid":10005}]}
+{
+   "cmd":"write",
+   "model":"acpartner.v3",
+   "sid":"640980123456",
+   "params":[{"mid":10005}]
+}
 ```
 
   
@@ -324,15 +429,25 @@ JSON报文的基本格式：
 允许添加子设备：
 
 ```
-{"cmd":"write","model":"acpartner.v3","sid":"640980123456","params":[{"join_permission":"yes"}]}
+{
+   "cmd":"write",
+   "model":"acpartner.v3",
+   "sid":"640980123456",
+   "params":[{"join_permission":"yes"}]
+}
 ```
 
  
 
-删除某个子设备：
+删除空调伴侣下的某个子设备：
 
 ```
-{"cmd":"write","model":"acpartner.v3","sid":"640980123456","params":[{"remove_device":"158d0000f12345"}]}
+{
+   "cmd":"write",
+   "model":"acpartner.v3",
+   "sid":"640980123456",
+   "params":[{"remove_device":"158d0000f12345"}]
+}
 ```
 
 
@@ -349,18 +464,28 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（智能插座状态为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"plug","sid":"158d0000123123","params":[{"channel_0":"on"}]}
+{
+   "cmd":"report",
+   "model":"plug",
+   "sid":"158d0000123123",
+   "params":[{"channel_0":"on"}] //智能插座状态为“开”
+}
 ```
 
  
 
-控制（将智能插座状态改为“关”）：
+控制：
 
 ```
-{"cmd":"write","model":"plug","sid":"158d0000123123","params":[{"channel_0":"off"}]}
+{
+   "cmd":"write",
+   "model":"plug",
+   "sid":"158d0000123123",
+   "params":[{"channel_0":"off"}]  //将智能插座状态改为“关”
+}
 ```
 
 
@@ -368,10 +493,14 @@ JSON报文的基本格式：
 心跳上报（~10分钟每次）：
 
 ```
-{"cmd":"heartbeat","model":"plug","sid":"158d0000123123","params":[{"load_power":9.57},{”energy_consumed":57}]}
+{
+   "cmd":"heartbeat",
+   "model":"plug",
+   "sid":"158d0000123123",
+   "params":[{"load_power":9.57},{”energy_consumed":57}] 
+   //负载功率为9.57W，负载消耗电量为57Wh。
+}
 ```
-
- 表示心跳上报时，负载功率为9.57W，负载消耗电量为57Wh。
 
 
 
@@ -387,18 +516,28 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（墙壁插座状态为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"ctrl_86plug","sid":"158d0001123123","params":[{"channel_0":"on"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_86plug",
+   "sid":"158d0001123123",
+   "params":[{"channel_0":"on"}]  //墙壁插座状态为“开”
+}
 ```
 
  
 
-控制（将墙壁插座状态改为“关”）：
+控制：
 
 ```
-{"cmd":"write","model":"ctrl_86plug","sid":"158d0001123123","params":[{“channel_0”:”off”}]}
+{
+   "cmd":"write",
+   "model":"ctrl_86plug",
+   "sid":"158d0001123123",
+   "params":[{“channel_0”:”off”}]  //将墙壁插座状态改为“关”
+}
 ```
 
 
@@ -406,10 +545,14 @@ JSON报文的基本格式：
 心跳上报（~10分钟每次）：
 
 ```
-{"cmd":"heartbeat","model":"ctrl_86plug","sid":"158d0001123123","params":[{"load_power":9.57},{"energy_consumed":57}]}
+{
+   "cmd":"heartbeat",
+   "model":"ctrl_86plug",
+   "sid":"158d0001123123",
+   "params":[{"load_power":9.57},{"energy_consumed":57}]
+   //负载功率为9.57W，负载消耗电量为57Wh。
+}
 ```
-
-表示心跳上报时，负载功率为9.57W，负载消耗电量为57Wh。
 
 
 
@@ -423,18 +566,28 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（开关状态为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"ctrl_ln1","sid":"158d0001112313","params":[{"channel_0":"on"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_ln1",
+   "sid":"158d0001112313",
+   "params":[{"channel_0":"on"}]  //墙壁开关状态为“开”
+}
 ```
 
  
 
-控制（将开关状态改为“关”）：
+控制：
 
 ```
-{"cmd":"write","model":"ctrl_ln1","sid":"158d0001112313","params":[{"channel_0":"off"}]}
+{
+   "cmd":"write",
+   "model":"ctrl_ln1",
+   "sid":"158d0001112313",
+   "params":[{"channel_0":"off"}]   //将墙壁开关状态改为“关”
+}
 ```
 
 
@@ -452,18 +605,28 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（开关2状态为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"ctrl_ln2","sid":"158d0001112312","params":[{"channel_1":"on"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_ln2",
+   "sid":"158d0001112312",
+   "params":[{"channel_1":"on"}]  //墙壁开关2状态为“开”
+}
 ```
 
  
 
-控制（将开关2状态改为“关”）：
+控制：
 
 ```
-{"cmd":"write","model":"ctrl_ln2","sid":"158d0001112312","params":[{"channel_1":"off"}]}
+{
+   "cmd":"write",
+   "model":"ctrl_ln2",
+   "sid":"158d0001112312",
+   "params":[{"channel_1":"off"}]  //将墙壁开关2状态改为“关”
+}
 ```
 
 
@@ -478,18 +641,28 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（开关状态为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"ctrl_neutral1","sid":"158d0001112311","params":[{"channel_0":"on"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_neutral1",
+   "sid":"158d0001112311",
+   "params":[{"channel_0":"on"}]  //墙壁开关状态为“开”
+}
 ```
 
  
 
-控制（将开关状态改为“关”）：
+控制：
 
 ```
-{"cmd":"write","model":"ctrl_neutral1","sid":"158d0001112311","params":[{" channel_0":"off"}]}
+{
+   "cmd":"write",
+   "model":"ctrl_neutral1",
+   "sid":"158d0001112311",
+   "params":[{" channel_0":"off"}]  //将墙壁开关状态改为“关”
+}
 ```
 
 
@@ -505,20 +678,40 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（开关1和开关2当前状态均为“开”）：
+属性上报：
 
 ```
-{"cmd":"report","model":"ctrl_neutral2","sid":"158d0001112316","params":[{"channel_0":"on"}]}
-{"cmd":"report","model":"ctrl_neutral2","sid":"158d0001112316","params":[{" channel_1":"on"}]}
+{
+   "cmd":"report",
+   "model":"ctrl_neutral2",
+   "sid":"158d0001112316",
+   "params":[{"channel_0":"on"}]  //墙壁开关1状态为“开”
+}
+{
+   "cmd":"report",
+   "model":"ctrl_neutral2",
+   "sid":"158d0001112316",
+   "params":[{"channel_1":"on"}]  //墙壁开关2状态为“开”
+}
 ```
 
  
 
-控制（将开关1改为“开”，开关2改为“关”）： 
+控制： 
 
 ```
-{"cmd":"write","model":"ctrl_neutral2","sid":"158d0001112316","params":[{"channel_0":"on"}]}
-{"cmd":"write","model":"ctrl_neutral2","sid":"158d0001112316","params":[{"channel_1":"off"}]}
+{
+   "cmd":"write",
+   "model":"ctrl_neutral2",
+   "sid":"158d0001112316",
+   "params":[{"channel_0":"on"}]  //将墙壁开关1改为“开”
+}
+{
+   "cmd":"write",
+   "model":"ctrl_neutral2",
+   "sid":"158d0001112316",
+   "params":[{"channel_1":"off"}]  //将墙壁开关2改为“关”
+}
 ```
 
 
@@ -534,25 +727,45 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（窗帘打开的百分比为50%）：
+属性上报：
 
 ```
-{"cmd":"report","model":"curtain","sid":"158d0001012345","params":[{"curtain_level":50}]}
+{
+   "cmd":"report",
+   "model":"curtain",
+   "sid":"158d0001012345",
+   "params":[{"curtain_level":50}]  //窗帘打开50%
+}
 ```
 
  
 
-控制（打开窗帘且打开百分比为25%）：
+控制：
 
 ```
-{"cmd":"write","model":"curtain","sid":"158d0001012345","params":[{"curtain_status":"open"}]}
-{"cmd":"write","model":"curtain","sid":"158d0001012345","params":[{"curtain_level":25}]}
+{
+   "cmd":"write",
+   "model":"curtain",
+   "sid":"158d0001012345",
+   "params":[{"curtain_status":"open"}]  //开窗帘
+}
+{
+   "cmd":"write",
+   "model":"curtain",
+   "sid":"158d0001012345",
+   "params":[{"curtain_level":25}]  //窗帘打开25%
+}
 ```
 
 上报窗帘打开状态：
 
 ```
-{"cmd":"report","model":"curtain","sid":"158d0001012345","params":[{"curtain_level":25}]}
+{
+   "cmd":"report",
+   "model":"curtain",
+   "sid":"158d0001012345",
+   "params":[{"curtain_level":25}]  //上报窗帘已打开25%
+}
 ```
 
 
@@ -570,10 +783,15 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（窗户被打开）：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_magnet.aq2","sid":"158d0001123456","params":[{"window_status":"open"}]}
+{
+   "cmd":"report",
+   "model":"sensor_magnet.aq2",
+   "sid":"158d0001123456",
+   "params":[{"window_status":"open"}]  //窗户被打开
+}
 ```
 
  
@@ -581,7 +799,12 @@ JSON报文的基本格式：
 心跳上报（~60分钟每次）：
 
 ```
-{"cmd":"report","model":"sensor_magnet.aq2","sid":"158d0001123456","params":[{"battery_voltage":3000}]}
+{
+   "cmd":"report",
+   "model":"sensor_magnet.aq2",
+   "sid":"158d0001123456",
+   "params":[{"battery_voltage":3000}]
+}
 ```
 
 
@@ -601,16 +824,26 @@ JSON报文的基本格式：
 
 例如：
 
-检测到有人移动，属性上报：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_motion.aq2","sid":"158d0000f12222","params":[{"motion_status":"motion"}]}
+{
+   "cmd":"report",
+   "model":"sensor_motion.aq2",
+   "sid":"158d0000f12222",
+   "params":[{"motion_status":"motion"}]  //检测到有人移动
+}
 ```
 
  同时上报光照度值：
 
 ```
-{"cmd":"report","model":"sensor_motion.aq2","sid":"158d0000f12222","params":[{"lux":100},{"illumination":100}]}
+{
+   "cmd":"report",
+   "model":"sensor_motion.aq2",
+   "sid":"158d0000f12222",
+   "params":[{"lux":100},{"illumination":100}]  
+}
 ```
 
  
@@ -618,10 +851,13 @@ JSON报文的基本格式：
 心跳上报（~60分钟每次）：
 
 ```
-{"cmd":"report","model":"sensor_motion.aq2","sid":"158d0000f12222","params":[{"battery_voltage":3000},{"lux":50}]}
+{
+   "cmd":"report",
+   "model":"sensor_motion.aq2",
+   "sid":"158d0000f12222",
+   "params":[{"battery_voltage":3000},{"lux":50}]
+}
 ```
-
-表示心跳上报时，光照度值为50，电池电压为3000mv。
 
 
 
@@ -640,10 +876,15 @@ JSON报文的基本格式：
 
 例如：
 
-属性上报（温度23.33度）：
+属性上报：
 
 ```
-{"cmd":"report","model":"weather","sid":"158d0000f12346","params":[{"temperature":2333}]}
+{
+   "cmd":"report",
+   "model":"weather",
+   "sid":"158d0000f12346",
+   "params":[{"temperature":2333}]  //温度是23.33度
+}
 ```
 
  
@@ -651,10 +892,14 @@ JSON报文的基本格式：
 心跳上报（~60分钟每次）：
 
 ```
-{"cmd":"heartbeat","model":"weather","sid":"112316","params":[{"battery_voltage":3000}, {"temperature":2333},{"humidity":6678},{"pressure":99900}]}
+{
+   "cmd":"heartbeat",
+   "model":"weather",
+   "sid":"112316",
+   "params":[{"battery_voltage":3000}, {"temperature":2333},{"humidity":6678},{"pressure":99900}]
+   //温度为23.33度，湿度为66.78%，大气气压为99.9KPa。
+}
 ```
-
-表示心跳上报时，温度为23.33，湿度为66.78%，大气气压为99.9KPa。
 
 
 
@@ -671,16 +916,27 @@ JSON报文的基本格式：
 
 例如：
 
-花了500毫秒逆时针旋转90度，属性上报：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_cube","sid":"158d0000f12345","params":[{“cube_status”:”rotate”},"rotate_degree":-90,"detect_time ":500}]}
+{
+   "cmd":"report",
+   "model":"sensor_cube",
+   "sid":"158d0000f12345",
+   "params":[{“cube_status”:”rotate”},"rotate_degree":-90,"detect_time ":500}]
+   //花了500毫秒将魔方逆时针旋转90度。
+}
 ```
 
- 翻转90度，属性上报：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_cube","sid":"158d0000f12345","params":[{"cube_status":"flip90"}]}
+{
+   "cmd":"report",
+   "model":"sensor_cube",
+   "sid":"158d0000f12345",
+   "params":[{"cube_status":"flip90"}]  //翻转90度
+}
 ```
 
 
@@ -695,10 +951,15 @@ JSON报文的基本格式：
 
 例如：
 
-检测到天然气泄露浓度过高导致的报警，属性上报：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_natgas","sid":"158d0001234565","params":[{"natgas_status":"alarm"}]}
+{
+   "cmd":"report",
+   "model":"sensor_natgas",
+   "sid":"158d0001234565",
+   "params":[{"natgas_status":"alarm"}]  //检测到天然气泄露浓度过高导致的报警
+}
 ```
 
 
@@ -713,10 +974,15 @@ JSON报文的基本格式：
 
 例如：
 
-检测到烟雾浓度过高导致的报警，属性上报：
+属性上报：
 
 ```
-{"cmd":"report","model":"sensor_smoke","sid":"158d0001234566","params":[{"smoke_status":"alarm"}]}
+{
+   "cmd":"report",
+   "model":"sensor_smoke",
+   "sid":"158d0001234566",
+   "params":[{"smoke_status":"alarm"}]  //检测到烟雾浓度过高导致的报警
+}
 ```
 
  
@@ -735,13 +1001,23 @@ JSON报文的基本格式：
 属性上报：
 
 ```
-{"cmd":"report","model":"sensor_wleak.aq1","sid":"158d0001234567","params":[{"wleak_status":"leak"}]}
+{
+   "cmd":"report",
+   "model":"sensor_wleak.aq1",
+   "sid":"158d0001234567",
+   "params":[{"wleak_status":"leak"}]  //检测到发生浸水报警
+}
 ```
 
 心跳上报（~60分钟每次）：
 
 ```
-{"cmd":"heartbeat","model":"sensor_wleak.aq1","sid":"158d0001234567","params":[{"battery_voltage":3000}]}
+{
+   "cmd":"heartbeat",
+   "model":"sensor_wleak.aq1",
+   "sid":"158d0001234567",
+   "params":[{"battery_voltage":3000}]
+}
 ```
 
 
@@ -762,13 +1038,23 @@ JSON报文的基本格式：
 属性上报：
 
 ```
-{"cmd":"report","model":"sensor_switch.aq3","sid":"158d0000123456","params":[{"button_0":"click"}]}
+{
+   "cmd":"report",
+   "model":"sensor_switch.aq3",
+   "sid":"158d0000123456",
+   "params":[{"button_0":"click"}]  //单击无线开关
+}
 ```
 
 心跳上报（~60分钟每次）：
 
 ```
-{"cmd":"heartbeat","model":"sensor_switch.aq3","sid":"158d0000123456","params":[{"battery_voltage":3000}]}
+{
+   "cmd":"heartbeat",
+   "model":"sensor_switch.aq3",
+   "sid":"158d0000123456",
+   "params":[{"battery_voltage":3000}]
+}
 ```
 
 
@@ -787,7 +1073,12 @@ JSON报文的基本格式：
 属性上报：
 
 ```
-{"cmd":"report","model":"sensor_86sw1.aq1","sid":"158d0000123456","params":[{"button_0":"click"}]}
+{
+   "cmd":"report",
+   "model":"sensor_86sw1.aq1",
+   "sid":"158d0000123456",
+   "params":[{"button_0":"double_click"}]
+}
 ```
 
 
@@ -807,6 +1098,11 @@ JSON报文的基本格式：
 属性上报：
 
 ```
-{"cmd":"report","model":"sensor_86sw2.aq1","sid":"158d0000123456","params":[{"button_0":"click"}]}
+{
+   "cmd":"report",
+   "model":"sensor_86sw2.aq1",
+   "sid":"158d0000123456",
+   "params":[{"button_1":"double_click"}]
+}
 ```
 
