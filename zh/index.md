@@ -22,7 +22,7 @@ AIOT开放平台提供HTTP API供第三方应用远程调用，实现用户查�
 
 - **局域网对接方式**
 
-Aqara网关支持局域网通讯功能，开启此功能后，开发者可以通过局域网通讯来查询与控制ZigBee子设备（传感器、控制器等）。相比HTTP通讯，局域网通讯的速度更快，控制延迟更低。但是，局域网对接方式的开发成本更高，需要一台支持开发的第三方网关，并且开发者有嵌入式开发经验。详细的接入方法请参见《[网关局域网通讯协议](http://docs.opencloud.aqara.cn/blank/)》。
+Aqara网关支持局域网通讯功能，开启此功能后，开发者可以通过局域网通讯来查询与控制ZigBee子设备（传感器、控制器等）。相比HTTP通讯，局域网通讯的速度更快，控制延迟更低。但是，局域网对接方式的开发成本更高，需要一台支持开发的第三方网关，并且开发者有嵌入式开发经验。详细的接入方法请参见《[网关局域网通讯协议](http://docs.opencloud.aqara.cn/development/gateway-LAN-communication/)》。
 
 ![局域网对接方式](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/local-network-access.png)
 
