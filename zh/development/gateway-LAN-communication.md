@@ -75,7 +75,7 @@
    "ip":"192.168.0.42",   //网关IP地址
    "protocal":"UDP",
    "port":"9898",
-   "model":"gateway.v3",  //网关设备类型
+   "model":"gateway.aq1",  //网关设备类型
    ......
 }
 ```

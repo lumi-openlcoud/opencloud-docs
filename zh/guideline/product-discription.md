@@ -70,7 +70,7 @@
 
 ### 空调伴侣
 
-![空调伴侣](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.acpartner.png)
+![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_acpartner.png)
 
 **<u>功能介绍</u>**
 
@@ -244,7 +244,7 @@
 
 ### 智能窗帘电机
 
-![智能窗帘电机](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.curtain.png)
+![智能窗帘电机](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_curtain.png)
 
 
 
@@ -430,7 +430,7 @@
 
 ### 门窗传感器
 
-![门窗传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_magnet.png)
+![门窗传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_sensor_magnet.png)
 
 **<u>功能介绍</u>**
 
@@ -455,9 +455,7 @@
 
 ### 人体传感器
 
-![人体传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_motion.png)
-
-**<u>功能介绍</u>**
+![人体传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_sensor_motion.png)
 
 **<u>功能介绍</u>**
 
@@ -507,7 +505,7 @@
 
 ### 水浸传感器
 
-![水浸传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_wleak.png)
+![水浸传感器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_wleak1.png)
 
 **<u>功能介绍</u>**
 
@@ -529,8 +527,6 @@
 - 执行标准：Q/QLML015-2017
 
 ### 天然气报警器
-
-![天然气报警器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_natgas.png)
 
 **<u>功能介绍</u>**
 
@@ -559,8 +555,6 @@
 - 继电器输出：2A@30VDC,2A@220VAC
 
 ### 烟雾报警器
-
-![烟雾报警器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_smoke.png)
 
 **<u>功能介绍</u>**
 
@@ -591,36 +585,7 @@
 - 供电方式：3VDC锂电池
 - 使用电池容量：1450mAh
 
-### 魔方控制器
 
-![魔方控制器](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_cube.png)
-
-**<u>功能介绍</u>**
-
-魔方控制器是一款基于动作感应的智能无线控制器，内置6级陀螺仪，6个动作随时操作，支持任意面无差别盲操作，将趣味与实用完美结合。通过搭配多功能网关，在手机APP进行设置，可实现不同动作联动控制多个设备。颠覆性的控制概念，可自定义联动智能设备，无需打开手机APP，即可控制家中智能设备。
-
-魔方控制器支持如下六个动作：
-
-- 摇一摇
-- 敲两下
-- 翻转90°
-- 翻转180°
-- 平面旋转
-- 轻推
-
-例如，摇一摇开关客厅灯，敲两下开关网络电台，翻转90°切换网络电台节目，翻转180°开关网关夜灯，平面旋转开关空调，轻推开关窗帘。
-
-**<u>基本参数</u>**
-
-魔方控制器的基本参数如下：
-
-- 产品尺寸：45 x 45 x 45mm
-- 支持动作：摇一摇、敲两下、翻转90°、翻转180°、平面旋转、轻推
-- 无线连接：ZigBee
-- 电池规格：CR2450
-- 工作温度：-10℃~+50℃
-- 工作湿度：5%~95%RH，无冷凝
-- 执行标准：Q/QLML008-2016
 
 ### 无线开关
 
