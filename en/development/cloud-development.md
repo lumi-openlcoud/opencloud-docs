@@ -249,7 +249,7 @@ For example, you can query the details of a device by calling the interface usin
         "bindDate": "2017-11-13",
         "chipVersion": "",
         "bindTime": "22:35:18",
-        "name": "卧室红外光照传感器",
+        "name": "Bedroom-Motion Sensor",
         "model": "lumi.sensor_motion.es2",
         "isOnline": 1,
         "firmwareVersion": "1",
@@ -276,7 +276,7 @@ Special attention should be given to ensure third-party applications receiving n
 ```
 {
 	"code": 0|ErrorCode,
-	"result": "自定义内容"
+	"result": "Custom content"
 }
 ```
 
@@ -375,7 +375,7 @@ At present, the AIOT Open Platform supports the following two types of messages:
     "msgType": "device", 
     "data": {
         "openId": "GoeFrrL7mN9SsGRi8WJn4x4YnQpXTS", 
-        "name": "空调伴侣", 
+        "name": "Air Conditioning Controller", 
         "model": "lumi.acpartner.aq1", 
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
