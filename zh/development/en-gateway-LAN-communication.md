@@ -40,7 +40,7 @@ Specific operations for obtaining the gateway KEY are as follows:
 
 3.Enable "LAN Communication Protocol" to get a random KEY. Click "OK".
 
-![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/gateway-LAN-communication/app-lan.png)
+
 
 ## **Discovery and Query Devices**
 
