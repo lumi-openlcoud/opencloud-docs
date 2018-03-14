@@ -57,5 +57,5 @@ pages:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
 - 常见问题: 
-  - 应用开发: blank.md
-  - 部署与运维: blank.md
+  - 应用开发: FAQ/FAQ-development.md
+  - 部署与运维: FAQ/FAQ-installation.md
