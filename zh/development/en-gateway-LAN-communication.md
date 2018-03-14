@@ -1,4 +1,4 @@
-# **Gateway LAN communication protocol**
+# Gateway LAN communication protocol
 
 ## **Overview**
 

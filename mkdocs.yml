@@ -51,8 +51,8 @@ pages:
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
-  - Cloud Development: development/en-cloud-development.md
-  - Gateway LAN Communication: development/en-gateway-LAN-communication.md
+  - Cloud Development Manual: development/en-cloud-development.md
+  - Gateway LAN Communication Protocol: development/en-gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
