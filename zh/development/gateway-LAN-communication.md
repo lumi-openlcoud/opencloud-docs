@@ -16,8 +16,6 @@
 
 
 
-
-
 ## 修订记录
 
 介绍网关局域网通信协议各版本的主要变更内容。
@@ -39,15 +37,15 @@
 
 获取网关KEY的具体操作如下：
 
-1、选择需要进行局域网通信的网关，单击页面右上角的“...”；
+1、打开Aqara APP，选择需要进行局域网通信的网关设备；
 
-2、单击“关于”-“局域网通信协议”。
+> 注意：当前仅“**升级版空调伴侣**”支持局域网通信协议功能。
 
-> 注意：若“关于”页面没有显示“局域网通信协议”，iOS系统在此页面空白处连续点击10次即可出现；安卓系统连续点击“插件版本”10次即可出现。
+2、默认情况下，此页面不显示“局域网协议”，需连续点击"设备类型"10次才可显示。
 
-3、开启“局域网通信协议”，获取随机KEY，单击“确定”。
+3、开启“局域网协议”，获取随机KEY，单击“确定”。
 
-![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/gateway-LAN-communication/app-lan.png)
+![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/gateway-LAN-communication/app-1.png)
 
 
 
