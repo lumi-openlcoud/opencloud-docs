@@ -87,7 +87,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 **步骤2** 在页面填写注册的手机号或邮箱和密码，单击【登录】。
 
-![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1.png)
+![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
 **步骤3** 登录成功后，自动跳转至【应用管理】页面。
 
@@ -105,7 +105,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 **步骤2** 单击页面左下方的【忘记密码】。
 
-![忘记密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/resetpw1.png)
+![忘记密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/resetpw1-1.png)
 
 **步骤3** 按照页面提示输入手机或邮箱信息，单击【下一步】。
 
@@ -124,7 +124,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 **步骤2** 填写注册的手机号或邮箱和密码，单击【登录】。
 
-![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1.png)
+![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
 **步骤3** 在左侧导航栏中，单击【个人中心】，在账号信息中，单击【密码】项后的【修改】。
 
@@ -145,7 +145,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 **步骤2** 填写注册的手机号或邮箱和密码，单击【登录】。
 
-![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1.png)
+![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
 **步骤3** 在左侧导航栏中，单击【个人中心】，在账号信息中，单击【邮箱】项后的【修改】。
 
@@ -164,7 +164,7 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 **步骤2** 填写注册的手机号或邮箱和密码，单击【登录】。
 
-![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1.png)
+![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
 **步骤3** 在左侧导航栏中，单击【个人中心】，在账号信息中，单击【手机】项后的【修改】。
 
