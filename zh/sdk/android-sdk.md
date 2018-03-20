@@ -2,19 +2,19 @@
 
 本文档旨在说明如何使用LumiSDK进行网关设备快联入网的开发，仅用于Android手机APP应用。
 
-&nbsp;
+
 
 ## 前期准备
 
 1、访问并登录AIOT开放平台网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中OAuth 2.0章节，获取openID。
+2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“OAuth 2.0”章节，获取openID。
 
 3、下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_Android_SDK_v0.3.zip)，并解压，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
 
 4、下载并安装Andriod Studio或其他集成开发环境。
 
-&nbsp;
+
 
 ## 使用说明
 
@@ -36,7 +36,7 @@
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-&nbsp;
+
 
 2、网关入网操作说明。
 
@@ -68,13 +68,13 @@
 | longitude    | 否    | 设备所在位置的经度        |
 | latitude     | 否    | 设备所在位置的纬度        |
 
-> 注意：1、系统不识别有特殊字符的Wi-Fi，若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
+> 注意：1、系统不识别有特殊字符的Wi-Fi，且不支持5G频段的Wi-Fi。若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
 >
 > 2、由于SDK中的网络请求是同步的，所以调用时必须在非UI线程中调用，具体可参考DEMO。
 >
 > 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“返回码说明”章节排查错误。
 
-&nbsp;
+
 
 ## Demo示例
 
