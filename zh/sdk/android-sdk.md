@@ -12,7 +12,7 @@
 
 3、下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_Android_SDK_v0.3.zip)，并解压，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
 
-4、下载并安装Andriod Studio或其他集成开发环境。
+4、下载并安装Andriod Studio或其他Andriod集成开发环境。
 
 
 
