@@ -53,6 +53,7 @@ pages:
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
   - Cloud Development Manual: development/en-cloud-development.md
   - Gateway LAN Communication Protocol: development/en-gateway-LAN-communication.md
+  - Android SDK开发文档: sdk/android-sdk.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
