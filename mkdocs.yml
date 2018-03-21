@@ -57,8 +57,8 @@ pages:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
 - 常见问题: 
-  - 应用开发: FAQ/FAQ-development.md
-  - 部署与运维: FAQ/FAQ-installation.md
+  - 应用开发: faq/faq-development.md
+  - 部署与运维: faq/faq-installation.md
 - 开发者资源: 
   - SDK下载: sdk/sdk_total.md
   - Android SDK开发文档: sdk/android-sdk.md

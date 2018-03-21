@@ -8,9 +8,9 @@
 
 1、访问并登录AIOT开放平台网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“OAuth 2.0”章节，获取openID。
+2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_Android_SDK_v0.3.zip)，并解压，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
+3、下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.3.zip)，并解压，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
 
 4、下载并安装Andriod Studio或其他Andriod集成开发环境。
 
@@ -18,15 +18,15 @@
 
 ## 使用说明
 
-1、配置Andriod项目。（以Andriod Studio为例）
+#### 1、配置Andriod项目。（以Android Studio为例）
 
-1）创建Android项目，在主菜单中选择File--New--New Module--Import .JAR/.AAR Package，选择LumiSDK.aar所在的路径，单击Finish完成。
+1）创建Android项目，在主菜单中选择File->New->New Module->Import .JAR/.AAR Package，选择LumiSDK.aar所在的路径，单击Finish完成。
 
 2）重新编译工程，LumiSDK模块图标会变成带茶杯的文件夹，且自动生成一个.iml文件。
 
 ![模块](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/sdk/lumisdk.png)
 
-3）在主菜单中选择File--Project Structure--app--Dependencies，单击右上角的绿色加号，选择Module Dependency，把LumiSDK的module添加进去。
+3）在主菜单中选择File->Project Structure->app->Dependencies，单击右上角的绿色加号，选择Module Dependency，把LumiSDK的module添加进去。
 
 ![依赖](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/sdk/dependencies.png)
 
@@ -38,7 +38,7 @@
 
 
 
-2、网关入网操作说明。
+#### 2、网关入网操作说明。
 
 1）手机连接外网，调用授权接口（aiotAuth），进行授权，返回授权结果。
 
@@ -58,27 +58,27 @@
 
 入网连接接口：**LumiSDK.gatewayFastLink(ssid, passwd, lang, positionId, positionType, longitude, latitude)**
 
-| 参数           | 是否必须 | 说明               |
-| ------------ | ---- | ---------------- |
-| ssid         | 是    | 网关需加入的外网网络WIFI名称 |
-| passwd       | 是    | 对应的WIFI密码        |
-| lang         | 否    | 语言设置，默认中文zh-CN   |
-| postionId    | 否    | 位置ID             |
-| positionType | 否    | 位置类型             |
-| longitude    | 否    | 设备所在位置的经度        |
-| latitude     | 否    | 设备所在位置的纬度        |
+| 参数           | 是否必须 | 说明                |
+| ------------ | ---- | ----------------- |
+| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称 |
+| passwd       | 是    | 对应的Wi-Fi密码        |
+| lang         | 否    | 语言设置，默认中文zh-CN    |
+| postionId    | 否    | 位置ID              |
+| positionType | 否    | 位置类型              |
+| longitude    | 否    | 设备所在位置的经度         |
+| latitude     | 否    | 设备所在位置的纬度         |
 
 > 注意：1、系统不识别有特殊字符的Wi-Fi，且不支持5G频段的Wi-Fi。若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
 >
 > 2、由于SDK中的网络请求是同步的，所以调用时必须在非UI线程中调用，具体可参考DEMO。
 >
-> 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“返回码说明”章节排查错误。
+> 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#_14)中“返回码说明”章节排查错误。
 
 
 
 ## Demo示例
 
-下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_Android_SDK_v0.3.zip)，并解压，在LHSDKDemo文件夹可查看该demo，本示例介绍如何使用SDK调用接口完成网关入网。
+下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.3.zip)，并解压，在LHSDKDemo文件夹可查看该demo，本示例介绍如何使用SDK调用接口完成网关入网。
 
 ```
 import android.graphics.Color;

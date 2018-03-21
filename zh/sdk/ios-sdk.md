@@ -8,9 +8,9 @@
 
 1、访问并登录AIOT开放平台网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“OAuth 2.0”章节，获取openID。
+2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_iOS_SDK_v0.3.zip)，并解压，在LHSDKLib文件夹下可查看SDK主要文件：libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h；在LHSDKDemo文件夹可查看Demo。
+3、下载[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip)，并解压，在LHSDKLib文件夹下可查看SDK主要文件：libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h；在LHSDKDemo文件夹可查看Demo。
 
 - **libLumiSDK.a**：静态连接库
 
@@ -24,11 +24,11 @@
 
 ## 使用说明
 
-1、配置IOS项目，添加静态链接库。（以Xcode为例）
+#### 1、配置IOS项目，添加静态链接库。（以Xcode为例）
 
 1）打开Finder，选中libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h文件，右键拖动到项目指定目录中。
 
-2）在Xcode界面点击.xcodeproj文件，确保targets项目的Build Phases---Link Binary With Libraries下能看到刚刚添加的libLumiSDK.a文件。
+2）在Xcode界面点击.xcodeproj文件，确保targets项目的Build Phases->Link Binary With Libraries下能看到刚刚添加的libLumiSDK.a文件。
 
 ![a文件](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/sdk/ios-sdk.png)
 
@@ -36,7 +36,7 @@
 
 
 
-2、网关入网操作说明。
+#### 2、网关入网操作说明。
 
 1）手机连接外网，调用授权接口（LHOAuthAIOT.h），进行授权。
 
@@ -52,25 +52,25 @@
 
 > 注意：网关成功入网需要一点时间，请耐心等待30s。
 
-| 参数           | 是否必须 | 说明               |
-| ------------ | ---- | ---------------- |
-| ssid         | 是    | 网关需加入的外网网络WIFI名称 |
-| password     | 是    | 对应的WIFI密码        |
-| lang         | 否    | 语言设置，默认中文zh-CN   |
-| postionId    | 否    | 位置ID             |
-| positionType | 否    | 位置类型             |
-| longitude    | 否    | 设备所在位置的经度        |
-| latitude     | 否    | 设备所在位置的纬度        |
+| 参数           | 是否必须 | 说明                |
+| ------------ | ---- | ----------------- |
+| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称 |
+| password     | 是    | 对应的Wi-Fi密码        |
+| lang         | 否    | 语言设置，默认中文zh-CN    |
+| postionId    | 否    | 位置ID              |
+| positionType | 否    | 位置类型              |
+| longitude    | 否    | 设备所在位置的经度         |
+| latitude     | 否    | 设备所在位置的纬度         |
 
 > 注意：1、系统不识别有特殊字符的Wi-Fi，且不支持5G频段的Wi-Fi。若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
 >
-> 2、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/)中“返回码说明”章节排查错误。
+> 2、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#_14)中“返回码说明”章节排查错误。
 
 
 
 ## Demo示例
 
-下载[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/lumi_iOS_SDK_v0.3.zip)，并解压，在lumi_iOS_SDK\LHSDKDemo\LHSDKDemo文件夹下，查看AppDelegate.m文件和ViewController.m文件。
+下载[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip)，并解压，在lumi_iOS_SDK\LHSDKDemo\LHSDKDemo文件夹下，查看AppDelegate.m文件和ViewController.m文件。
 
 步骤一：调用LHOAuthAIOT接口进行授权操作，示例代码：
 
