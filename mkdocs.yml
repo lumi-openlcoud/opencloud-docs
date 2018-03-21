@@ -59,3 +59,7 @@ pages:
 - 常见问题: 
   - 应用开发: FAQ/FAQ-development.md
   - 部署与运维: FAQ/FAQ-installation.md
+- 开发者资源: 
+  - SDK下载: sdk/sdk_total.md
+  - Android SDK开发文档: sdk/android-sdk.md
+  - IOS SDK OC版开发文档: sdk/ios-sdk.md
