@@ -90,6 +90,8 @@ Camera Hub is a panorama security application which applies to home, store, ware
 
 
 
+
+
 ## **Control products**
 
 Control products are devices that complete actions according to relevant control instructions, such as power on and rotation, and are mainly used for the execution of scene and automation.
@@ -372,6 +374,8 @@ The functions of buttons of the Dimmer are described below.
 - Output mode: N-MOSFET open-drain constant voltage PWM common-ground output
 - Load Type: Common anode single color LED dimming light or light bar. Other load types need corresponding converter
 - Load Capacity: 5A/channel, 180W@12VDC or 360W@24VDC
+
+
 
 
 
