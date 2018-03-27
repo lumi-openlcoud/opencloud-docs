@@ -47,6 +47,7 @@ pages:
 - 新手帮助: 
   - AIOT开放平台介绍: index.md
   - 产品介绍: guideline/product-discription.md
+  - Product Discription: guideline/en-product-discription.md
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
@@ -55,6 +56,7 @@ pages:
   - Gateway LAN Communication Protocol: development/en-gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
+  - Installation and Configuration Guide: implementation/en-installation-and-configuration.md
   - 故障诊断指南: blank.md
 - 常见问题: 
   - 产品功能: faq/faq-product.md

@@ -18,21 +18,13 @@
 
 &nbsp;
 
-<u>**Q：如何查询某个资源一天的历史数据？**</u>
+**<u>Q：调用查询资源历史数据的API（/open/res/query/history/option），不设置行号，默认是查询多少条数据？</u>** 
+**A：**默认是50条。count可以设置大于50条，但要注意若count设置太大，容易出现超时。
 
-**A：**调用查询资源历史数据的API（/open/res/query/history/option），不设置行号，仅设置时间和资源即可。例如：
+&nbsp;
 
-```
-{
-    "openId": "xxxx",
-    "did": "lumi.158d0001xxxx",
-    "startDate": "2018-01-19",
-    "endDate": "2018-01-19",
-    "option": [
-        "switch_status"
-    ]
-}
-```
+**<u>Q：为什么接口返回结果一直提示“请求参数错误”？</u>** 
+**A：**1、接口的请求body和返回结果都采用JSON格式，请检查格式是否正确；2、请检查参数名称是否正确。 
 
 &nbsp;
 
