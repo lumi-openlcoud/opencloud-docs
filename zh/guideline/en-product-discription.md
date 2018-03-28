@@ -438,11 +438,11 @@ Motion Sensor can accurately capture the movement of human or pets. With a detec
 
 **<u>Function Description</u>**
 
-Temperature and Humidity Sensor is an industrial grade sensor that can measure and record real-time environmental temperature. The user can check current temperature and humidity and their historical change curve via mobile APP. Installation method: just attach it; easy installation without using any tool.
+Temperature and Humidity Sensor is an industrial grade sensor that can measure and record real-time environmental temperature. The user can check current temperature, humidity,  atmospheric pressure and their historical change curve via mobile APP. Installation method: just attach it; easy installation without using any tool.
 
 - **Intelligent Linkage**: This device can work with other intelligent devices to achieve scene linkage. For example, when detecting that the indoor air is too dry, the humidifier connected with Smart Plug will turn on to improve indoor humidity status. 
-- **Temperature and Humidity Abnormity Prompt**: When the temperature and humidity in the house deviates from the comfort zone, the mobile phone will receive a prompt message which helps analyze and improve the temperature and humidity condition in the house. 
-- **Temperature and Humidity Reporting Mechanism**: Temperature: When the temperature variation exceeds ±0.5℃, report the temperature or report together with humidity; Humidity: When the humidity variation exceeds ±6%, report the humidity or report together with temperature. 
+- **Temperature, Humidity and Atmospheric Pressure Abnormity Prompt**: When the temperature, humidity and atmospheric pressure in the house deviates from the comfort zone, the mobile phone will receive a prompt message which helps analyze and improve the temperature and humidity condition in the house. 
+- **Temperature and Humidity Reporting Mechanism**: 1) Temperature: When the temperature variation exceeds ±0.5℃, report the temperature or report together with humidity; 2) Humidity: When the humidity variation exceeds ±6%, report the humidity or report together with temperature. 3) Report by heartbeat.
 
 **<u>Basic Parameters</u>**
 
