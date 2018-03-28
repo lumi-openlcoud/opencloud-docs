@@ -296,26 +296,29 @@ Precautions before installation:
 
 - **Screw installation mode**
 
-  1. Press on the position circled in the figure below with your thumb, then rotate counterclockwise to remove the base plate. 
+  1.Press on the position circled in the figure below with your thumb, then rotate counterclockwise to remove the base plate. 
 
   ![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_sensor_natgas3.png)
 
-  2. Select an appropriate installation position and use a pencil to make the drilling position.
+  2.Select an appropriate installation position and use a pencil to make the drilling position.
 
   ![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_sensor_natgas4.png)
 
-  3. Use an impact drill (bit diameter: 6mm) to drill a hole at the marked position, and then insert the expansion rubber stopper into the hole. 
-  4. Use apping screw to fix the base plate and press the body of the detector on the base plate, and then rotate clockwise to clip the detector into the base plate. 
+  3.Use an impact drill (bit diameter: 6mm) to drill a hole at the marked position, and then insert the expansion rubber stopper into the hole. 
+
+  4.Use apping screw to fix the base plate and press the body of the detector on the base plate, and then rotate clockwise to clip the detector into the base plate. 
 
   ![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_sensor_natgas5.png)
 
-  5. Use the attached adaptor to provide power input for the detector. r:rgb(;Jďż˝ďż˝
+  5.Use the attached adaptor to provide power input for the detector. 
 
 - **Sticking installation mode**
 
-  1. Stick the double-sided 3M sticker in the box to the base plate on the back of the product (without removing the base plate). 
-  2. Clean the surface of the installation position, remove the protective film and stick it to the installation position.
-  3. Use the attached adaptor to provide power input for the detector.
+  1.Stick the double-sided 3M sticker in the box to the base plate on the back of the product (without removing the base plate). 
+
+  2.Clean the surface of the installation position, remove the protective film and stick it to the installation position.
+
+  3.Use the attached adaptor to provide power input for the detector.
 
 ##### Installation verification
 
@@ -351,15 +354,15 @@ Precautions before use:
 
 - **Screw installation mode **
 
-  1. Select an appropriate installation position and use a pencil to make the drilling position.
+  1.Select an appropriate installation position and use a pencil to make the drilling position.
 
   ![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_sensor_smoke1.png)
 
-  2. Use an impact drill (bit diameter: 6mm) to drill a hole at the marked position, and then insert the expansion rubber stopper into the hole.
+  2.Use an impact drill (bit diameter: 6mm) to drill a hole at the marked position, and then insert the expansion rubber stopper into the hole.
 
   ![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/implementation/installation-and-configuration/install_sensor_smoke2.png)
 
-  3. Press the body of the alarm on the base plate, and then rotate clockwise to clip the detector into the base plate.
+  3.Press the body of the alarm on the base plate, and then rotate clockwise to clip the detector into the base plate.
 
   > **Note:** If no batteries are mounted on the alarm, the body of the alarm can't be clipped into the base plate. 
 
@@ -367,9 +370,11 @@ Precautions before use:
 
 - **Sticking installation mode**
 
-  1. Stick the double-sided 3M sticker in the box to the base plate on the back of the product
-  2. Clean the surface of the installation position, remove the protective film and stick it to the installation position.
-  3. Press the body of the alarm on the base plate, and then rotate clockwise to clip the detector into the base plate.
+  1.Stick the double-sided 3M sticker in the box to the base plate on the back of the product
+
+  2.Clean the surface of the installation position, remove the protective film and stick it to the installation position.
+
+  3.Press the body of the alarm on the base plate, and then rotate clockwise to clip the detector into the base plate.
 
   > **Note:** If no batteries are mounted on the alarm, the body of the alarm can't be clipped into the base plate.
 
@@ -469,20 +474,23 @@ The differences between scene and automation are as followsďź
 
 Set a scene as follows:
 
-1. Open Aqara App, click "Device List" to go to "Scene".
-2. Click "+" in the top right corner, select to use system default scene or add a custom scene. 
+1.Open Aqara App, click "Device List" to go to "Scene".
+
+2.Click "+" in the top right corner, select to use system default scene or add a custom scene. 
 
 - Default scene (Get up, Get home, Leave home, Sleep): Select any default scene and then enter "Edit Scene" page. On the page, there are relevant default actions, you may delete actions you don't need and add actions you need. 
 - Custom scene: Click "Add Custom Scene" at the bottom of the page, enter "Scene Name", click "+" behind the action to add the action. 
 
-3. After adding the action, click "Try" in the top right corner for confirmation of the set effect. 
-4. Click "Save" to complete the setting. The name of the scene saved is displayed on the page of "Scene" and the icon of the scene saved is displayed in the control item on the "Home Page". 
-5. There are two ways to execute a scene: 
+3.After adding the action, click "Try" in the top right corner for confirmation of the set effect. 
+
+4.Click "Save" to complete the setting. The name of the scene saved is displayed on the page of "Scene" and the icon of the scene saved is displayed in the control item on the "Home Page". 
+
+5.There are two ways to execute a scene: 
 
 - On "Scene" page, click "Execute Once" button behind the scene to be executed. 
 - In the control item on the "Home Page", click the icon of the scene to be executed. 
 
-6. Delete a scene. On scene page, click the scene to be deleted and then click "detele" in the top right corner of the "Edit Scene" page. 
+6.Delete a scene. On scene page, click the scene to be deleted and then click "detele" in the top right corner of the "Edit Scene" page. 
 
 > Note: 
 >
@@ -497,21 +505,18 @@ Set a scene as follows:
 
 Set an automation as follows: 
 
-1. Open Aqara App, click "Automation". 
+1.Open Aqara App, click "Automation". 
 
-
-2. Click "+" in the top right corner, use the automation recommended by the system, or create a custom automation: 
+2.Click "+" in the top right corner, use the automation recommended by the system, or create a custom automation: 
 
 - Automation recommended by the system (Home Arm and Away Arm): Select any automation and enter "Edit Automation" page. On the page, there are default set conditions and actions to be executed, you may add or delete the settings according to your need.  
 - Create a custom automation: Click "Create a Custom Automation" at the bottom of the page, enter "Automation Name", click "+", set activating conditions and actions to be executed. 
 
-3. Click "Save" to complete the setting. 
+3.Click "Save" to complete the setting. 
 
+4.On "Automation" page, automation can be activated by moving the slider behind the automation name. When the set automation conditions are set, corresponding action will be executed automatically. 
 
-4. On "Automation" page, automation can be activated by moving the slider behind the automation name. When the set automation conditions are set, corresponding action will be executed automatically. 
-
-
-5. Delete an automation. On automation page, click the automation to be deleted and then click "Delete" in the top right corner of the "Edit Automation" page. 
+5.Delete an automation. On automation page, click the automation to be deleted and then click "Delete" in the top right corner of the "Edit Automation" page. 
 
 ### **Examples **
 
@@ -523,21 +528,18 @@ Requirement: When you get home, close the indoor camera and turn on the lamp in 
 
 Open Aqara App, enter "Device List"-"Scene" page, click "+" in the top right corner to add a scene. System default scenes include Go home scene. You can use and set this scene directly, or add a new custom scene. Here explain this by taking "Add a Custom Scene" for example. 
 
-1. Click "Add a Custom Scene" at the bottom of the page and enter the name of the scene as "Go home". 
+1.Click "Add a Custom Scene" at the bottom of the page and enter the name of the scene as "Go home". 
 
-
-2. After clicking "+" behind "Add Actions", set actions in proper order according to the flow chart: 
+2.After clicking "+" behind "Add Actions", set actions in proper order according to the flow chart: 
 
 - Click "Camera Hub", and select "Turn off". 
 - Click "Wall Switch" connected with the lamp in the living room, and select "Turn on". 
 - Click "Air Conditioning Controller", and select "Turn on". 
 - Click "Plug" connected with the TV, and select "Turn on". 
 
-3. Click "Try" to verify whether actions for the scene can be executed correctly. 
+3.Click "Try" to verify whether actions for the scene can be executed correctly. 
 
-
-4. Click "Save" to complete the setting. 
-
+4.Click "Save" to complete the setting. 
 
 
 **Automation **(Take "Away Arm" for example) 
@@ -548,21 +550,18 @@ Requirement: During office hours on a working day (from 9:00 am to 6:00 pm), whe
 
 Open Aqara App, enter "Automation" page, click "+" in the top right corner to add an automation. There is an Away Arm automation by system default. You can use and set this automation directly, or add a new custom automation. Here explain this by taking "Add a Custom Automation" for example.  
 
-1. Click "Add a Custom Automation" at the bottom of the page and enter the name of the automation as "Away Arm". 
+1.Click "Add a Custom Automation" at the bottom of the page and enter the name of the automation as "Away Arm". 
 
-
-2. Activate conditions and select "Meet any of the Conditions", Click "+" to add specific conditions. 
+2.Activate conditions and select "Meet any of the Conditions", Click "+" to add specific conditions. 
 
 - Click "Door and Window Sensor", and select "The Moment When the Door or Window is Opened". 
 - Click "Motion Sensor", and select "The Moment When Someone Passes By". 
 
-3. After adding the specific conditions, click the icons behind "Door and Window Sensor" and "Motion Sensor", select "Period", set "Repeat setting" as "From Monday to Friday", set the "Starting Time" as "09:00", and set the "Ending Time" as "18:00". 
+3.After adding the specific conditions, click the icons behind "Door and Window Sensor" and "Motion Sensor", select "Period", set "Repeat setting" as "From Monday to Friday", set the "Starting Time" as "09:00", and set the "Ending Time" as "18:00". 
 
-
-4. Click "+" behind "Execute in Proper Order" and add actions to be executed. 
+4.Click "+" behind "Execute in Proper Order" and add actions to be executed. 
 
 - Click "Air Conditioning Controller", select "Alarm", set alarm ring (Police Car No. 1) and volume (60), Click "Confirm". 
 - Click "Send the Information to Mobile Phone", select "Send Alarm Information + Short Message". 
 
-5. Click "Save" to complete the setting. 
-
+5.Click "Save" to complete the setting. 
