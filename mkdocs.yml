@@ -23,7 +23,7 @@ theme:
 extra:
   search: 
     language: 'en'
-  disqus: 'mkdocs-material'
+  disqus: 
   social:
     - type: 'globe'
       link: 'https://opencloud.aqara.cn'
@@ -33,6 +33,11 @@ extra:
       link: 'https://weibo.com/u/5232002130'
     - type: 'twitter'
       link: 'https://twitter.com/squidfunk'
+
+# Google Analytics
+google_analytics:
+  - 'UA-116424606-1'
+  - 'auto'
 
 # Extensions
 markdown_extensions:
