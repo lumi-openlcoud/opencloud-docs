@@ -65,15 +65,15 @@ All devices shall be installed or placed properly according to practical environ
 
 ### Hub devices
 
-Hub devices include Hub, Air Conditioning Controller and Camera Hub. 
+Now only one hub device that can be used directly on the Aqara APP is **Air Conditioning Controller (advanced)**.
 
-In addition to Hub function, Air Conditioning Controller can also fast implement the intellectualization reconstruction of traditional air conditioner; Camera Hub also has security camera function. Therefore, their installation position can be classified into two categories: first one is "Hub Function Priority" and the second one is "Air Conditioning Control Priority" or "Camera Priority". Users can choose the installation position according to their actual needs. 
+In addition to Hub function, Air Conditioning Controller can also fast implement the intellectualization reconstruction of traditional air conditioner. Therefore, their installation position can be classified into two categories: first one is "Hub Function Priority" and the second one is "Air Conditioning Control Priority". Users can choose the installation position according to their actual needs. 
 
 
 
 **Hub Function Priority**
 
-Install Hub devices (Hub, Air Conditioning Controller or Camera Hub) in the central position of the home as far as possible and keep it 2~6m away from the wireless router to ensure wireless signal coverage and the stability of the devices. 
+Install Hub devices (Air Conditioning Controller) in the central position of the home as far as possible and keep it 2~6m away from the wireless router to ensure wireless signal coverage and the stability of the devices. 
 
 > **Note:** For homes over 70 square meters, increase the quantity of Hubs in different areas according to the practical situation. 
 
@@ -86,10 +86,6 @@ Plug the Air Conditioning Controller in the outlet for air conditioner (16A), th
 > **Note:** Air Conditioning Controller controls the air conditioner with infrared. Therefore, there should be no barrier between the Air Conditioning Controller and the infrared panel of the air conditioner. 
 
 ![ĺŽčŁçŠşč°äź´äžŁ](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_condition.png)
-
-**Camera Priority **
-
-Camera Hub is provided with a magnet at the bottom which allows the Camera Hub to be placed or absorbed on the wall or ceiling. Please place the Camera Hub at a suitable monitoring location. 
 
 
 

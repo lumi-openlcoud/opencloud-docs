@@ -65,31 +65,6 @@ The status of Air Conditioning Controller indicator is described below:
 
 
 
-### **Camera Hub**
-
-![摄像机](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.camera.png)
-
-**<u>Function Description</u>**
-
-Camera Hub is a panorama security application which applies to home, store, warehouse etc. With both security camera and hub functions, it can connect various ZigBee sub-devices such as Motion Sensor and Door and Window Sensor to achieve linkage scenes such as alarm triggering and local control. 
-
-- **Linkage Alarm**: Camera Hub works with Door and Window Sensor and Motion Sensor to constitute a precision home security network system. When the user isn't at home or when the user is sleeping at home, in case of anybody breaking into the house, the security system will send an alarm and meanwhile shoot and send a 12s small video to mobile APP.  
-- **Super High Definition Night Vision**: This device is provided with 180° panoramic and 1080P high-definition camera which is able to capture clear pictures even in a dark room. 
-- **Local Storage**: This device supports local storage of data in SD card. Alarm video and automation linkage video can be stored in the cloud for three months. Triple data encryption modes, i.e., mutual identity authentication, data transmission encryption and cloud storage encryption, ensure the confidentiality of the videos. 
-- **Auto Sleep**: This devices supports linkage sleep, timing sleep and APP sleep. The user may select automatic sleep of camera when the user doesn't want to be shot in order to protect privacy. 
-
-**<u>Basic Parameters</u>**
-
-- Product dimension: 99 x 77 x 70mm
-- Wireless type: Wi-Fi, ZigBee
-- Input voltage: 5V 1A
-- Operating temperature: -10℃~+40℃
-- Operating humidity: 0~95% RH, non-condensing
-- Standard: Q/QLML018-2017
-- Storage support: Micro SD card (support more than 8G)
-
-
-
 
 
 ## **Control products**
