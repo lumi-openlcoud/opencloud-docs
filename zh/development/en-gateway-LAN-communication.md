@@ -46,7 +46,7 @@ Specific operations for obtaining the gateway KEY are as follows:
 
 ### **Discover the gateway device**
 
-The device discovery operates in unencrypted mode and use **multicast** (**IP: 224.0.0.50  peer_port: 4321**) to discover the gateway device on the LAN.
+The device discovery operates in unencrypted mode and use **multicast** (**IP: 224.0.0.50  peer_port: 4321 protocal: UDP**) to discover the gateway device on the LAN.
 
 Send the "whois" command in multicast mode:
 
