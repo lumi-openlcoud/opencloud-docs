@@ -6,11 +6,11 @@
 
 ## 前期准备
 
-1、访问并登录AIOT开放平台网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
+1、访问并登录[AIOT开放平台](https://opencloud.aqara.cn/)网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
 2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip)，并解压，在LHSDKLib文件夹下可查看SDK主要文件：libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h；在LHSDKDemo文件夹可查看Demo。
+3、下载并解压[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip)，在LHSDKLib文件夹下可查看SDK主要文件：libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h；在LHSDKDemo文件夹可查看Demo。
 
 - **libLumiSDK.a**：静态连接库
 
