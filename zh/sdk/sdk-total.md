@@ -9,9 +9,10 @@
 
 ## 消息推送SDK
 
-| 语言       | 下载                                       | 使用说明 |
-| -------- | ---------------------------------------- | ---- |
-| Java SDK | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_java.zip) | NA   |
+| 语言       | 下载                                       | 使用说明                                     |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| Java SDK | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_java.zip) | [开发文档](http://docs.opencloud.aqara.cn/sdk/java-sdk/) |
+| PHP SDK  | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_php.zip) | [开发文档](http://docs.opencloud.aqara.cn/sdk/php-sdk/) |
 
 &nbsp;
 

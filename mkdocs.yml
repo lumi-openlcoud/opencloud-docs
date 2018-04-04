@@ -71,3 +71,5 @@ pages:
   - SDK下载: sdk/sdk-total.md
   - Android SDK开发文档: sdk/android-sdk.md
   - IOS SDK OC版开发文档: sdk/ios-sdk.md
+  - Java SDK开发文档: sdk/java-sdk.md
+  - PHP SDK开发文档: sdk/php-sdk.md
