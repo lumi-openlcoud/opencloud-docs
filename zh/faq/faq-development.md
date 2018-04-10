@@ -37,3 +37,16 @@
 > 注意：当前仅“**升级版空调伴侣**”支持局域网通信协议功能。
 
 &nbsp;
+
+<u>**Q：whois、discovery命令单播信息接收正常，无法收到设备心跳和状态上报信息？**</u>
+
+**A：**设备心跳和状态上报都是组播方式发送，而很多路由器对组播都有不同形式的限制，可检查路由器后台的防火墙规则是否有过滤组播ip（224.0.0.50），或者更换路由器。
+
+&nbsp;
+
+<u>**Q：网关KEY对token进行AES-CBC 128加密时，无法获取到正确的key？**</u>
+
+**A：**对于某些开发语言（如：Java）需使用“NoPadding”的填充方式。例如：使用Cipher类，cipher = Cipher.getInstance(algorithmStr)；其中algorithmStr = "AES/CBC/ NoPadding"。
+
+&nbsp;
+
