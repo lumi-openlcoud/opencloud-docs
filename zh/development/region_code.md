@@ -2,7 +2,7 @@
 
 ## 部署区域
 
-| 中文名  | 环境代码 |         英文名          |           域名            |
+| 中文名  | 环境代码 |         英文名          |         API调用域名         |
 | :--: | :--: | :------------------: | :---------------------: |
 | 亚太地区 |  AP  | Asia-Pacific regions | aiot-open-ap.aqara.com  |
 | 大陆地区 |  CN  |    Mainland China    | aiot-open-3rd.aqara.cn  |
