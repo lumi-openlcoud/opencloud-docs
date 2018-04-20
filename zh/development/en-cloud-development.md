@@ -218,7 +218,7 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 For example, you can query the details of a device by calling the interface using the following methods:
 
-- Request URL：https://rpc.opencloud.aqara.cn/open/device/query
+- Request URL：https://aiot-open-3rd.aqara.cn/open/device/query
 - Request mothod:  HTTP POST （application/json）
 - Request header example
 

@@ -214,7 +214,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 例如，通过调用接口查询一个设备的详细信息，调用方法如下：
 
-- 请求URL：https://rpc.opencloud.aqara.cn/open/device/query
+- 请求URL：https://aiot-open-3rd.aqara.cn/open/device/query
 
 - 请求方式： HTTP POST （application/json）
 
