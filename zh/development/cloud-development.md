@@ -200,7 +200,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ### API调用规范
 
-1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，统一域名为：**https://rpc.opencloud.aqara.cn**。
+1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**，其他地区域名请参考[国家（地区码）](http://docs.opencloud.aqara.cn/development/region_code/)。
 
 2. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
 

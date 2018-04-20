@@ -208,7 +208,7 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 ### **API call specification**
 
-1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name is **https://rpc.opencloud.aqara.cn**.
+1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (Area Code)](http://docs.opencloud.aqara.cn/development/region_code/).
 2. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
 3. The body of the request and the results returned through the interface using the **JSON format**. If the developer uses another format, the "request parameter error" will be returned.
 4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT POpen Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
