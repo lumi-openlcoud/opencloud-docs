@@ -105,6 +105,8 @@ AIOT Open Platform implements the OAuth 2.0 standard authorization code (authori
 
 Detailed OAuth 2.0 authorization process is as follows:
 
+> **Note:** The URL in this chapter takes “Mainland China( https://aiot-oauth2.aqara.cn/)” as an example, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
+
 #### **Step 1 Request authorization code**
 
 First, third-party applications need to redirect users to the AIOT OAuth 2.0 service through a web browser. After logging in successfully using **the Aqara APP account**, the AIOT Open Platform returns the user's authorization code. The validity period of the authorization code is 10 minutes. Please complete the following process within 10 minutes.
@@ -208,7 +210,7 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 ### **API call specification**
 
-1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**.
+1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
 2. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
 3. The body of the request and the results returned through the interface using the **JSON format**. If the developer uses another format, the "request parameter error" will be returned.
 4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT POpen Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.

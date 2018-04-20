@@ -98,6 +98,8 @@ AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式�
 
 OAuth 2.0 详细授权流程如下：
 
+> 注意：本章节URL示例以“中国大陆地区（https://aiot-oauth2.aqara.cn/）”为例进行说明，若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.cn/development/region_code)文档更改域名。
+
 #### 步骤1 请求授权码
 
 首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara APP账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
@@ -200,7 +202,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ### API调用规范
 
-1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。
+1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.cn/development/region_code)文档更改域名。
 
 2. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
 

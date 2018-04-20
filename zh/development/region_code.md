@@ -2,18 +2,18 @@
 
 ## 部署区域
 
-| 中文名  | 环境代码 |         英文名          |         API调用域名         |
-| :--: | :--: | :------------------: | :---------------------: |
-| 亚太地区 |  AP  | Asia-Pacific regions | aiot-open-ap.aqara.com  |
-| 大陆地区 |  CN  |    Mainland China    | aiot-open-3rd.aqara.cn  |
-| 欧洲地区 |  EU  |   European regions   | aiot-open-eu.aqara.com  |
-| 美洲地区 | USA  |   American regions   | aiot-open-usa.aqara.com |
+| 中文名  |  代码  |         英文名          |         OAuth认证域名          |         API接口域名         |
+| :--: | :--: | :------------------: | :------------------------: | :---------------------: |
+| 亚太地区 |  AP  | Asia-Pacific regions | aiot-oauth2-ap.aqara.com/  | aiot-open-ap.aqara.com  |
+| 大陆地区 |  CN  |    Mainland China    |   aiot-oauth2.aqara.cn/    | aiot-open-3rd.aqara.cn  |
+| 欧洲地区 |  EU  |   European regions   | aiot-oauth2-eu.aqara.com/  | aiot-open-eu.aqara.com  |
+| 美洲地区 | USA  |   American regions   | aiot-oauth2-usa.aqara.com/ | aiot-open-usa.aqara.com |
 
-
+> 注意：OAuth2.0认证和API均采用HTTPS协议。
 
 ## 国家地区区域划分
 
-| 地区代码 |    中文名     | 环境代码 |           英文名           |
+| 地区代码 |    中文名     |  代码  |           英文名           |
 | :--: | :--------: | :--: | :---------------------: |
 | 004  |    阿富汗     |  AP  |       Afghanistan       |
 | 012  |   阿尔及利亚    |  AP  |         Algeria         |
