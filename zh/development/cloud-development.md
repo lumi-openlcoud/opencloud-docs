@@ -436,3 +436,38 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | ERROR_THIRD   | 807  | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_ILLEGAL | RefreshToken有误              |
 | ERROR_THIRD   | 808  | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_EXPIRED | RefreshToken过期              |
 | ERROR_OTA     | 901  | ERROR_OTA_FIRMWARE_NOT_EXIST             | 不存在该Firmware                |
+
+## 资源定义
+
+云端开发的完整资源请查看“资源授权”页面，以下为部分特殊资源的定义说明。
+
+资源：**ac_state**
+
+空调命令压缩格式（4 bytes）: 
+
+|0 1 2 3|4 5 6 7|8 9 10 11|12 13 14 15|16 17 18 19 20 21 22 23|24 25 26 27 28 29 30 31|
+
+| 位置        | 值                                        | 描述      |
+| --------- | ---------------------------------------- | ------- |
+| [0 ~3]    | 0: off; 1: on; 2: toggle; E: circle; F: invalid; else: reserve | 开关      |
+| [4 ~ 7]   | 0: heat; 1: cool; 2: auto; 3: dry; 4: wind; E: circle; F: invalid; else: reserve | 模式      |
+| [8 ~ 11]  | 0: low; 1: middle; 2: high; 3: auto; E: circle; F: invalid; else: reserve | 风速      |
+| [12 ~ 13] | 0: horizontal; 1: vertical; 2: circle; 3: invalid; | 风向      |
+| [14 ~ 15] | 0: swing; 1: fix; 2: circle; 3: invalid; | 扫风      |
+| [16 ~ 23] | 0 ~ 240; 243: up; 244: down; FF: invalid | 温度      |
+| [24]      | 默认为0                                     | 扩展位     |
+| [25]      | 默认为0                                     | 是否为压缩码  |
+| [26]      | 默认为0                                     | LED显示   |
+| [27]      | 0: 开关命令; 1: 非开关命令                        | 是否为开关命令 |
+| [28 ~ 31] | 00: 无状态; 01: 有状态; 02: 协议; 03: 推荐场景; 04: 半状态; 11: 忽略 | 空调类型    |
+
+例如：
+
+有状态开空调（Set_on）：1FFFFF01（ac_state值为“536870657”）
+
+有状态关空调（Set_off）：0FFFFF01（ac_state值为“268435201”）
+
+推荐场景：开窗关空调：0FFFFF03（ac_state值为“268435203”）
+
+> 注意："ac_state"值必须采用10进制数。
+
