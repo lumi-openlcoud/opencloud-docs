@@ -392,17 +392,17 @@ There are three installation modes for wireless switch:
 
 
 
-## Device network access
+## Add Device
 
-In the device network access stage, Aqara products can be classified into two categories: Hub device and Sub-device. Hub device is a device with hub function and is used to connect and manage multiple sensors and controllers. Sub-device includes sensors and controllers. All Sub-devices must be used together with hub devices. Therefore, before setting Sub-device on the App, you must set hub device to ensure the normal wireless communication between Wi-Fi and ZigBee. 
+In the add device stage, Aqara products can be classified into two categories: Hub device and Sub-device. Hub device is a device with hub function and is used to connect and manage multiple sensors and controllers. Sub-device includes sensors and controllers. All Sub-devices must be used together with hub devices. Therefore, before setting Sub-device on the App, you must set hub device to ensure the normal wireless communication between Wi-Fi and ZigBee. 
 
 
 
-### **Hub device network access**
+### **Hub device**
 
 Add hub device to the App as follows: 
 
-**Step1** Add device 
+**Step1** Choose device 
 
 Open Aqara App, Click "+" in the top right corner of the "Device List" interface, select corresponding hub device under the Hub menu, and set the device according to the prompt. 
 
@@ -429,11 +429,11 @@ After adding Air Conditioning Controller successfully, you should pair it with t
 
 
 
-### **Sub-device network access**
+### **Sub-device**
 
 Add sub-device to the App as follows: 
 
-**Step1** Add sub-device 
+**Step1** Choose sub-device 
 
 Open Aqara App, Click "+" in the top right corner of the "Device List" interface, select corresponding hub device under the Hub menu, and set the device according to the prompt. 
 
