@@ -440,3 +440,35 @@ Each time a third-party application calls an interface, it may get a return code
 | ERROR_THIRD   | 808             | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_EXPIRED | RefreshToken expired                     |
 | ERROR_OTA     | 901             | ERROR_OTA_FIRMWARE_NOT_EXIST             | The Firmware selected does not exist     |
 
+## Resource definition
+
+Please go to "resource permission" page to get all resource of cloud development, below is a definition of some special resoures.
+
+Resource: **ac_state**
+
+Compression mode of air conditioning command (4 bytes):  (binary)
+
+|0 1 2 3|4 5 6 7|8 9 10 11|12 13 14 15|16 17 18 19 20 21 22 23|24 25 26 27 28 29 30 31|
+
+| Position  | Data                                     | Description           |
+| --------- | ---------------------------------------- | --------------------- |
+| [0 ~3]    | 0: off; 1: on; 2: toggle; E: circle; F: invalid; else: reserve | switch                |
+| [4 ~ 7]   | 0: heat; 1: cool; 2: auto; 3: dry; 4: wind; E: circle; F: invalid; else: reserve | mode                  |
+| [8 ~ 11]  | 0: low; 1: middle; 2: high; 3: auto; E: circle; F: invalid; else: reserve | speed                 |
+| [12 ~ 13] | 0: horizontal; 1: vertical; 2: circle; 3: invalid; | wind direction        |
+| [14 ~ 15] | 0: swing; 1: fix; 2: circle; 3: invalid; | sweeping              |
+| [16 ~ 23] | 0 ~ 240; 243: up; 244: down; FF: invalid | temperature           |
+| [24]      | default: 0                               | extension digit       |
+| [25]      | default: 0                               | compression code      |
+| [26]      | default: 0                               | LED display           |
+| [27]      | 0: switch command; 1: non-switching command | switch command        |
+| [28 ~ 31] | 00: stateless; 01: stateful; 02: protocal; 03: recommended scenario; 04: semi-state; 11: ignore | air conditioning type |
+
+> Note:
+>
+> - [16-23] The temperature value (0~244) is decimal. If temperature is 25 degrees, then binary is 00011001.
+> - The value of "ac_state" must be decimal.
+> - Mode, speed and wind direction should not be F(invaild), it will probably control failure because the value cannot be recognized. Before setting the value of ac_state, it is better to query the current value of ac_state by API(/open/res/query/multi/option/extended), then change the value according to the requirement.
+
+For example: "open air conditioning, mode is cool, speed is low, wind direction is horizontal, sweeping is swing and temperature is 25 degrees". 
+According to the above-metioned, binary is 00010001000000000001100100000001, convert binary to decimal, then the value of ac_state is “285219073”.
