@@ -65,7 +65,7 @@ pages:
   - Installation and Configuration Guide: implementation/en-installation-and-configuration.md
   - 故障诊断指南: blank.md
 - 常见问题: 
-  - 产品功能: faq/faq-product.md
+  - 产品问题: faq/faq-product.md
   - 应用开发: faq/faq-development.md
   - 部署与运维: faq/faq-installation.md
 - 开发者资源: 

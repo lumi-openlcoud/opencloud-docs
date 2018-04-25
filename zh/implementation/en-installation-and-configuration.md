@@ -15,7 +15,7 @@ Aqara products include electrical devices which should be installed and commissi
 | Preparations before Installation | Make a list of hardware devices to be prepared before installation. |
 | Installation and LogIn Aqara App | Introduce how to download and install Aqara App and register an account. |
 | Device installation              | Introduce installation precautions, requirements and processes of Aqara devices. |
-| Device network access            | How to add Hub and Sub-device in Aqara App. |
+| Add device                       | How to add Hub and Sub-device in Aqara App. |
 | Scene and automation setting     | How to set scenes and automation in Aqara App so as to achieve intelligent linkage among different devices. |
 
 
@@ -392,7 +392,7 @@ There are three installation modes for wireless switch:
 
 
 
-## Add Device
+## Add device
 
 In the add device stage, Aqara products can be classified into two categories: Hub device and Sub-device. Hub device is a device with hub function and is used to connect and manage multiple sensors and controllers. Sub-device includes sensors and controllers. All Sub-devices must be used together with hub devices. Therefore, before setting Sub-device on the App, you must set hub device to ensure the normal wireless communication between Wi-Fi and ZigBee. 
 
