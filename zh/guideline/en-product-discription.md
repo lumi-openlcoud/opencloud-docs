@@ -83,6 +83,7 @@ Based on ZigBee wireless communication protocol, Wall Outlet is a fixed plug ado
 - **Intelligent Linkage**: This device can work with other intelligent devices to make the ordinary appliances at home become intelligent instantly and achieve scene linkage. For example, when the user gets home, the water dispenser connected with Wall Outlet will turn on automatically and turn off when the user isn't at home. 
 - **Power Statistics**: This device supports real-time power statistics and precision measurement of the actual power used by the appliance and achieves power consumption visualization. The power reporting mechanism of Wall Outlet is as follows: Report when the variation exceeds 3% or 5W or adopt heartbeat type reporting mode (heartbeat cycle is 5-8 minutes). 
 - **Over-temperature and Overload Protection**: This device supports appliances with a maximum load of 2,500W. 
+- **Routing Function**: Wall Outlet has ZigBee signal relay function. It can expand the coverage of Hub ZigBee signal and act as a bridge between the Hub and Sub-device. 
 
 The status of Wall Outlet indicator is described below:
 
@@ -119,6 +120,7 @@ Based on ZigBee wireless communication protocol, the samrt plug has ultra-low st
 - **Timing Switch: **This device can turn off appliances which do not have to be always in standby status in long term at a specified time to achieve intelligent control of appliances. 
 - **Power-off Memory**: In case of power-off, the Plug will maintain the status before power-off when the power is turned on. 
 - **Charging Protection**: The plug will be turned off automatically when the power is below 2W for half an hour. 
+- **Routing Function**: Smart Plug has ZigBee signal relay function. It can expand the coverage of Hub ZigBee signal and act as a bridge between the Hub and Sub-device. 
 
 **<u>Basic Parameters</u>**
 
