@@ -590,6 +590,30 @@ Report curtain open status:
 }
 ```
 
+### **Wireless Relay Controller (2 Channels)**
+
+（device model：lumi.ctrl_dualchn）
+
+| Attributes | Description            |
+| ---------- | ---------------------- |
+| channel_0  | on/off/toggle (on/off) |
+| channel_1  | on/off/toggle (on/off) |
+
+Example:
+
+Property Report:
+
+```
+{
+   "cmd":"report",
+   "model":"lumi.ctrl_dualchn",
+   "sid":"158d0001112316",
+   "params":[{"channel_0":"on"}] 
+}
+```
+
+
+
 ### **Door and Window Sensor**
 
 (device model：sensor_magnet.aq2)

@@ -84,6 +84,18 @@ Based on ZigBee wireless communication protocol, Wall Outlet is a fixed plug ado
 - **Power Statistics**: This device supports real-time power statistics and precision measurement of the actual power used by the appliance and achieves power consumption visualization. The power reporting mechanism of Wall Outlet is as follows: Report when the variation exceeds 3% or 5W or adopt heartbeat type reporting mode (heartbeat cycle is 5-8 minutes). 
 - **Over-temperature and Overload Protection**: This device supports appliances with a maximum load of 2,500W. 
 
+The status of Wall Outlet indicator is described below:
+
+|      **Indicator status**       |             **Description**              |
+| :-----------------------------: | :--------------------------------------: |
+| Red light keeps flashing slowly |         Network isn't connected          |
+|    Blue light keeps flashing    |        Network is being connected        |
+|        Blue light is on         | Power on and network is connected successfully |
+|    Red light keeps flashing     |     Over-temperature, overload, etc      |
+|         Red light is on         | The neutral line and firewire are reversed |
+
+
+
 **<u>Basic Parameters</u>**
 
 - Product dimension: 86 x 86 x 45mm
@@ -134,6 +146,16 @@ Adopting ZigBee wireless communication protocol, Wall Switch (With Neutral) is a
 - **Power Statistics**: This device supports real-time power statistics and precision measurement of the actual power used by the appliance and achieves power consumption visualization. 
 - **Overload and Over-temperature Protection**: Wall Switch (With Neutral) comprises temperature measurement chip and 5A fuse. When the power of any way of the Wall Switch is greater than 1,500W or the temperature inside the switch reaches 60℃, the switch will cut off the power supply automatically. 
 - **Routing Function**: Wall Switch(With Neutral) has ZigBee signal relay function. It can expand the coverage of Hub ZigBee signal and act as a bridge between the Hub and Sub-device. 
+
+The status of Wall Switch (With Neutral) indicator is described below:
+
+|      **Indicator status**       |             **Description**              |
+| :-----------------------------: | :--------------------------------------: |
+|     Blue light flashes once     |                 Power on                 |
+| Red light keeps flashing slowly |         Network isn't connected          |
+|    Blue light keeps flashing    |        Network is being connected        |
+|        Blue light is on         | Power on and network is connected successfully |
+| Red light keeps flashing fastly |     Over-temperature, overload, etc      |
 
 **<u>Basic Parameters</u>**
 
@@ -543,6 +565,16 @@ Wireless Remote Switch is a new remote switch with low power consumption. There 
 - **Intelligent Linkage**: This device can work with other intelligent devices to achieve scene linkage. For example, it can work with Wall Switch and Smart Plug. When the user isn't at home, it can turn off all appliances with just one click.  
 - **Local Control**: When the network connection is unstable or even broken, the user can manually control the devices without opening the mobile APP. 
 - **Act as Doorbell**: When working with Air Conditioning Controller, Wireless Mini Switch can be pasted outside the door and act as doorbell. And the ring can be customized. 
+
+The status of Wireless Remote Switch indicator is described below:
+
+|   **Indicator status**    |      **Description**       |
+| :-----------------------: | :------------------------: |
+|  Blue light flashes once  |     Send instructions      |
+| Blue light flashes thrice |  Network isn't connected   |
+| Blue light keeps flashing | Network is being connected |
+
+
 
 **<u>Basic Parameters</u>**
 

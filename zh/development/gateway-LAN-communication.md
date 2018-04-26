@@ -692,6 +692,28 @@ JSON报文的基本格式：
 
 
 
+### 双路控制器
+
+（设备类型model：lumi.ctrl_dualchn）
+
+| 属性        | 说明                 |
+| --------- | ------------------ |
+| channel_0 | on/off/toggle（开/关） |
+| channel_1 | on/off/toggle（开/关） |
+
+例如：
+
+属性上报：
+
+```
+{
+   "cmd":"report",
+   "model":"lumi.ctrl_dualchn",
+   "sid":"158d0001112316",
+   "params":[{"channel_0":"on"}] 
+}
+```
+
 
 
 ### 门窗传感器
