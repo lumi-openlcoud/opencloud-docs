@@ -57,10 +57,10 @@ pages:
   - Account and Password: guideline/account-and-password-en.md
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
-  - 网关局域网通讯协议: development/gateway-LAN-communication.md
-  - 国家（地区码）: development/region_code.md
   - Cloud Development Manual: development/en-cloud-development.md
+  - 网关局域网通讯协议: development/gateway-LAN-communication.md
   - Gateway LAN Communication Protocol: development/en-gateway-LAN-communication.md
+  - 国家（地区码）: development/region_code.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
   - Installation and Configuration Guide: implementation/en-installation-and-configuration.md
