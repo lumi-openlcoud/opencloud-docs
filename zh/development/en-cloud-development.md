@@ -293,9 +293,9 @@ Open the "Application Management -> Push Notification" page, click the "Edit" bu
 
 Detailed descriptions of differences between the message encryption and decryption methods:
 
-- Clear text mode: Does not encrypt the message body, low safety factor;
+- Plain Text mode: Does not encrypt the message body, low safety factor;
 - Compatibility mode: The message body contains both plaintext and ciphertext to facilitate debugging and maintenance by developers;
-- Secure mode: The message body is pure ciphertext, requires developers to encrypt and decrypt, has a high safety factor.
+- Safe mode: The message body is pure ciphertext, requires developers to encrypt and decrypt, has a high safety factor.
 
 > **Note**: presently, only the "plain text mode" is supported. Developers are instructed to use clear text mode.
 
@@ -303,9 +303,9 @@ Detailed descriptions of differences between the message encryption and decrypti
 
 ### **Authentication server**
 
-**Clear text mode**
+**Plain Text mode**
 
-In clear text mode, the server authentication method is very simple. After the developer saves the server configuration, the AIOT server sends a POST request to the server address (URL) as configured by the developer. The request will carry an "echostr" parameter(JSON format) that consists of a random string. If the third-party server receives the request, please return the "echostr" parameter without any changes to ensure authentication to the server is successful; otherwise, the authentication fails.
+In plain text mode, the server authentication method is very simple. After the developer saves the server configuration, the AIOT server sends a POST request to the server address (URL) as configured by the developer. The request will carry an "echostr" parameter(JSON format) that consists of a random string. If the third-party server receives the request, please return the "echostr" parameter without any changes to ensure authentication to the server is successful; otherwise, the authentication fails.
 
 Format for sending messages:
 
@@ -324,9 +324,9 @@ The format for returning messages is as follows:
 }
 ```
 
-**Secure mode**
+**Safe mode**
 
-Under secure mode, the server authentication method becomes complicated, and similar to the WeChat Public Platform.  After the developer saves the server configuration, the AIOT server will send a GET request to the  server address (URL) with the following parameters:
+Under safe mode, the server authentication method becomes complicated, and similar to the WeChat Public Platform.  After the developer saves the server configuration, the AIOT server will send a GET request to the  server address (URL) with the following parameters:
 
 - **signature**: encryption signature. The signature consists of the "Token" parameter filled in by the developer with the "timestamp" parameter for the request, and the "nonce" parameter;
 - **timestamp**: timestamp

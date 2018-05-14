@@ -10,9 +10,9 @@ AIOT opencloud website support two registration methods: mobile phone number and
 
 ### Registration Process of Mobile Phone Number
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Register**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign Up**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2 **Enter the phone number, password and SMS verification code, click **Register**.
+**Step2 **Enter the phone number, password and SMS verification code, click **Sign up**.
 
 ![手机号注册](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signup1-phone.png)
 
@@ -44,9 +44,9 @@ Different types of developers need to provide different authentication informati
 
 ### Registration Process of Email
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Register**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign Up**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2** Select **Email registration**, enter email address, password and email verification code, click **Register**.
+**Step2** Select **Email registration**, enter email address, password and email verification code, click **Sign up**.
 
 ![邮箱注册](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signup1-email.png)
 
@@ -83,9 +83,9 @@ After account audit is approved, you can login to AIOT opencloud website to modi
 
 ### Account Login
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Login**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign In**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2** Enter the registered mobile phone number or email and password, click **Login**.
+**Step2** Enter the registered mobile phone number or email and password, click **Sign in**.
 
 ![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
@@ -99,11 +99,11 @@ After account audit is approved, you can login to AIOT opencloud website to modi
 ![个人中心](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin2.png)
 
 
-### Recover Password
+### Reset Password
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Login**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign In**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2** Click **Forget Password** on the left bottom of the page.
+**Step2** Click **Forgot Password** on the left bottom of the page.
 
 ![忘记密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/resetpw1-1.png)
 
@@ -120,7 +120,7 @@ After account audit is approved, you can login to AIOT opencloud website to modi
 
 ### Change Password
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Login**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign In**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
 **Step2** Enter the registered mobile phone number or email and password, click **Login**.
 
@@ -141,9 +141,9 @@ After account audit is approved, you can login to AIOT opencloud website to modi
 
 ### Change Email Address
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Login**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign In**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2** Enter the registered mobile phone number or email and password, click **Login**.
+**Step2** Enter the registered mobile phone number or email and password, click **Sign in**.
 
 ![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
@@ -160,9 +160,9 @@ After account audit is approved, you can login to AIOT opencloud website to modi
 
 ### Change Mobile Phone Number
 
-**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Login**](https://opencloud.aqara.cn/register) button on the top right of the page.
+**Step1** Visit [AIOT opencloud website](https://opencloud.aqara.cn/), click the [**Sign In**](https://opencloud.aqara.cn/register) button on the top right of the page.
 
-**Step2** Enter the registered mobile phone number or email and password, click **Login**.
+**Step2** Enter the registered mobile phone number or email and password, click **Sign in**.
 
 ![登录](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/signin1-1.png)
 
