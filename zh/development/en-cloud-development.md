@@ -78,7 +78,7 @@ You need to wait for 1 to 3 business days after submitting the application form.
 
 APIs are not only used by the AIOT Open Platform to provide an external data interface, but also the main method for developers to query and control equipment. Before developing applications, developers should apply for the API permissions based on their own needs. By default, APPs are automatically assigned common API permissions.
 
-If a developer needs to request access to an API, please visit the "Application Management" page and switch to the "API Access" page, as shown in the following figure.
+If a developer needs to request access to an API, please visit the "Application Management" page and switch to the "API List" page, as shown in the following figure.
 
 - Click the "Apply" button to the right of each row to request access to the API.
 - Click on the "Batch Application" button in the upper right corner and apply for access to multiple APIs using the batch application feature.
