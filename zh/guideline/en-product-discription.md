@@ -451,6 +451,7 @@ Temperature and Humidity Sensor is an industrial grade sensor that can measure a
 - Battery specifications: CR2032
 - Operating temperature: -20℃~+60℃
 - Operating humidity: 0%~100%RH, non-condensing
+- Pressure detection range and accuracy: 30KPa～110KPa，±120Pa
 - Standard: Q/QLML006-2016
 
 ### **Water Leak Sensor**
