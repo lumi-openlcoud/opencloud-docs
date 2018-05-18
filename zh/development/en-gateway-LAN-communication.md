@@ -19,8 +19,9 @@ Introduces the major changes for each version of the Gateway LAN protocol.
 
 | **Update time** | **Document version** | **Update log**                           |
 | --------------- | -------------------- | ---------------------------------------- |
-| 2017-10-09      | V2.0.1               | Modifications: support property report on water leak sensor |
-| 2017-09-20      | V2.0.0               | Modifications: Changes to the basic JSON format; device model value and property name change for some devices; for the property value type, each analog value is assigned to a corresponding numerical value. |
+| 2018.05.18      | V2.0.1               | Add: Cube (sensor_cube.aqgl01), Wall Outlet (ctrl_86plug.aq1), Wall Switch(ctrl_ln1.aq1) |
+| 2017.10.09      | V2.0.1               | Modifications: support property report on water leak sensor |
+| 2017.09.20      | V2.0.0               | Modifications: Changes to the basic JSON format; device model value and property name change for some devices; for the property value type, each analog value is assigned to a corresponding numerical value. |
 
 ## **Encryption mechanism**
 
@@ -352,9 +353,9 @@ Heartbeat report (~ 10 minutes each time):
 }
 ```
 
-### **Wall outlet**
+### **Wall Outlet**
 
-(device model：ctrl_86plug)
+(device model：ctrl_86plug and ctrl_86plug.aq1)
 
 | **Attributes**  | **Description**                          |
 | --------------- | ---------------------------------------- |
@@ -400,7 +401,7 @@ Heartbeat report (~ 10 minutes each time):
 
 ### **Wall Switch (With Neutral, Single Rocker)**
 
-(device model：ctrl_ln1)
+(device model：ctrl_ln1 and ctrl_ln1.aq1)
 
 | **Attributes** | **Description** |
 | -------------- | --------------- |
@@ -770,13 +771,51 @@ Heartbeat report (~ 60 minutes each time):
 
 ### **Wireless Mini Switch**
 
+(device model：sensor_switch.aq2)
+
+The Wireless Mini Switch reports once for each click, it reports twice when clicked on twice within 400ms.
+
+| **Attributes**  | **Description**                          |
+| --------------- | ---------------------------------------- |
+| button_0        | click / double_click                     |
+| battery_voltage | Button battery voltage, measured in mv units, range 0~3300mv. Under normal circumstances, less than 2800mv is considered to be low battery power. |
+
+Example:
+
+Property Report:
+
+```
+{
+   "cmd":"report",
+   "model":"sensor_switch.aq2",
+   "sid":"158d0000123456",
+   "params":[{"button_0":"click"}]  
+}
+
+```
+
+Heartbeat report (~ 60 minutes each time):
+
+```
+{
+   "cmd":"heartbeat",
+   "model":"sensor_switch.aq2",
+   "sid":"158d0000123456",
+   "params":[{"battery_voltage":3000}]
+}
+```
+
+
+
+### **Wireless Mini Switch**
+
 (device model：sensor_switch.aq3)
 
 The Wireless Mini Switch reports once for each click, it reports twice when clicked on twice within 400ms.
 
 | **Attributes**  | **Description**                          |
 | --------------- | ---------------------------------------- |
-| button_0        | click / double_click / shake (click / double click / shake) |
+| button_0        | click / double_click                     |
 | battery_voltage | Button battery voltage, measured in mv units, range 0~3300mv. Under normal circumstances, less than 2800mv is considered to be low battery power. |
 
 Example:
@@ -845,6 +884,43 @@ Property Report:
    "model":"sensor_86sw2.aq1",
    "sid":"158d0000123456",
    "params":[{"button_1":"double_click"}]
+}
+```
+
+### **Cube**
+
+(device model：sensor_cube.aqgl01)
+
+| **Attributes**  | **Description**                          |
+| --------------- | ---------------------------------------- |
+| cube_status     | flip90/flip180/move/tap_twice/shake_air/swing/alert/free_fall/rotate |
+| rotate_degree   | Rotation angle, the unit is degree(°) . Positive numbers indicate clockwise rotations and negative numbers indicate counterclockwise rotations. |
+| detect_time     | Rotation time, the unit is ms.           |
+| battery_voltage | Button battery voltage, measured in mv units, range 0~3300mv. Under normal circumstances, less than 2800mv is considered to be low battery power. |
+
+Example:
+
+Property Report:
+
+Rotation report: It took 500 milliseconds to rotate 90 degrees counterclockwise
+
+```
+{
+   "cmd":"report",
+   "model":"sensor_cube.aqgl01",
+   "sid":"158d0000123456",
+   "params":[{“cube_status”:”rotate”},{"rotate_degree":-90},{"detect_time ":500}]
+}
+```
+
+Other status report:
+
+```
+{
+    "cmd":"report",
+    "model":"sensor_cube.aqgl01",
+    "sid":"158d0000123456",
+    "params":[{"cube_status":"flip90"}]
 }
 ```
 
