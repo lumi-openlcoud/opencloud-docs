@@ -379,7 +379,8 @@ Location: https://redirect_uri?code=xxx&state=xxx
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.158d00010b4090", 
-        "parentId": ""
+        "parentId": "", 
+        "extra": "{"clientId":"xxxx"}"
     }
 }
 ```
@@ -394,6 +395,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | event    | 事件类型，详细参数说明见下表        |
 | did      | 设备ID                  |
 | parentId | 父设备（网关）ID，如果是网关，该字段为空 |
+| extra    | 附加消息 |
 
 | 事件类型               | 描述     |
 | :----------------- | :----- |
