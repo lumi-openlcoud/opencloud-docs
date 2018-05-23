@@ -10,7 +10,7 @@
 
 2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.3.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
+3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.9.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
 
 4、下载并安装Andriod Studio或其他Andriod集成开发环境。
 
