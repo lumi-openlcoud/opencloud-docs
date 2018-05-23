@@ -56,12 +56,14 @@
 
 > 注意：网关成功入网需要一点时间，请耐心等待30s。
 
-入网连接接口：**LumiSDK.gatewayFastLink(ssid, passwd, lang, positionId, positionType, longitude, latitude)**
+入网连接接口：**LumiSDK.gatewayFastLink(cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude)**
 
 | 参数           | 是否必须 | 说明                |
 | ------------ | ---- | ----------------- |
+| cId          | 是    | 手机的唯一标识           |
 | ssid         | 是    | 网关需加入的外网网络Wi-Fi名称 |
 | passwd       | 是    | 对应的Wi-Fi密码        |
+| uid          | 是    | 用户唯一标识            |
 | lang         | 否    | 语言设置，默认中文zh-CN    |
 | postionId    | 否    | 位置ID              |
 | positionType | 否    | 位置类型              |

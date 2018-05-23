@@ -1,4 +1,4 @@
-# Gateway LAN communication protocol
+# Gateway LAN communication protocol V2.0
 
 ## **Overview**
 

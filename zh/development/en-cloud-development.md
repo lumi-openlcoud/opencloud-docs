@@ -382,7 +382,8 @@ At present, the AIOT Open Platform supports the following two types of messages:
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.158d00010b4090", 
-        "parentId": ""
+        "parentId": "", 
+        "extra": "{"clientId":"xxxx"}"
     }
 }
 ```
