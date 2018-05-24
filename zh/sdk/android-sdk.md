@@ -10,7 +10,7 @@
 
 2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.9.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库；在LHSDKDemo文件夹可查看Demo。
+3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.9_beta.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库。
 
 4、下载并安装Andriod Studio或其他Andriod集成开发环境。
 
@@ -56,114 +56,42 @@
 
 > 注意：网关成功入网需要一点时间，请耐心等待30s。
 
-入网连接接口：**LumiSDK.gatewayFastLink(cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude)**
+入网连接接口：**LumiSDK.gatewayFastLink(String param)**
 
-| 参数           | 是否必须 | 说明                |
-| ------------ | ---- | ----------------- |
-| cId          | 是    | 手机的唯一标识           |
-| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称 |
-| passwd       | 是    | 对应的Wi-Fi密码        |
-| uid          | 是    | 用户唯一标识            |
-| lang         | 否    | 语言设置，默认中文zh-CN    |
-| postionId    | 否    | 位置ID              |
-| positionType | 否    | 位置类型              |
-| longitude    | 否    | 设备所在位置的经度         |
-| latitude     | 否    | 设备所在位置的纬度         |
+参数param采用JSON格式，包含cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude。
+
+```
+{
+  cid: xxxxxxxxxxxxxxxx, 
+  ssid：test_123, 
+  passwd: 12345678, 
+  uid: xxxxxxxxxxxxxxxx, 
+  lang: zh-CN, 
+  positionId: xxxxxxxxxxxxxxxxxx, 
+  positionType: home, 
+  longitude: 0, 
+  latitude: 0
+}
+```
+
+详细子参数说明如下表。
+
+| 参数           | 是否必须 | 说明                         |
+| ------------ | ---- | -------------------------- |
+| cId          | 是    | 手机的唯一标识。若未设置，将无法收到消息推送。    |
+| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称          |
+| passwd       | 是    | 对应的Wi-Fi密码                 |
+| uid          | 是    | 第三方应用的用户id。若未设置，将无法收到消息推送。 |
+| lang         | 否    | 语言设置，默认中文zh-CN             |
+| postionId    | 否    | 位置ID                       |
+| positionType | 否    | 位置类型                       |
+| longitude    | 否    | 设备所在位置的经度                  |
+| latitude     | 否    | 设备所在位置的纬度                  |
+
+
 
 > 注意：1、系统不识别有特殊字符的Wi-Fi，且不支持5G频段的Wi-Fi。若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
 >
 > 2、由于SDK中的网络请求是同步的，所以调用时必须在非UI线程中调用，具体可参考DEMO。
 >
 > 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#_14)中“返回码说明”章节排查错误。
-
-
-
-## Demo示例
-
-下载[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.3.zip)，并解压，在LHSDKDemo文件夹可查看该demo，本示例介绍如何使用SDK调用接口完成网关入网。
-
-```
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
-import LumiSDK.LumiSDK;   
-
-public class MainActivity extends AppCompatActivity {
-    private ImageView mAuthStatues;
-    private EditText mEtSSID;
-    private EditText mEtPwd;
-    
-    private final String appID = "";  //第三方应用ID
-    private final String appKey = "";  //第三方应用KEY
-    private final String openID = "";  //通过OAuth授权获得的用户ID
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mAuthStatues = (ImageView) findViewById(R.id.iv_auth_statues);
-        mEtSSID = (EditText) findViewById(R.id.et_ssid);   //获取用户界面输入的网络wifi名称
-        mEtPwd = (EditText) findViewById(R.id.et_pwd);    //获取用户界面输入的网络wifi密码
-    }
-
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            showInfoByToast("授权结果：" + (boolean) msg.obj);
-            if ((boolean) msg.obj) {
-                mAuthStatues.setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN);
-            } else {
-                mAuthStatues.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
-            }
-        }
-    };
-
-    public void auth(View view) {
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean result = false;
-                try {
-                    result = LumiSDK.aiotAuth(appID, appKey, openID);   //调用授权接口
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return;
-                }
-                Log.d("BIU", "auth result --->>:" + result);
-                Message msg = handler.obtainMessage(110, result);
-                msg.sendToTarget();
-
-            }
-        }).start();
-    }
-
-    public void fastLink(View view) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    LumiSDK.gatewayFastLink(mEtSSID.getText().toString(), mEtPwd.getText().toString(), "", "", "", "", "");     //调用入网连接接口
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
-
-
-    public void showInfoByToast(String info) {
-        Toast.makeText(getApplicationContext(), info, Toast.LENGTH_SHORT).show();
-    }
-}
-```
