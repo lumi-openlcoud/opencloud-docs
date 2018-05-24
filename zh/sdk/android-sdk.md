@@ -83,7 +83,7 @@
 | passwd       | 是    | 对应的Wi-Fi密码                 |
 | uid          | 是    | 第三方应用的用户id。若未设置，将无法收到消息推送。 |
 | lang         | 否    | 语言设置，默认中文zh-CN             |
-| postionId    | 否    | 位置ID                       |
+| positionId   | 否    | 位置ID                       |
 | positionType | 否    | 位置类型                       |
 | longitude    | 否    | 设备所在位置的经度                  |
 | latitude     | 否    | 设备所在位置的纬度                  |
