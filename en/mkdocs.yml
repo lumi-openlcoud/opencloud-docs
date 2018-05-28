@@ -2,8 +2,7 @@
 site_name: 'AIOT开放平台文档中心'
 site_description: 'AIOT开放平台的官方文档，帮助开发基于AIOT平台的物联网应用'
 site_author: 'Penny & Forrest'
-site_url: 'http://docs.opencloud.aqara.cn'
-docs_dir: zh
+site_url: 'http://docs.opencloud.aqara.cn/'
 
 # Repository
 repo_name: 'aqara/opencloud-docs'
@@ -15,6 +14,7 @@ copyright: '版权所有 &copy; 2017 - 2018 深圳绿米联创科技有限公司
 # Theme Configuration 
 theme:
   name: 'material'
+  custom_dir: 'theme'
   language: 'zh'
   feature:
     tabs: true
@@ -51,19 +51,14 @@ markdown_extensions:
 pages:
 - 新手帮助: 
   - AIOT开放平台介绍: index.md
-  - 产品介绍: guideline/product-discription.md
-  - Product Description: guideline/en-product-discription.md
-  - 账号与密码: guideline/account-and-password.md
-  - Account and Password: guideline/account-and-password-en.md
+  - Product Description: guideline/product-discription.md
+  - Account and Password: guideline/account-and-password.md
 - 开发手册:
-  - 云端开发手册: development/cloud-development.md
-  - Cloud Development Manual: development/en-cloud-development.md
-  - 网关局域网通讯协议: development/gateway-LAN-communication.md
-  - Gateway LAN Communication Protocol: development/en-gateway-LAN-communication.md
+  - Cloud Development Manual: development/cloud-development.md
+  - Gateway LAN Communication Protocol: development/gateway-LAN-communication.md
   - 国家（地区码）: development/region_code.md
 - 部署与运维:
-  - 安装与配置指南: implementation/installation-and-configuration.md
-  - Installation and Configuration Guide: implementation/en-installation-and-configuration.md
+  - Installation and Configuration Guide: implementation/installation-and-configuration.md
   - 故障诊断指南: blank.md
 - 常见问题: 
   - 产品问题: faq/faq-product.md

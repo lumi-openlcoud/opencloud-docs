@@ -1,0 +1,72 @@
+# Project information
+site_name: 'AIOT开放平台文档中心'
+site_description: 'AIOT开放平台的官方文档，帮助开发基于AIOT平台的物联网应用'
+site_author: 'Penny & Forrest'
+site_url: 'http://docs.opencloud.aqara.cn/'
+
+# Repository
+repo_name: 'aqara/opencloud-docs'
+repo_url: 'https://github.com/aqara/opencloud-docs/'
+
+# Copyright
+copyright: '版权所有 &copy; 2017 - 2018 深圳绿米联创科技有限公司'
+
+# Theme Configuration 
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  language: 'zh'
+  feature:
+    tabs: true
+
+# Customization
+extra:
+  search: 
+    language: 'en'
+  disqus: 
+  social:
+    - type: 'globe'
+      link: 'https://opencloud.aqara.cn'
+    - type: 'github'
+      link: 'https://github.com/aqara'
+    - type: 'weibo'
+      link: 'https://weibo.com/u/5232002130'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+
+# Google Analytics
+google_analytics:
+  - 'UA-116424606-1'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+# Contents
+pages:
+- 新手帮助: 
+  - AIOT开放平台介绍: index.md
+  - 产品介绍: guideline/product-discription.md
+  - 账号与密码: guideline/account-and-password.md
+- 开发手册:
+  - 云端开发手册: development/cloud-development.md
+  - 网关局域网通讯协议: development/gateway-LAN-communication.md
+  - 国家（地区码）: development/region_code.md
+- 部署与运维:
+  - 安装与配置指南: implementation/installation-and-configuration.md
+  - 故障诊断指南: blank.md
+- 常见问题: 
+  - 产品问题: faq/faq-product.md
+  - 应用开发: faq/faq-development.md
+  - 部署与运维: faq/faq-installation.md
+- 开发者资源: 
+  - SDK下载: sdk/sdk-total.md
+  - Android SDK开发文档: sdk/android-sdk.md
+  - IOS SDK OC版开发文档: sdk/ios-sdk.md
+  - Java SDK开发文档: sdk/java-sdk.md
+  - PHP SDK开发文档: sdk/php-sdk.md
