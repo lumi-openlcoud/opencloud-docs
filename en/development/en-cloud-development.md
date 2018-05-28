@@ -78,7 +78,7 @@ You need to wait for 1 to 3 business days after submitting the application form.
 
 APIs are not only used by the AIOT Open Platform to provide an external data interface, but also the main method for developers to query and control equipment. Before developing applications, developers should apply for the API permissions based on their own needs. By default, APPs are automatically assigned common API permissions.
 
-If a developer needs to request access to an API, please visit the "Application Management" page and switch to the "API Access" page, as shown in the following figure.
+If a developer needs to request access to an API, please visit the "Application Management" page and switch to the "API List" page, as shown in the following figure.
 
 - Click the "Apply" button to the right of each row to request access to the API.
 - Click on the "Batch Application" button in the upper right corner and apply for access to multiple APIs using the batch application feature.
@@ -104,6 +104,8 @@ AIOT Open Platform implements the OAuth 2.0 standard authorization code (authori
 ![Oauth2.0授权码模式时序图](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/auth-sequence-diagram.png)
 
 Detailed OAuth 2.0 authorization process is as follows:
+
+> **Note:** The URL in this chapter takes “Mainland China( https://aiot-oauth2.aqara.cn/)” as an example, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
 
 #### **Step 1 Request authorization code**
 
@@ -208,9 +210,9 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 ### **API call specification**
 
-1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name is **https://rpc.opencloud.aqara.cn**.
+1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
 2. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
-3. The body of the request and the results returned through the interface using the JSON format. If the developer uses another format, the "request parameter error" will be returned.
+3. The body of the request and the results returned through the interface using the **JSON format**. If the developer uses another format, the "request parameter error" will be returned.
 4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT POpen Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
 5. For detailed API definitions of all functions, please visit the "Application Management -> API Access" page in the [AIOT Open Platform](https://opencloud.aqara.cn/).
 
@@ -218,7 +220,7 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 For example, you can query the details of a device by calling the interface using the following methods:
 
-- Request URL：https://rpc.opencloud.aqara.cn/open/device/query
+- Request URL：https://aiot-open-3rd.aqara.cn/open/device/query
 - Request mothod:  HTTP POST （application/json）
 - Request header example
 
@@ -291,9 +293,9 @@ Open the "Application Management -> Push Notification" page, click the "Edit" bu
 
 Detailed descriptions of differences between the message encryption and decryption methods:
 
-- Clear text mode: Does not encrypt the message body, low safety factor;
+- Plain Text mode: Does not encrypt the message body, low safety factor;
 - Compatibility mode: The message body contains both plaintext and ciphertext to facilitate debugging and maintenance by developers;
-- Secure mode: The message body is pure ciphertext, requires developers to encrypt and decrypt, has a high safety factor.
+- Safe mode: The message body is pure ciphertext, requires developers to encrypt and decrypt, has a high safety factor.
 
 > **Note**: presently, only the "plain text mode" is supported. Developers are instructed to use clear text mode.
 
@@ -301,9 +303,9 @@ Detailed descriptions of differences between the message encryption and decrypti
 
 ### **Authentication server**
 
-**Clear text mode**
+**Plain Text mode**
 
-In clear text mode, the server authentication method is very simple. After the developer saves the server configuration, the AIOT server sends a POST request to the server address (URL) as configured by the developer. The request will carry an "echostr" parameter(JSON format) that consists of a random string. If the third-party server receives the request, please return the "echostr" parameter without any changes to ensure authentication to the server is successful; otherwise, the authentication fails.
+In plain text mode, the server authentication method is very simple. After the developer saves the server configuration, the AIOT server sends a POST request to the server address (URL) as configured by the developer. The request will carry an "echostr" parameter(JSON format) that consists of a random string. If the third-party server receives the request, please return the "echostr" parameter without any changes to ensure authentication to the server is successful; otherwise, the authentication fails.
 
 Format for sending messages:
 
@@ -322,9 +324,9 @@ The format for returning messages is as follows:
 }
 ```
 
-**Secure mode**
+**Safe mode**
 
-Under secure mode, the server authentication method becomes complicated, and similar to the WeChat Public Platform.  After the developer saves the server configuration, the AIOT server will send a GET request to the  server address (URL) with the following parameters:
+Under safe mode, the server authentication method becomes complicated, and similar to the WeChat Public Platform.  After the developer saves the server configuration, the AIOT server will send a GET request to the  server address (URL) with the following parameters:
 
 - **signature**: encryption signature. The signature consists of the "Token" parameter filled in by the developer with the "timestamp" parameter for the request, and the "nonce" parameter;
 - **timestamp**: timestamp
@@ -380,7 +382,8 @@ At present, the AIOT Open Platform supports the following two types of messages:
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.158d00010b4090", 
-        "parentId": ""
+        "parentId": "", 
+        "extra": "{"clientId":"xxxx"}"
     }
 }
 ```
@@ -438,3 +441,35 @@ Each time a third-party application calls an interface, it may get a return code
 | ERROR_THIRD   | 808             | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_EXPIRED | RefreshToken expired                     |
 | ERROR_OTA     | 901             | ERROR_OTA_FIRMWARE_NOT_EXIST             | The Firmware selected does not exist     |
 
+## Resource definition
+
+Please go to "resource permission" page to get all resource of cloud development, below is a definition of some special resoures.
+
+Resource: **ac_state**
+
+Compression mode of air conditioning command (4 bytes):  (binary)
+
+|0 1 2 3|4 5 6 7|8 9 10 11|12 13 14 15|16 17 18 19 20 21 22 23|24 25 26 27 28 29 30 31|
+
+| Position  | Data                                     | Description           |
+| --------- | ---------------------------------------- | --------------------- |
+| [0 ~3]    | 0: off; 1: on; 2: toggle; E: circle; F: invalid; else: reserve | switch                |
+| [4 ~ 7]   | 0: heat; 1: cool; 2: auto; 3: dry; 4: wind; E: circle; F: invalid; else: reserve | mode                  |
+| [8 ~ 11]  | 0: low; 1: middle; 2: high; 3: auto; E: circle; F: invalid; else: reserve | speed                 |
+| [12 ~ 13] | 0: horizontal; 1: vertical; 2: circle; 3: invalid; | wind direction        |
+| [14 ~ 15] | 0: swing; 1: fix; 2: circle; 3: invalid; | sweeping              |
+| [16 ~ 23] | 0 ~ 240; 243: up; 244: down; FF: invalid | temperature           |
+| [24]      | default: 0                               | extension digit       |
+| [25]      | default: 0                               | compression code      |
+| [26]      | default: 0                               | LED display           |
+| [27]      | 0: switch command; 1: non-switching command | switch command        |
+| [28 ~ 31] | 00: stateless; 01: stateful; 02: protocal; 03: recommended scenario; 04: semi-state; 11: ignore | air conditioning type |
+
+> Note:
+>
+> - [16-23] The temperature value (0~244) is decimal. If temperature is 25 degrees, then binary is 00011001.
+> - The value of "ac_state" must be decimal.
+> - Mode, speed and wind direction should not be F(invaild), it will probably control failure because the value cannot be recognized. Before setting the value of ac_state, it is better to query the current value of ac_state by API(/open/res/query/multi/option/extended), then change the value according to the requirement.
+
+For example: "open air conditioning, mode is cool, speed is low, wind direction is horizontal, sweeping is swing and temperature is 25 degrees". 
+According to the above-metioned, binary is 00010001000000000001100100000001, convert binary to decimal, then the value of ac_state is “285219073”.
