@@ -589,3 +589,33 @@ The status of Wireless Remote Switch indicator is described below:
 - Battery specifications: CR2032
 - Battery life: More than 2 years (depending on the specific use environment)
 - Standard: Q/QLML009-2016
+
+### Cube
+
+![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.sensor_cube.png)
+
+<u>**Function Description**</u>
+
+Cube is a smart wireless controller based on motion sensing. It uses a high-precision, ultra-low-power 6-axis sensor with accelerometer and gyroscope. Through the sensor data, it can accurately calculate the controller's motion status and trajectory, and accurately Identify 6 control actions. Using invisible, dark
+technologies to bring you an interesting, intellectual experience. With a Hub, settings can be made in the phone app to perform different actions using different devices. Revolutionary control ideas, customizable, connected smart devices allow controlling smart devices without the app.
+
+Cube supports the following 6 actions: 
+
+- Shake
+- Double tap
+- 90° rotation
+- 180° rotation
+- Plane rotation
+- Push
+
+For example, shake to control living room lights, double tap to turn on/off the
+FM, rotate 90° to change FM station, rotate 180° to turn on/off the night light, rotate along the plane to turn on/off the air conditioner, push to open/close the curtains.
+
+**<u>Basic Parameters</u>**
+
+- Product dimension: 45 x 45 x 45mm
+- Wireless type: ZigBee
+- Battery specifications: CR2450
+- Operating temperature: -10℃~+50℃
+- Operating humidity: 0~95%RH, non-condensing
+- Standard: Q/QLML008-2016
