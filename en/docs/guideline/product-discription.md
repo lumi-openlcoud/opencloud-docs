@@ -22,7 +22,7 @@ LUMI products have the following advantages:
 - **Open data**: Open API and device data and help enterprises access to Internet of Things rapidly. 
 - **AI and Big Data**: Arrange AI and big data analysis technology in advance, and help enterprises find the core value of data of Internet of Things. 
 
-> **Note:** Please visit [Aqara Tmall flagship store](https://aqara.world.tmall.com/) or [Aqara Jingdong self-run store](https://mall.jd.com/index-1000093463.html) to purchase Aqara products. For products that can't be purchased online, please contact LUMI Commerce Department. Contact number: +86 15800503149 (Mr. Hu). If you need to use open platform service, please be sure to purchase Aqara products and use Aqara APP. 
+> **Note:** Please visit [Aqara Tmall flagship store](https://aqara.world.tmall.com/) or [Aqara Jingdong store](https://mall.jd.com/index-1000093463.html) to purchase Aqara products. For products that can't be purchased online, please contact LUMI Commerce Department. Contact number: +86 15800503149 (Mr. Hu). If you need to use open platform service, please be sure to purchase Aqara products and use Aqara APP. 
 
 
 

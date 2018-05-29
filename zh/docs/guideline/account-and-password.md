@@ -130,13 +130,11 @@ AIOT开放平台支持两种注册方式：手机号和邮箱。完成账号注�
 
 ![修改密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/modifypw1.png)
 
-**步骤4** 在弹出的更改密码窗口，输入原始密码，单击【下一步】。
+**步骤4** 在弹出的更改密码窗口，输入原始密码，并设置新密码，单击【提交】。
 
 ![更改密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/modifypw2.png)
 
-**步骤5** 设置新密码，单击【提交】。
 
-![更改密码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/account-and-password/modifypw3.png)
 
 
 ### 修改绑定邮箱

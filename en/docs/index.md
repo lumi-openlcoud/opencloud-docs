@@ -16,13 +16,13 @@ Currently, the AIOT open cloud platform provides two types of data open method. 
 
 - **Cloud connection method**
 
-The AIOT open cloud platform provides HTTP, API for remote calls from third party applications, enabling user queries, device status inquiries, and remote control devices. In addition, through the message push service, the AIOT open cloud platform pushes the real-time data uploaded by the device to a third-party server. Cloud services are easy and quick to connect with and is cheap to develop; a server is all that is required. Please refer to the “[Cloud Development Manual](http://docs.opencloud.aqara.cn/development/en-cloud-development/)” for detailed information.
+The AIOT open cloud platform provides HTTP, API for remote calls from third party applications, enabling user queries, device status inquiries, and remote control devices. In addition, through the message push service, the AIOT open cloud platform pushes the real-time data uploaded by the device to a third-party server. Cloud services are easy and quick to connect with and is cheap to develop; a server is all that is required. Please refer to the “[Cloud Development Manual](http://docs.opencloud.aqara.cn/en/development/cloud-development/)” for detailed information.
 
 ![cloud-access](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/doc-index/cloud-access.png)
 
 - **LAN connection method**
 
-Aqara Hub supports LAN connections. After enabling this function,  developers can search for Zigbee devices (sensors, controllers, etc) through LAN connections. Compared to HTTP connections, LAN networks are faster; reducing control lag. However, development costs using LAN networks are higher and requires a third party developer Hub. Furthermore, the developer must have embedded development experience. For detailed connection methods, please see “[Gateway LAN communication protocol](http://docs.opencloud.aqara.cn/development/en-gateway-LAN-communication/)”.
+Aqara Hub supports LAN connections. After enabling this function,  developers can search for Zigbee devices (sensors, controllers, etc) through LAN connections. Compared to HTTP connections, LAN networks are faster; reducing control lag. However, development costs using LAN networks are higher and requires a third party developer Hub. Furthermore, the developer must have embedded development experience. For detailed connection methods, please see “[Gateway LAN communication protocol](http://docs.opencloud.aqara.cn/en/development/gateway-LAN-communication/)”.
 
 ![local-network-access](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/doc-index/local-network-access.png)
 

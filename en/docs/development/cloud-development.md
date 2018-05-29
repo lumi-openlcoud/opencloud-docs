@@ -7,9 +7,9 @@
 
 AIOT is a cloud-based IOT platform that provides services such as user management, device management, data collection, and remote control. The data collected by the smart device is stored in the AIOT cloud database. Examples of data collected include power, temperature and humidity, switch status, and the status of windows and doors. At the same time, the AIOT cloud can remotely control devices by issuing control commands. How do developers obtain the data that was collected? Or how to remotely control their own equipment?
 
-The AIOT Open Platform provides a cloud-based connection interface to meet the needs of third-party developers. Through Open APIs and messaging services, developers can create rich IoT applications by collecting data and remotely controlling devices via the cloud.
+The AIOT Open Cloud Platform provides a cloud-based connection interface to meet the needs of third-party developers. Through Open APIs and messaging services, developers can create rich IoT applications by collecting data and remotely controlling devices via the cloud.
 
-The AIOT Open Platform provides a comprehensive interface, including:
+The AIOT Open Cloud Platform provides a comprehensive interface, including:
 
 - User Management
 
@@ -25,7 +25,7 @@ The AIOT Open Platform provides a comprehensive interface, including:
 
   ​
 
-In addition, the AIOT Open Platform provides a push notification service, which supports pushing the real-time data reported by the device to a third-party server, meeting developers' requirements for receiving data in real-time.
+In addition, the AIOT Open Cloud Platform provides a push notification service, which supports pushing the real-time data reported by the device to a third-party server, meeting developers' requirements for receiving data in real-time.
 
 In the following, this manual describes how to develop third-party applications that utilizes cloud-based connection interfaces. This consists of application creation, configuration, and development.
 
@@ -49,13 +49,13 @@ If the developer is not familiar with the use of API call methods, we recommende
 
 ### **Creating the application**
 
-Login to the [AIOT Open Platform](https://opencloud.aqara.cn/) and click on "Create New Application". When creating an application, the developer needs to configure the relevant parameters for the application, including:
+Login to the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/) and click on "Create New Application". When creating an application, the developer needs to configure the relevant parameters for the application, including:
 
 - Application Name
 - Industry
 - Introduction
 
-After creating an application, the platform automatically assigns the AppID and AppKey. The AppID is the unique identifier of the application and the AppKey is the application's secret key. AppID and AppKey are very important and are frequently used during application development process. For example, when calling the AIOT Open Platform Open API, developers need to add AppID and AppKey as validation parameters in the request header.
+After creating an application, the platform automatically assigns the AppID and AppKey. The AppID is the unique identifier of the application and the AppKey is the application's secret key. AppID and AppKey are very important and are frequently used during application development process. For example, when calling the AIOT Open Cloud Platform Open API, developers need to add AppID and AppKey as validation parameters in the request header.
 
 > **Note**: Developers must take proper care of their AppKey, prevent disclosure to unauthorized parties, and reset their AppKey on a regular basis.
 
@@ -72,11 +72,11 @@ If developers need to apply for level 2 access permissions, please visit the "Ap
 
 You need to wait for 1 to 3 business days after submitting the application form. Developers will be notified of the application result by SMS or email.
 
-![资源授权页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-resource.png)
+![资源授权页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/apply-resource.png)
 
 ### **Apply for API permissions**
 
-APIs are not only used by the AIOT Open Platform to provide an external data interface, but also the main method for developers to query and control equipment. Before developing applications, developers should apply for the API permissions based on their own needs. By default, APPs are automatically assigned common API permissions.
+APIs are not only used by the AIOT Open Cloud Platform to provide an external data interface, but also the main method for developers to query and control equipment. Before developing applications, developers should apply for the API permissions based on their own needs. By default, APPs are automatically assigned common API permissions.
 
 If a developer needs to request access to an API, please visit the "Application Management" page and switch to the "API List" page, as shown in the following figure.
 
@@ -85,7 +85,7 @@ If a developer needs to request access to an API, please visit the "Application 
 
 You need to wait for 1 to 3 business days after submitting the application form. Developers will be notified of the application result by SMS or email.
 
-![API访问页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-api.png)
+![API访问页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/apply-api.png)
 
 ## **Account authorization**
 
@@ -93,23 +93,23 @@ After the device is online, the device is linked to a unique AIOT account, the l
 
 > **Note**: Search for "Aqara" in the App Store or Apple Store, download and install, then register the Aaqra App Account.
 
-Currently, the AIOT Open Platform only provides one authorization method: OAuth 2.0. Additional authorization methods will be provided in the future.
+Currently, the AIOT Open Cloud Platform only provides one authorization method: OAuth 2.0. Additional authorization methods will be provided in the future.
 
 ### **OAuth2.0**
 
 OAuth2.0 is an open standard that allows users to grant third-party applications access to private resources (such as user information, photos, videos, device data, etc.) stored by users on websites (or Internet of Things platform) without having to provide their username and password to third-party applications. If you want to read more about the OAuth2.0 open standard, please refer to [Understanding OAuth2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html) | [OAuth standard (English)](https://oauth.net/2/).
 
-AIOT Open Platform implements the OAuth 2.0 standard authorization code (authorization_code) mode, for server-side applications. The OAuth 2.0 authorization process is simple and secure. The time-process diagram is shown below. An access token (token) is obtained after successfully completing the authorization process. After receiving access tokens, developers can use access tokens to gain access to interfaces, get user information, or manipulate users' devices.
+AIOT Open Cloud Platform implements the OAuth 2.0 standard authorization code (authorization_code) mode, for server-side applications. The OAuth 2.0 authorization process is simple and secure. The time-process diagram is shown below. An access token (token) is obtained after successfully completing the authorization process. After receiving access tokens, developers can use access tokens to gain access to interfaces, get user information, or manipulate users' devices.
 
 ![Oauth2.0授权码模式时序图](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/auth-sequence-diagram.png)
 
 Detailed OAuth 2.0 authorization process is as follows:
 
-> **Note:** The URL in this chapter takes “Mainland China( https://aiot-oauth2.aqara.cn/)” as an example, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
+> **Note:** The URL in this chapter takes “Mainland China( https://aiot-oauth2.aqara.cn/)” as an example, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/en/development/region_code) .
 
 #### **Step 1 Request authorization code**
 
-First, third-party applications need to redirect users to the AIOT OAuth 2.0 service through a web browser. After logging in successfully using **the Aqara APP account**, the AIOT Open Platform returns the user's authorization code. The validity period of the authorization code is 10 minutes. Please complete the following process within 10 minutes.
+First, third-party applications need to redirect users to the AIOT OAuth 2.0 service through a web browser. After logging in successfully using **the Aqara APP account**, the AIOT Open Cloud Platform returns the user's authorization code. The validity period of the authorization code is 10 minutes. Please complete the following process within 10 minutes.
 
 - **URL：**  https://aiot-oauth2.aqara.cn/authorize?client_id=xxx&response_type=code&redirect_uri=xxxx&state=xxx&theme=x
 - **Request method:**  HTTP GET
@@ -210,11 +210,11 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 ### **API call specification**
 
-1. To ensure the security of data transmissions, the API provided by the AIOT Open Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/development/region_code) .
+1. To ensure the security of data transmissions, the API provided by the AIOT Open Cloud Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.cn/en/development/region_code) .
 2. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
 3. The body of the request and the results returned through the interface using the **JSON format**. If the developer uses another format, the "request parameter error" will be returned.
-4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT POpen Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
-5. For detailed API definitions of all functions, please visit the "Application Management -> API Access" page in the [AIOT Open Platform](https://opencloud.aqara.cn/).
+4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
+5. For detailed API definitions of all functions, please visit the "Application Management -> API Access" page in the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/).
 
 ### **Call example**
 
@@ -299,7 +299,7 @@ Detailed descriptions of differences between the message encryption and decrypti
 
 > **Note**: presently, only the "plain text mode" is supported. Developers are instructed to use clear text mode.
 
-![消息服务器配置](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/message-subscribe.png)
+![消息服务器配置](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/message-subscribe.png)
 
 ### **Authentication server**
 
@@ -341,7 +341,7 @@ If it is confirmed that the GET request is from the LUMI Server, please return t
 
 ### **Message format**
 
-At present, the AIOT Open Platform supports the following two types of messages:
+At present, the AIOT Open Cloud Platform supports the following two types of messages:
 
 - Resource Message: resource change information, such as temperature changes, power changes, etc .
 - Device Messages: Device event messages, such as device on-line/off-line, linking/unlinking, etc.
