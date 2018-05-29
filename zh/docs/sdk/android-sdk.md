@@ -10,7 +10,7 @@
 
 2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
-3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.9_beta.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库。
+3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.4.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库。
 
 4、下载并安装Andriod Studio或其他Andriod集成开发环境。
 
@@ -42,13 +42,27 @@
 
 1）手机连接外网，调用授权接口（aiotAuth），进行授权，返回授权结果。
 
-授权接口：**LumiSDK.aiotAuth(appID,appKey,openID)**
+授权接口：**LumiSDK.aiotAuth(appID,appKey,openID, new CallBack())**
 
-| 参数     | 说明               |
-| ------ | ---------------- |
-| appID  | 第三方应用ID，AppID    |
-| appKey | 第三方应用秘钥，AppKey   |
-| openID | 通过OAuth授权获得的用户ID |
+| 参数       | 说明               |
+| -------- | ---------------- |
+| appID    | 第三方应用ID，AppID    |
+| appKey   | 第三方应用秘钥，AppKey   |
+| openID   | 通过OAuth授权获得的用户ID |
+| CallBack | 回调函数             |
+
+CallBack回调函数代码如下：
+
+```
+package lumisdk;
+
+public interface CallBack {
+    void onFaied(long var1, String var3);
+    void onSuccess(String var1);
+}
+```
+
+
 
 2）授权成功后，长按网关按钮至指示灯为黄色闪烁，且语音提示”等待连接中“，网关会创建一个以”lumi-gateway-xxxx“开头的热点。
 
@@ -56,9 +70,10 @@
 
 > 注意：网关成功入网需要一点时间，请耐心等待30s。
 
-入网连接接口：**LumiSDK.gatewayFastLink(String param)**
+入网连接接口：**LumiSDK.gatewayFastLink(String param, new CallBack())**
 
-参数param采用JSON格式，包含cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude。
+- 参数param采用JSON格式，包含cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude。
+
 
 ```
 {
