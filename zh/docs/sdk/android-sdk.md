@@ -72,7 +72,7 @@ public interface CallBack {
 
 入网连接接口：**LumiSDK.gatewayFastLink(String param, new CallBack())**
 
-- 参数param采用JSON格式，包含cid, ssid, passwd, uid, lang, positionId, positionType, longitude, latitude。
+- 参数param采用JSON格式，包含cid, ssid, passwd, lang, positionId, positionType, longitude, latitude。
 
 
 ```
@@ -80,7 +80,6 @@ public interface CallBack {
   cid: xxxxxxxxxxxxxxxx, 
   ssid：test_123, 
   passwd: 12345678, 
-  uid: xxxxxxxxxxxxxxxx, 
   lang: zh-CN, 
   positionId: xxxxxxxxxxxxxxxxxx, 
   positionType: home, 
@@ -91,17 +90,16 @@ public interface CallBack {
 
 详细子参数说明如下表。
 
-| 参数           | 是否必须 | 说明                         |
-| ------------ | ---- | -------------------------- |
-| cId          | 是    | 手机的唯一标识。若未设置，将无法收到消息推送。    |
-| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称          |
-| passwd       | 是    | 对应的Wi-Fi密码                 |
-| uid          | 是    | 第三方应用的用户id。若未设置，将无法收到消息推送。 |
-| lang         | 否    | 语言设置，默认中文zh-CN             |
-| positionId   | 否    | 位置ID                       |
-| positionType | 否    | 位置类型                       |
-| longitude    | 否    | 设备所在位置的经度                  |
-| latitude     | 否    | 设备所在位置的纬度                  |
+| 参数           | 是否必须 | 说明                      |
+| ------------ | ---- | ----------------------- |
+| cId          | 是    | 手机的唯一标识。若未设置，将无法收到消息推送。 |
+| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称       |
+| passwd       | 是    | 对应的Wi-Fi密码              |
+| lang         | 否    | 语言设置，默认中文zh-CN          |
+| positionId   | 否    | 位置ID                    |
+| positionType | 否    | 位置类型                    |
+| longitude    | 否    | 设备所在位置的经度               |
+| latitude     | 否    | 设备所在位置的纬度               |
 
 
 
