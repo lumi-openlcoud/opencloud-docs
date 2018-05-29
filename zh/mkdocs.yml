@@ -59,7 +59,6 @@ pages:
   - 国家（地区码）: development/region_code.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
-  - 故障诊断指南: blank.md
 - 常见问题: 
   - 产品问题: faq/faq-product.md
   - 应用开发: faq/faq-development.md

@@ -1,5 +1,5 @@
 # Project information
-site_name: 'AIOT开放平台文档中心'
+site_name: 'AIOT Open Cloud Documantation'
 site_description: 'AIOT开放平台的官方文档，帮助开发基于AIOT平台的物联网应用'
 site_author: 'Penny & Forrest'
 site_url: 'http://docs.opencloud.aqara.cn/'
@@ -15,7 +15,7 @@ copyright: '版权所有 &copy; 2017 - 2018 深圳绿米联创科技有限公司
 theme:
   name: 'material'
   custom_dir: 'theme'
-  language: 'zh'
+  language: 'en'
   feature:
     tabs: true
 
