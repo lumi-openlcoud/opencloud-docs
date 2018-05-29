@@ -49,24 +49,13 @@ markdown_extensions:
 
 # Contents
 pages:
-- 新手帮助: 
-  - AIOT开放平台介绍: index.md
+- Newbie Guide: 
+  - AIOT Open Cloud Platform Introduction: index.md
   - Product Description: guideline/product-discription.md
   - Account and Password: guideline/account-and-password.md
-- 开发手册:
+- Development Manual:
   - Cloud Development Manual: development/cloud-development.md
   - Gateway LAN Communication Protocol: development/gateway-LAN-communication.md
-  - 国家（地区码）: development/region_code.md
-- 部署与运维:
+  - Country (area code): development/region_code.md
+- Deployment and maintenance:
   - Installation and Configuration Guide: implementation/installation-and-configuration.md
-  - 故障诊断指南: blank.md
-- 常见问题: 
-  - 产品问题: faq/faq-product.md
-  - 应用开发: faq/faq-development.md
-  - 部署与运维: faq/faq-installation.md
-- 开发者资源: 
-  - SDK下载: sdk/sdk-total.md
-  - Android SDK开发文档: sdk/android-sdk.md
-  - IOS SDK OC版开发文档: sdk/ios-sdk.md
-  - Java SDK开发文档: sdk/java-sdk.md
-  - PHP SDK开发文档: sdk/php-sdk.md
