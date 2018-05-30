@@ -10,7 +10,7 @@ AIOT is the cloud based control behind Aqara’s productline. It is responsible 
 The AIOT open cloud platform will always uphold the ideals of “open, benefit others, win together”.  The platform provides full life cycle technical service for third party companies, accelerating the development of IoT applications, reducing construction and operating costs and helping companies to make data their core value. Currently, over 100 companies have registered on the AIOT open cloud platform; covering smart homes, smart hotels, new energy sources, firefighting, education and several other fields. 
 
 
-## **Open data service**
+## **Data open service**
 
 Currently, the AIOT open cloud platform provides two types of data open method. Developers can choose the appropriate method depending on their needs.
 
