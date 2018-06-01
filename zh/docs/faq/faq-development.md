@@ -1,11 +1,5 @@
 ### **云端开发**
 
-<u>**Q：设备耗电量cost_energy的统计单位是什么？是什么时间的数据？**</u>
-
-**A：**空调伴侣、智能插座、墙壁插座和零火墙壁开关支持耗电量的上报，单位wh，数值表示设备第一次入网后累计的耗电量，当前耗电量不支持清零。
-
-&nbsp;
-
 <u>**Q：使用Postman测试API时出现："Could not get any response"？**</u>
 
 **A：**可能原因：1）公司网络对访问做了限制；2）Postman启用了SSL验证（SSL certifacate verification）。

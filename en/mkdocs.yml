@@ -59,3 +59,6 @@ pages:
   - Country (area code): development/region_code.md
 - Deployment and maintenance:
   - Installation and Configuration Guide: implementation/installation-and-configuration.md
+- FAQ:
+  - Product: faq/faq-product.md
+  - Development: faq/faq-development.md

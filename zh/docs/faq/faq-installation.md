@@ -6,8 +6,3 @@
 
 &nbsp;
 
-<u>**Q：将Eigenstone版本空调伴侣添加到Aqara app后，无法成功添加Aqara子设备？**</u>
-
-**A：**Eigenstone空调伴侣固件版本太低，请将固件更新至最新再尝试。
-
-&nbsp;
