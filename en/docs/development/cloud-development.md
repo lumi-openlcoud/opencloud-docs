@@ -297,7 +297,7 @@ Detailed descriptions of differences between the message encryption and decrypti
 - Compatibility mode: The message body contains both plaintext and ciphertext to facilitate debugging and maintenance by developers;
 - Safe mode: The message body is pure ciphertext, requires developers to encrypt and decrypt, has a high safety factor.
 
-> **Note**: presently, only the "plain text mode" is supported. Developers are instructed to use clear text mode.
+> **Note**: Presently, only the "plain text mode" is supported. Developers are instructed to use clear text mode.
 
 ![消息服务器配置](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/en/development/doc-cloud-development/message-subscribe.png)
 
