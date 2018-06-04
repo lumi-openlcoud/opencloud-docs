@@ -62,3 +62,9 @@ pages:
 - FAQ:
   - Product: faq/faq-product.md
   - Development: faq/faq-development.md
+- Developer Resource: 
+  - SDK Download: sdk/sdk-total.md
+  - Android SDK Development Documentation: sdk/android-sdk.md
+  - IOS SDK Development Documentation: sdk/ios-sdk.md
+  - Java SDK Development Documentation: sdk/java-sdk.md
+  - PHP SDK Development Documentation: sdk/php-sdk.md
