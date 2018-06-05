@@ -31,19 +31,13 @@ Aqara Hub supports LAN connections. After enabling this function,  developers ca
 To improve development efficiency and lowering operating and maintenance cost,  AIOT open cloud platform provides full-lifecycle service, including project design, software development, and system maintenance. The services are listed below:
 
 1. **1V1 Solution Inquiry: ** AIOT open cloud platform provides complete solution packages and case instruction. It can also provide design solutions customized for each client’s needs.
-
 2. **Detailed Development Manual: ** AIOT open cloud platform provides a detailed development manual for developers, helping developers understand the development process quickly.
 
-   <!--**Quick Creation of Customized App: ** Users can upload their company logo and complete simple layouts to create a customized app; saving high development costs.-->
-
-   ​
-
 3. **Numerous SDKs and DEMOs:  **Diverse SDKs and Demos are sorted by function and are available for download. Developers are free to download these resources anytime.
-
 4. **7X24hTechnical Support: ** During the development, installation, deployment and maintenance process, AIOT open cloud platform provides 7x24 hour technical support; solving your problems quickly.
-
 5. **Developer Forum: ** Provide a forum for developers, allowing them to speak freely: chat, share experiences, promote products.
 
-   ​
 
-   <!--**Troubleshooting and Maintenance System: ** Errors can be quickly identified using the troubleshooting tool. The maintenance system can monitor the status of applications in real time; ensuring the system stability.-->
+<!--**Troubleshooting and Maintenance System: ** Errors can be quickly identified using the troubleshooting tool. The maintenance system can monitor the status of applications in real time; ensuring the system stability.-->
+
+<!--**Quick Creation of Customized App: ** Users can upload their company logo and complete simple layouts to create a customized app; saving high development costs.-->
