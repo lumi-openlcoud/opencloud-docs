@@ -1,3 +1,7 @@
+> Note: Fastlink SDK and push notification SDK are only for cloud development.
+
+
+
 ## Fastlink SDK
 
 | Development Language | Download                                 | Instruction                              |
