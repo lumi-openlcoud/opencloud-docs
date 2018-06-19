@@ -26,9 +26,9 @@ LUMI products have the following advantages:
 
 
 
-## **Hub products**
+## **Hub**
 
-Hub products are central hubs that connect and manage various intelligent sensors and controllers.
+Hub are central hubs that connect and manage various intelligent sensors and controllers.
 
 ### Air Conditioning Controller
 
@@ -67,9 +67,9 @@ The status of Air Conditioning Controller indicator is described below:
 
 
 
-## **Control products**
+## **Controller**
 
-Control products are devices that complete actions according to relevant control instructions, such as power on and rotation, and are mainly used for the execution of scene and automation.
+Controllers are devices that complete actions according to relevant control instructions, such as power on and rotation, and are mainly used for the execution of scene and automation.
 
 ### **Wall Outlet**
 
@@ -378,9 +378,9 @@ The functions of buttons of the Dimmer are described below.
 
 
 
-## **Sensor products**
+## **Sensor**
 
-Sensor products achieve automatic detection and control mainly through sensing temperature, humidity, photosensitivity and displacement etc. and are mainly used for home automation triggering. 
+Sensors achieve automatic detection and control mainly through sensing temperature, humidity, photosensitivity and displacement etc. and are mainly used for home automation triggering. 
 
 ### **Door and Window Sensor**
 

@@ -56,16 +56,16 @@ Specific operation steps are as follows:
 
 ## Device installation
 
-Aqara products include hubs, controllers and sensors. Hub products are central hubs that connect and manage various intelligent sensors and controllers. Control products are devices that complete actions according to relevant control instructions, such as power on and rotation, and are mainly used for the execution of scene and automation. Sensor products achieve automatic detection and control mainly through sensing temperature, humidity, photosensitivity and displacement etc. and are mainly used for home automation triggering. 
+Aqara products include hubs, controllers and sensors. Hubs are central hubs that connect and manage various intelligent sensors and controllers. Controllers are devices that complete actions according to relevant control instructions, such as power on and rotation, and are mainly used for the execution of scene and automation. Sensors achieve automatic detection and control mainly through sensing temperature, humidity, photosensitivity and displacement etc. and are mainly used for home automation triggering. 
 
 All devices shall be installed or placed properly according to practical environment before use so as to achieve intelligent linkage among them. 
 
 
 
 
-### Hub devices
+### Hub
 
-Now only one hub device that can be used directly on the Aqara APP is **Air Conditioning Controller (advanced)**.
+Now only one hub that can be used directly on the Aqara APP is **Air Conditioning Controller (advanced)**.
 
 In addition to Hub function, Air Conditioning Controller can also fast implement the intellectualization reconstruction of traditional air conditioner. Therefore, their installation position can be classified into two categories: first one is "Hub Function Priority" and the second one is "Air Conditioning Control Priority". Users can choose the installation position according to their actual needs. 
 
@@ -90,11 +90,11 @@ Plug the Air Conditioning Controller in the outlet for air conditioner (16A), th
 
 
 
-### **Control devices **
+### **Controller **
 
 Precautions before installation: 
 
-- **Control devices, except Plug, shall be installed and commissioned by qualified specialists according to electrical code and the user manual.**
+- **Controllers, except Plug, shall be installed and commissioned by qualified specialists according to electrical code and the user manual.**
 - **Please be sure to install the devices after the main switch is turned off. The main switch can be turned on after the installation. **
 
 
@@ -197,11 +197,11 @@ Please refer to the user manual attached for detailed installation guide.
 
 
 
-### **Sensor devices **
+### **Sensor**
 
 Precautions before installation: 
 
-- Sensor devices shall be installed in the signal coverage area of hub devices; otherwise, normal connection is unavailable. 
+- Sensors shall be installed in the signal coverage area of hub devices; otherwise, normal connection is unavailable. 
 - Keep the surface clean and dry. Do not install sensor devices on a metal surface; otherwise, wireless communication distance may be affected. 
 - To ensure that the security and convenient adjustment of the sticker, do not compact it when it is first installed. Just attach the device gently to a designated position (make sure the device will not drop). After it is confirmed that the device is installed correctly by tests, compact and stick the device. 
 - If the position of the sensor has to be adjusted, remove the device from left or right side; do not pull it vertically because it is difficult to remove the device and the viscosity of the sticker may be reduced by doing so.  
