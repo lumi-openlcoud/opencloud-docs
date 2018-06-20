@@ -7,7 +7,7 @@ As part of the Xiaomi supply chain, Lumi has introduced several pieces of smart 
 
 AIOT is the cloud based control behind Aqara’s productline. It is responsible for communications, control, automated settingmanagement between devices. To support third party companies researching Internet of things applications, Lumi built the AIOT open cloud platform in 2017. The platform shares data publicly, helping companies quickly join the internet of things and promoting complete smart home service upgrades.
 
-The AIOT open cloud platform will always uphold the ideals of “open, benefit others, win together”.  The platform provides full life cycle technical service for third party companies, accelerating the development of IoT applications, reducing construction and operating costs and helping companies to make data their core value. Currently, over 100 companies have registered on the AIOT open cloud platform; covering smart homes, smart hotels, new energy sources, firefighting, education and several other fields. 
+The AIOT open cloud platform will always uphold the ideals of “Open, Altruistic, Win-Win”.  The platform provides full life cycle technical service for third party companies, accelerating the development of IoT applications, reducing construction and operating costs and helping companies to make data their core value. Currently, over 100 companies have registered on the AIOT open cloud platform; covering smart homes, smart hotels, new energy sources, firefighting, education and several other fields. 
 
 
 ## **Data open service**
