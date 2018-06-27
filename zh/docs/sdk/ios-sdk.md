@@ -57,7 +57,7 @@
 | ssid         | 是    | 网关需加入的外网网络Wi-Fi名称 |
 | password     | 是    | 对应的Wi-Fi密码        |
 | lang         | 否    | 语言设置，默认中文zh-CN    |
-| postionId    | 否    | 位置ID              |
+| postionId    | 是    | 位置ID              |
 | positionType | 否    | 位置类型              |
 | longitude    | 否    | 设备所在位置的经度         |
 | latitude     | 否    | 设备所在位置的纬度         |

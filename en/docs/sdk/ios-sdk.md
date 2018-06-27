@@ -51,7 +51,7 @@ The purpose of this document is to explain how to use LumiSDK for the developmen
 | ssid         | Yes          | Wi-Fi name                              |
 | password     | Yes          | Wi-Fi password                          |
 | lang         | No           | Language. The default is zh-CN.         |
-| postionId    | No           | Position ID                             |
+| postionId    | Yes          | Position ID                             |
 | positionType | No           | Position Type, such as home, room.      |
 | longitude    | No           | The longitude of the device's location. |
 | latitude     | No           | The latitude of the device's location.  |

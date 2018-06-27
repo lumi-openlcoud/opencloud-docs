@@ -94,7 +94,7 @@ Detailed sub-parameters are described in the following table.
 | ssid         | Yes          | Wi-Fi name                               |
 | passwd       | Yes          | Wi-Fi password                           |
 | lang         | No           | Language. The default is zh-CN.          |
-| positionId   | No           | Position ID                              |
+| positionId   | Yes          | Position ID, you can query positionId by calling API. |
 | positionType | No           | Position Type, such as home, room.       |
 | longitude    | No           | The longitude of the device's location.  |
 | latitude     | No           | The latitude of the device's location.   |
