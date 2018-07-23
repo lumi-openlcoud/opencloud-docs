@@ -55,8 +55,9 @@ pages:
   - Account and Password: guideline/account-and-password.md
 - Development Manual:
   - Cloud Development Manual: development/cloud-development.md
-  - Gateway LAN Communication Protocol: development/gateway-LAN-communication.md
+  - Scene and Automation API Documation: development/automation-api-demo.md
   - Country (area code): development/region_code.md
+  - Gateway LAN Communication Protocol: development/gateway-LAN-communication.md
 - Deployment and maintenance:
   - Installation and Configuration Guide: implementation/installation-and-configuration.md
 - FAQ:
