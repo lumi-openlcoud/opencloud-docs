@@ -55,8 +55,10 @@ pages:
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
-  - 网关局域网通讯协议: development/gateway-LAN-communication.md
   - 国家（地区码）: development/region_code.md
+  - 场景和自动化接口示例: development/automation-api-demo.md
+  - Trigger和Action列表: development/trigger_and_action_list.md
+  - 网关局域网通讯协议: development/gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
 - 常见问题: 
