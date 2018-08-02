@@ -86,7 +86,7 @@ API是AIOT开放平台对外提供数据的接口，也是开发者查询与控�
 
 > 说明：在应用商店或Apple Store搜索“Aqara”，下载安装后注册Aaqra APP账号。
 
-目前，AIOT开放平台只提供一种授权方式：OAuth 2.0，后续会提供更多的授权方式。
+目前，AIOT开放平台提供两种授权方式：OAuth 2.0和签名授权方式。
 
 ### OAuth2.0
 
@@ -198,6 +198,64 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 > 注意：如果刷新访问令牌时出现非正常返回的情况，请重试！
 
+
+
+### 签名授权
+
+大都数情况下，第三方应用会有自己的账号体系，并希望将此账号体系与AIOT账号体系进行对接，而不像Oauth2.0授权方式一样，需要用户再次注册Aqara账号。签名授权的方式，对用户而言，对Aqara账号是无感知的，只需要注册第三方应用的账号即可。
+
+
+
+#### 步骤1 创建超级账号
+
+登录AIOT开放平台网站，在“应用管理”页面切换到“超级账号”页面，单击页面右上角的“创建账号”，输入用户名和密码，创建成功后，系统会自动生成“Open ID”和“Private Key”。
+
+| 参数名         | 描述                             |
+| ----------- | ------------------------------ |
+| Open ID     | 授权用户的唯一标识                      |
+| Private Key | 密钥，用于生成数字签名                    |
+| 用户名         | 设置的Aqara账号，目前不支持在Aqara APP上登录。 |
+
+
+
+#### 步骤2 生成数字签名
+
+数字签名采用ECDSA算法，代码可[下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/ECDSA%E7%AE%97%E6%B3%95%E5%8F%8Ademo.zip)。
+
+> 说明：ECDSA算法及demo.zip文件夹中，ECDSAUtil.java为ECDSA算法代码，OpenEchoTester.java为签名授权接口调用demo。
+
+签名字符串拼接方法如下：
+
+```
+StringBuilder stringBuilder = new StringBuilder();
+stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).append("&").append(openId).append("&").append(nonce);
+```
+
+| 参数名    | 描述                                       |
+| ------ | ---------------------------------------- |
+| uri    | 例如：查询设备接口：https://aiot-open-3rd.aqara.cn/open/device/query/v2，uri即为/open/device/query/v2。 |
+| appId  | 第三方应用ID                                  |
+| appKey | 第三方应用秘钥                                  |
+| openId | 步骤1中生成的Open ID                           |
+| nonce  | 发送请求时的时间戳，单位ms                           |
+
+
+
+#### 步骤3 请求接口
+
+通过签名授权方式认证后，在请求接口时，需在header中携带以下参数：
+
+| 参数名                   | 类型     | 描述             |
+| --------------------- | ------ | -------------- |
+| Authorization-Version | String | 认证方案的版本号。值：v2  |
+| Appid                 | String | 第三方应用ID        |
+| Appkey                | String | 第三方应用秘钥        |
+| Openid或Open-Id        | String | 步骤1中生成的Open ID |
+| _nonce                | String | 发送请求时的时间戳，单位ms |
+| _signature            | String | 步骤2中请求的数字签名    |
+
+
+
 ## API调用
 
 ### API调用规范
@@ -214,6 +272,8 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ### 调用示例
 
+#### OAuth 2.0
+
 例如，通过调用接口查询一个设备的详细信息，调用方法如下：
 
 - 请求URL：https://aiot-open-3rd.aqara.cn/open/device/query
@@ -224,8 +284,8 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 | Key          | Value                            | 描述（可不填）          |
 | ------------ | -------------------------------- | ---------------- |
-| Appid        | 54a230103556040223478911         | 应用的唯一标识          |
-| Appkey       | oT7kp77vzwxBn7siiXISamsPpvaTaWeZ | 应用的秘钥            |
+| Appid        | 54a230100006040223478911         | 应用的唯一标识          |
+| Appkey       | oT7kp77v123456siiXISamsPpvaTaWeZ | 应用的秘钥            |
 | Openid       | Yb2bR2btJC6L8EmU5Z3jzh4oQsttie   | 通过OAuth授权获得的用户ID |
 | Access-Token | 12db5a10c49fd289963dbc67a0d13ab5 | 通过OAuth授权获得的访问令牌 |
 | Content-Type | application/json                 | 返回结果采用JSON格式     |
@@ -236,8 +296,8 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ```
   {
-  "openId": "Yb2bR2btJC6L8EmU5Z3jzh4oQsttie",
-  "did": "lumi.158d00013fd654"
+  "openId": "Yb2bR2btJC6L8Em123456h4oQsttie",
+  "did": "lumi.158d0001234654"
   }
 ```
 > 说明：参数did表示设备ID，是设备的唯一标识。开发者可以通过调用接口，根据OpenID获得用户下所有设备的did。
@@ -253,14 +313,33 @@ Location: https://redirect_uri?code=xxx&state=xxx
         "model": "lumi.sensor_motion.es2",
         "isOnline": 1,
         "firmwareVersion": "1",
-        "did": "lumi.158d00013fd654",
-        "parentId": "lumi.158d00010d65a9"
+        "did": "lumi.158d0001123454",
+        "parentId": "lumi.158d00011234a9"
     },
     "code": 0,
     "isBytesData": 0,
     "requestId": "oHjXRtRdnm"
   }
 ```
+
+#### 签名授权
+
+例如，通过调用接口查询一个设备的详细信息，调用方法如下：
+
+- 请求URL：https://aiot-open-3rd.aqara.cn/open/device/query/v2
+- 请求方式： HTTP POST （application/json）
+- 请求header示例
+
+| Key                   | Value                            | 描述（可不填）          |
+| --------------------- | -------------------------------- | ---------------- |
+| Authorization-Version | v2                               | 认证方案的版本号         |
+| Appid                 | 54a230100006040223478911         | 应用的唯一标识          |
+| Appkey                | oT7kp77v123456siiXISamsPpvaTaWeZ | 应用的秘钥            |
+| Openid或Open-Id        | 225997134641850051123456247729   | 通过OAuth授权获得的用户ID |
+| _nonce                | 1532571136000                    | 发送请求时的时间戳，单位ms   |
+| _signature            | MEUCICSJ9WBOXWoNElGFVLR3IyTYso   | 请求的数字签名          |
+
+
 
 ## 消息推送
 
@@ -353,7 +432,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
             "time": "1503556533", 
             "attr": "load_power", 
             "value": "3.93", 
-            "did": "lumi.158d00011c1cee"
+            "did": "lumi.158d00011234ee"
         }
     ]
 }
@@ -373,12 +452,12 @@ Location: https://redirect_uri?code=xxx&state=xxx
 {
     "msgType": "device", 
     "data": {
-        "openId": "GoeFrrL7mN9SsGRi8WJn4x4YnQpXTS", 
+        "openId": "GoeFrrL7mN9SsGRi1234564YnQpXTS", 
         "name": "空调伴侣", 
         "model": "lumi.acpartner.aq1", 
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
-        "did": "lumi.158d00010b4090", 
+        "did": "lumi.158d00010b1230", 
         "parentId": "", 
         "extra": "{"clientId":"xxxx"}"
     }
@@ -395,7 +474,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | event    | 事件类型，详细参数说明见下表        |
 | did      | 设备ID                  |
 | parentId | 父设备（网关）ID，如果是网关，该字段为空 |
-| extra    | 附加消息 |
+| extra    | 附加消息                  |
 
 | 事件类型               | 描述     |
 | :----------------- | :----- |

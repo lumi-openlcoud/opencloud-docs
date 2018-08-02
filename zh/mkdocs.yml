@@ -55,8 +55,8 @@ pages:
   - 账号与密码: guideline/account-and-password.md
 - 开发手册:
   - 云端开发手册: development/cloud-development.md
-  - 国家（地区码）: development/region_code.md
   - 场景和自动化接口文档: development/automation-api-demo.md
+  - 国家（地区码）: development/region_code.md
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
@@ -66,7 +66,5 @@ pages:
   - 部署与运维: faq/faq-installation.md
 - 开发者资源: 
   - SDK下载: sdk/sdk-total.md
-  - Android SDK开发文档: sdk/android-sdk.md
-  - IOS SDK OC版开发文档: sdk/ios-sdk.md
   - Java SDK开发文档: sdk/java-sdk.md
   - PHP SDK开发文档: sdk/php-sdk.md
