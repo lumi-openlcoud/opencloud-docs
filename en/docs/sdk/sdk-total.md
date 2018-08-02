@@ -6,8 +6,8 @@
 
 | Development Language | Download                                 | Instruction                              |
 | -------------------- | ---------------------------------------- | ---------------------------------------- |
-| Andriod SDK          | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.4_.zip) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/android-sdk/) |
-| IOS SDK              | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/ios-sdk/) |
+| Andriod SDK          | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/android-sdk/) |
+| IOS SDK              | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/ios-sdk/) |
 
 &nbsp;
 
