@@ -4,10 +4,10 @@
 
 ## 快联入网SDK
 
-| 语言          | 下载                                       | 使用说明                                     |
-| ----------- | ---------------------------------------- | ---------------------------------------- |
-| Andriod SDK | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip) | [开发文档](http://docs.opencloud.aqara.cn/sdk/android-sdk/) |
-| IOS SDK     | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip) | [开发文档](http://docs.opencloud.aqara.cn/sdk/ios-sdk/) |
+| 语言          | 下载                                       |
+| ----------- | ---------------------------------------- |
+| Andriod SDK | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip) |
+| IOS SDK     | [下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip) |
 
 &nbsp;
 

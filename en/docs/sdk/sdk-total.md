@@ -4,10 +4,10 @@
 
 ## Fastlink SDK
 
-| Development Language | Download                                 | Instruction                              |
-| -------------------- | ---------------------------------------- | ---------------------------------------- |
-| Andriod SDK          | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/android-sdk/) |
-| IOS SDK              | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/ios-sdk/) |
+| Development Language | Download                                 |
+| -------------------- | ---------------------------------------- |
+| Andriod SDK          | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) |
+| IOS SDK              | [Download]((http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink.zip)) |
 
 &nbsp;
 
