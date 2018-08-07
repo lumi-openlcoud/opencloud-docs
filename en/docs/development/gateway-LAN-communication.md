@@ -19,6 +19,7 @@ Introduces the major changes for each version of the Gateway LAN protocol.
 
 | **Update time** | **Document version** | **Update log**                           |
 | --------------- | -------------------- | ---------------------------------------- |
+| 2018.07.16      | V2.0.2               | Add: Air conditioning status reporting, control feature and relay control feature；Add: Dimmer(Multicolor) and Thermostat |
 | 2018.05.18      | V2.0.1               | Add: Cube (sensor_cube.aqgl01), Wall Outlet (ctrl_86plug.aq1), Wall Switch(ctrl_ln1.aq1) |
 | 2017.10.09      | V2.0.1               | Modifications: support property report on water leak sensor |
 | 2017.09.20      | V2.0.0               | Modifications: Changes to the basic JSON format; device model value and property name change for some devices; for the property value type, each analog value is assigned to a corresponding numerical value. |
@@ -242,6 +243,12 @@ Describes device types, properties, and usage examples for Aqara products.
 | mid             | Indicates music id, the id of the music ringtone. Supports write. The values are: 0 ~ 8, 10 ~ 13, and 20 ~ 29 (the systems mentioned above comes with ringtones), 10000 (stop ringing), >10001 (user-defined ringtones). |
 | join_permission | The value of "yes"/"no" is used to indicate whether sub-devices can be added. |
 | remove_device   | The value is a did (did hex) string of the sub-device. It is used to remove a sub-device. |
+| on_off_cfg      | Air conditioning switch status. The values are: off、on、toggle、invalid. |
+| mode_cfg        | Air conditioning mode. The values are: heat、cool、auto、dry、wind、circle、invalid. |
+| ws_cfg          | Air conditioning speed.The values are: low、middle、high、auto、circle、invalid. |
+| swing_cfg       | Air conditioning swing. The values are: unswing、swing、invalid. |
+| temp_cfg        | Air conditioning temperature. The values are current temperature: 17~30 |
+| relay_status    | Air conditioning relay control. The values are: off、on、toggle. |
 
 Example:
 
@@ -306,6 +313,21 @@ Delete a sub-device under the Air Conditioning Controller:
    "params":[{"remove_device":"158d0000f12345"}]
 }
 ```
+
+
+
+Air conditioning configuration:
+
+```
+{
+    "cmd":"write",
+    "model":"acpartner.v3",
+    "sid":"6409802da2af",
+    "params":[{"on_off_cfg":"on"}]
+}
+```
+
+
 
 ### **Plug**
 
@@ -610,6 +632,81 @@ Property Report:
    "model":"lumi.ctrl_dualchn",
    "sid":"158d0001112316",
    "params":[{"channel_0":"on"}] 
+}
+```
+
+
+
+### Dimmer(Multicolor)
+
+(device model: dimmer.rgbegl01)
+
+| Attributes   | Description                              |
+| ------------ | ---------------------------------------- |
+| power_status | on/off/unknown                           |
+| light_rgb    | Ranges: 0-0x64FFFFFF. The highest byte indicates brightness(0 ~ 0x64), other bytes indicates color (RGB). |
+| light_level  | Ranges: 0~100, means light level is 1% ~ 100%. |
+
+Example:
+
+Property Report:
+
+```
+{
+    "cmd":"report",
+    "model":"dimmer.rgbegl01",
+    "sid":"112316",
+    "params":[{"power_status":"on"}]
+}
+```
+
+Control: 
+
+```
+{
+    "cmd":"write",
+    "model":"dimmer.rgbegl01",
+    "sid":"112316",
+    "params":[{"light_rgb":845905783}]
+}
+```
+
+
+
+### Thermostat
+
+(device model: ctrl_hvac.aq1/airrtc.tcpecn01)
+
+| Attributes    | Description                              |
+| ------------- | ---------------------------------------- |
+| on_off_cfg    | “on”/”off”/“toggle”/”circle”/”invalid”   |
+| mode_cfg      | “heat”/”cool”/”auto”/”dry”/”wind”/”circle”/”invalid” |
+| ws_cfg        | “low”/”middle”/”high”/”auto”/”circle”/”invalid” |
+| temp_cfg      | Ambient temperature that users set. The value is integer and unit is ℃. |
+| env_temp      | Ambient temperature of air conditioning, the unit is ℃ |
+| on_off_status | on/off , only read                       |
+
+Example:
+
+Property Report:
+
+```
+{
+    "cmd":"report",
+    "model":"airrtc.tcpecn01",
+    "sid":"112316",
+    "params":[{"on_off_status":"on"}]
+}
+```
+
+Control: 
+
+```
+{
+    "cmd":"write",
+    "model":"airrtc.tcpecn01",
+    "sid":"112316",
+    "params":[{"temp_cfg":20}]
 }
 ```
 

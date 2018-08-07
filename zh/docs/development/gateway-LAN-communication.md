@@ -24,6 +24,7 @@
 
 | 更新时间       | 文档版本   | 更新日志                                     |
 | ---------- | ------ | ---------------------------------------- |
+| 2018.07.16 | V2.0.2 | 新增：空调伴侣空调状态上报和控制功能，空调伴侣继电器控制功能；新增：RGB控制器和空调温控器 |
 | 2018.05.18 | V2.0.1 | 新增：魔方传感器 （sensor_cube.aqgl01）、墙壁插座（ctrl_86plug.aq1）、墙壁开关（ctrl_ln1.aq1） |
 | 2017.10.09 | V2.0.1 | 修改：水浸传感器的属性上报                            |
 | 2017.09.20 | V2.0.0 | 修改：基本的JSON格式变更；部分设备的model值和属性名称变更；对于属性的取值类型，模拟量统一取值为数值型。 |
@@ -292,6 +293,12 @@ JSON报文的基本格式：
 | mid             | 表示music id，即音乐铃声的id。支持write。取值有：0~8，10~13，20~29（上述为系统自带铃声），10000（表示停止播放铃声），>10001(表示用户自定义的铃声)。 |
 | join_permission | 取值“yes”/”no”，表示是否允许添加子设备。                |
 | remove_device   | 取值为子设备的did（did的16进制形式的字符串），用于删除某个子设备。    |
+| on_off_cfg      | 空调开关状态，取值为off、on、toggle、invalid          |
+| mode_cfg        | 空调模式，取值为heat、cool、auto、dry、wind、circle、invalid |
+| ws_cfg          | 空调风速，取值为low、middle、high、auto、circle、invalid |
+| swing_cfg       | 空调扫风，取值为unswing、swing、invalid            |
+| temp_cfg        | 空调温度，值为整形，取值为当前温度，17~30                  |
+| relay_status    | 空调继电器控制，取值为off、on、toggle                 |
 
 例如：
 
@@ -364,6 +371,17 @@ JSON报文的基本格式：
 ```
 
 
+
+空调配置：
+
+```
+{
+    "cmd":"write",
+    "model":"acpartner.v3",
+    "sid":"6409802da2af",
+    "params":[{"on_off_cfg":"on"}]
+}
+```
 
 
 
@@ -714,6 +732,81 @@ JSON报文的基本格式：
    "model":"lumi.ctrl_dualchn",
    "sid":"158d0001112316",
    "params":[{"channel_0":"on"}] 
+}
+```
+
+
+
+### RGB调光控制器
+
+（设备类型model：dimmer.rgbegl01）
+
+| 属性           | 说明                                       |
+| ------------ | ---------------------------------------- |
+| power_status | on/off/unknown        (开/关/未知)           |
+| light_rgb    | 取值范围为0-0x64FFFFFF，最高字节表示亮度（0 ~ 0x64），其余3个字节表示颜色值RGB |
+| light_level  | 取值范围为0~100，表示亮度为1% ~ 100%                |
+
+例如：
+
+属性上报：
+
+```
+{
+    "cmd":"report",
+    "model":"dimmer.rgbegl01",
+    "sid":"112316",
+    "params":[{"power_status":"on"}]
+}
+```
+
+控制：
+
+```
+{
+    "cmd":"write",
+    "model":"dimmer.rgbegl01",
+    "sid":"112316",
+    "params":[{"light_rgb":845905783}]
+}
+```
+
+
+
+### 空调温控器
+
+（设备类型model：ctrl_hvac.aq1/airrtc.tcpecn01）
+
+| 属性            | 说明                                       |
+| ------------- | ---------------------------------------- |
+| on_off_cfg    | “on”/”off”/“toggle”/”circle”/”invalid” （开/关/切换/循环/未定义值） |
+| mode_cfg      | “heat”/”cool”/”auto”/”dry”/”wind”/”circle”/”invalid” （制热/制冷/自动/干燥/送风/循环/未定义） |
+| ws_cfg        | “low”/”middle”/”high”/”auto”/”circle”/”invalid” （低速/中速/高速/自动/循环/未定义） |
+| temp_cfg      | 值为整形，用户设定的、想达到的环境温度，单位℃                  |
+| env_temp      | 空调环境温度，单位℃                               |
+| on_off_status | on/off （开/关），只读                          |
+
+例如：
+
+属性上报：
+
+```
+{
+    "cmd":"report",
+    "model":"airrtc.tcpecn01",
+    "sid":"112316",
+    "params":[{"on_off_status":"on"}]
+}
+```
+
+控制：
+
+```
+{
+    "cmd":"write",
+    "model":"airrtc.tcpecn01",
+    "sid":"112316",
+    "params":[{"temp_cfg":20}]
 }
 ```
 
