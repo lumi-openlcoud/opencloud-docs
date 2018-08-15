@@ -21,7 +21,7 @@ The AIOT Open Cloud Platform provides a comprehensive interface, including:
 
 - Resource Management
 
-- Remote Control
+- Linkage Management
 
   ​
 
