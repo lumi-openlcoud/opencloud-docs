@@ -550,3 +550,29 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 
 例如：设置为“开空调，模式为制冷，风速为低档，风向为水平，摆动扫风，温度为25度” 
 对应的二进制数为：00010001000000000001100100000001，二进制数转换为十进制，则ac_state值为“285219073”。 
+
+
+
+资源：**cfg_param**
+
+
+
+| 参数             | 类型     | 描述                       | 可写可读 |
+| -------------- | ------ | ------------------------ | ---- |
+| WriteMask      | uint16 | 标志要写的成员是哪一个，需要写的成员的对应位为1 | NA   |
+| bPosLimitState | bool_t | 电机是否已经设置了行程              | RW   |
+| bPolarity      | bool_t | 电机旋转的极性                  | RW   |
+| u8MotorStatus  | uint8  | 电机当前的状态                  | RO   |
+| bManualEnabled | bool_t | 电机是否使能了手拉功能              | RW   |
+| u8TransTime    | uint8  | 窗帘从起点允许到终点的使用时间，单位s      | RO   |
+
+
+
+
+
+
+
+
+
+
+

@@ -704,6 +704,8 @@
 
 ### 86无线开关（单键）
 
+设备类型：lumi.sensor_86sw1.aq1和lumi.sensor_86sw1.v1
+
 **Trigger列表**
 
 | name | Trigger |
@@ -712,7 +714,19 @@
 
 
 
+设备类型：lumi.remote.b186acn01
+
+**Trigger列表**
+
+| name | Trigger   |
+| ---- | --------- |
+| 单击   | click_ch0 |
+
+
+
 ### 86无线开关（双键）
+
+设备类型：lumi.sensor_86sw2.aq1和lumi.sensor_86sw2.v1
 
 **Trigger列表**
 
@@ -721,6 +735,18 @@
 | 左键单击   | left_click       |
 | 右键单击   | right_click      |
 | 左右同时单击 | left_right_click |
+
+
+
+设备类型：lumi.remote.b286acn01
+
+**Trigger列表**
+
+| name   | Trigger    |
+| ------ | ---------- |
+| 左键单击   | click_ch0  |
+| 右键单击   | click_ch1  |
+| 左右同时单击 | both_click |
 
 
 

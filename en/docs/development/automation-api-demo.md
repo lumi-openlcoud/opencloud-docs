@@ -704,6 +704,8 @@ Some Triggers need to configure specific parameter information:
 
 ### Wireless Remote Switch (Single Rocker)
 
+Device model: lumi.sensor_86sw1.aq1和lumi.sensor_86sw1.v1
+
 **Trigger**
 
 | name         | Trigger |
@@ -712,7 +714,19 @@ Some Triggers need to configure specific parameter information:
 
 
 
+Device model: lumi.remote.b186acn01
+
+**Trigger**
+
+| name         | Trigger   |
+| ------------ | --------- |
+| Single press | click_ch0 |
+
+
+
 ### Wireless Remote Switch (Double Rocker)
+
+Device model: lumi.sensor_86sw2.aq1和lumi.sensor_86sw2.v1
 
 **Trigger**
 
@@ -721,6 +735,18 @@ Some Triggers need to configure specific parameter information:
 | Single press the left button | left_click       |
 | Single press right button    | right_click      |
 | Single press both buttons    | left_right_click |
+
+
+
+Device model: lumi.sensor_86sw2.aq1和lumi.sensor_86sw2.v1
+
+**Trigger**
+
+| name                         | Trigger    |
+| ---------------------------- | ---------- |
+| Single press the left button | click_ch0  |
+| Single press right button    | click_ch1  |
+| Single press both buttons    | both_click |
 
 
 
