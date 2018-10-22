@@ -469,7 +469,7 @@ Compression mode of air conditioning command (4 bytes):  (binary)
 >
 > - [16-23] The temperature value (0~244) is decimal. If temperature is 25 degrees, then binary is 00011001.
 > - The value of "ac_state" must be decimal.
-> - Mode, speed and wind direction should not be F(invaild), it will probably control failure because the value cannot be recognized. Before setting the value of ac_state, it is better to query the current value of ac_state by API(/open/res/query/multi/option/extended), then change the value according to the requirement.
+> - Mode, speed and wind direction should not be F(invaild), it will probably control failure because the value cannot be recognized. Before setting the value of ac_state, it is better to query the current value of ac_state by API(/open/resource/query), then change the value according to the requirement.
 
 For example: "open air conditioning, mode is cool, speed is low, wind direction is horizontal, sweeping is swing and temperature is 25 degrees". 
 According to the above-metioned, binary is 00010001000000000001100100000001, convert binary to decimal, then the value of ac_state is “285219073”.
