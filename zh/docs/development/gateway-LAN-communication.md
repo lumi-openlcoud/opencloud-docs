@@ -105,8 +105,8 @@
    "cmd":"discovery_rsp",
    "sid":"158d323123c9d9",     //sid为网关did
    "token":"TahkC7dalbIhXG22",    //网关生成的随机字符串
-   "dev_list":[{"sid":"158d0000f1a750","model":"plug"},  
-               {"sid":"158d00010fd645","model":"sensor_switch.aq2"}]  //sid为子设备did
+   "dev_list":[{"sid":"xxxxxxxx","model":"plug"},  
+               {"sid":"xxxxxxxx","model":"sensor_switch.aq2"}]  //sid为子设备did
 }
 ```
 
@@ -129,7 +129,7 @@
 {
    "cmd":"report",
    "model":"sensor_magnet.aq2",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"window_status":"open"}] 
 }
 ```
@@ -148,7 +148,7 @@
 {
     "cmd":"heartbeat",
     "model":"gateway.v3",
-    "sid":"f0b429b3c9d965",
+    "sid":"xxxxxxxx",
     "token":"1234567890abcdef",   //网关生成的随机字符串
     "params":[{"ip":"172.22.4.130"}]  //网关IP地址
  }
@@ -169,7 +169,7 @@
 {
    "cmd":"heartbeat",
    "model":"sensor_magnet.aq2",
-   "sid":"158d000065a271",
+   "sid":"xxxxxxxx",
    "params":[{"window_status":"open"}]
 }
 ```
@@ -197,7 +197,7 @@
 ```
 {
    "cmd":"read",
-   "sid":"158d0000123456"   //墙壁开关did
+   "sid":"xxxxxxxx"   //墙壁开关did
 }
 ```
 
@@ -207,7 +207,7 @@
 {
    "cmd":"read_rsp",
    "model":"ctrl_neutral2",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"},{"channel_1":"off"}]  
 }
 ```
@@ -228,7 +228,7 @@
 {
     "cmd":"write",
     "model":"ctrl_neutral1",
-    "sid":"158d0000123456",
+    "sid":"xxxxxxxx",
     "key":"3EB43E37C20AFF4C5872CC0D04D81314",
     "params":[{"channel_0":"off"}]
  }
@@ -242,7 +242,7 @@
 {
    "cmd":"write_rsp",
    "model":"ctrl_neutral1",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  
 }
 ```
@@ -267,7 +267,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",     //命令类型，支持write/read/write_rsp/read_rsp/report/heartbeat
    "model":"ctrl_neutral2",   //设备类型
-   "sid":"158d0000123456",    //设备的did
+   "sid":"xxxxxxxx",    //设备的did
    "params":[{"channel_0":"on"},{"channel_1":"off"}]  //params里可以包含同一个设备的多个属性 
 }
 ```
@@ -308,7 +308,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"acpartner.v3",
-   "sid":"640980123456",
+   "sid":"xxxxxxxx",
    "params":["illumination:500,"proto_version":"2.0.0"}]
    //光照度为500，通信协议版本为2.0.0。
 }
@@ -324,7 +324,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"acpartner.v3",
-   "sid":"640980123456",
+   "sid":"xxxxxxxx",
    "params":[{"mid":10005}]
 }
 ```
@@ -337,7 +337,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"acpartner.v3",
-   "sid":"640980123456",
+   "sid":"xxxxxxxx",
    "params":[{"mid":10000}]
 }
 ```
@@ -350,7 +350,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"acpartner.v3",
-   "sid":"640980123456",
+   "sid":"xxxxxxxx",
    "params":[{"join_permission":"yes"}]
 }
 ```
@@ -365,7 +365,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"acpartner.v3",
-   "sid":"640980123456",
+   "sid":"xxxxxxxx",
    "params":[{"remove_device":"158d0000f12345"}]
 }
 ```
@@ -378,7 +378,7 @@ JSON报文的基本格式：
 {
     "cmd":"write",
     "model":"acpartner.v3",
-    "sid":"6409802da2af",
+    "sid":"xxxxxxxx",
     "params":[{"on_off_cfg":"on"}]
 }
 ```
@@ -403,7 +403,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"plug",
-   "sid":"158d0000123123",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}] //智能插座状态为“开”
 }
 ```
@@ -416,7 +416,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"plug",
-   "sid":"158d0000123123",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"off"}]  //将智能插座状态改为“关”
 }
 ```
@@ -429,7 +429,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"plug",
-   "sid":"158d0000123123",
+   "sid":"xxxxxxxx",
    "params":[{"load_power":9.57},{”energy_consumed":57}] 
    //负载功率为9.57W，负载消耗电量为57Wh。
 }
@@ -457,7 +457,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"ctrl_86plug",
-   "sid":"158d0001123123",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  //墙壁插座状态为“开”
 }
 ```
@@ -470,7 +470,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"ctrl_86plug",
-   "sid":"158d0001123123",
+   "sid":"xxxxxxxx",
    "params":[{“channel_0”:”off”}]  //将墙壁插座状态改为“关”
 }
 ```
@@ -483,7 +483,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"ctrl_86plug",
-   "sid":"158d0001123123",
+   "sid":"xxxxxxxx",
    "params":[{"load_power":9.57},{"energy_consumed":57}]
    //负载功率为9.57W，负载消耗电量为57Wh。
 }
@@ -509,7 +509,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"ctrl_ln1",
-   "sid":"158d0001112313",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  //墙壁开关状态为“开”
 }
 ```
@@ -522,7 +522,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"ctrl_ln1",
-   "sid":"158d0001112313",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"off"}]   //将墙壁开关状态改为“关”
 }
 ```
@@ -548,7 +548,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"ctrl_ln2",
-   "sid":"158d0001112312",
+   "sid":"xxxxxxxx",
    "params":[{"channel_1":"on"}]  //墙壁开关2状态为“开”
 }
 ```
@@ -561,7 +561,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"ctrl_ln2",
-   "sid":"158d0001112312",
+   "sid":"xxxxxxxx",
    "params":[{"channel_1":"off"}]  //将墙壁开关2状态改为“关”
 }
 ```
@@ -586,7 +586,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"ctrl_neutral1",
-   "sid":"158d0001112311",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  //墙壁开关状态为“开”
 }
 ```
@@ -599,7 +599,7 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"ctrl_neutral1",
-   "sid":"158d0001112311",
+   "sid":"xxxxxxxx",
    "params":[{" channel_0":"off"}]  //将墙壁开关状态改为“关”
 }
 ```
@@ -625,13 +625,13 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"ctrl_neutral2",
-   "sid":"158d0001112316",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  //墙壁开关1状态为“开”
 }
 {
    "cmd":"report",
    "model":"ctrl_neutral2",
-   "sid":"158d0001112316",
+   "sid":"xxxxxxxx",
    "params":[{"channel_1":"on"}]  //墙壁开关2状态为“开”
 }
 ```
@@ -644,13 +644,13 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"ctrl_neutral2",
-   "sid":"158d0001112316",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}]  //将墙壁开关1改为“开”
 }
 {
    "cmd":"write",
    "model":"ctrl_neutral2",
-   "sid":"158d0001112316",
+   "sid":"xxxxxxxx",
    "params":[{"channel_1":"off"}]  //将墙壁开关2改为“关”
 }
 ```
@@ -676,7 +676,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"curtain",
-   "sid":"158d0001012345",
+   "sid":"xxxxxxxx",
    "params":[{"curtain_level":50}]  //窗帘打开50%
 }
 ```
@@ -689,13 +689,13 @@ JSON报文的基本格式：
 {
    "cmd":"write",
    "model":"curtain",
-   "sid":"158d0001012345",
+   "sid":"xxxxxxxx",
    "params":[{"curtain_status":"open"}]  //开窗帘
 }
 {
    "cmd":"write",
    "model":"curtain",
-   "sid":"158d0001012345",
+   "sid":"xxxxxxxx",
    "params":[{"curtain_level":25}]  //窗帘打开25%
 }
 ```
@@ -706,7 +706,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"curtain",
-   "sid":"158d0001012345",
+   "sid":"xxxxxxxx",
    "params":[{"curtain_level":25}]  //上报窗帘已打开25%
 }
 ```
@@ -730,7 +730,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"lumi.ctrl_dualchn",
-   "sid":"158d0001112316",
+   "sid":"xxxxxxxx",
    "params":[{"channel_0":"on"}] 
 }
 ```
@@ -755,7 +755,7 @@ JSON报文的基本格式：
 {
     "cmd":"report",
     "model":"dimmer.rgbegl01",
-    "sid":"112316",
+    "sid":"xxxxxxxx",
     "params":[{"power_status":"on"}]
 }
 ```
@@ -766,7 +766,7 @@ JSON报文的基本格式：
 {
     "cmd":"write",
     "model":"dimmer.rgbegl01",
-    "sid":"112316",
+    "sid":"xxxxxxxx",
     "params":[{"light_rgb":845905783}]
 }
 ```
@@ -794,7 +794,7 @@ JSON报文的基本格式：
 {
     "cmd":"report",
     "model":"airrtc.tcpecn01",
-    "sid":"112316",
+    "sid":"xxxxxxxx",
     "params":[{"on_off_status":"on"}]
 }
 ```
@@ -805,7 +805,7 @@ JSON报文的基本格式：
 {
     "cmd":"write",
     "model":"airrtc.tcpecn01",
-    "sid":"112316",
+    "sid":"xxxxxxxx",
     "params":[{"temp_cfg":20}]
 }
 ```
@@ -831,7 +831,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_magnet.aq2",
-   "sid":"158d0001123456",
+   "sid":"xxxxxxxx",
    "params":[{"window_status":"open"}]  //窗户被打开
 }
 ```
@@ -844,7 +844,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_magnet.aq2",
-   "sid":"158d0001123456",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000}]
 }
 ```
@@ -874,7 +874,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_motion.aq2",
-   "sid":"158d0000f12222",
+   "sid":"xxxxxxxx",
    "params":[{"motion_status":"motion"}]  //检测到有人移动
 }
 ```
@@ -885,7 +885,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_motion.aq2",
-   "sid":"158d0000f12222",
+   "sid":"xxxxxxxx",
    "params":[{"lux":100},{"illumination":100}]  
 }
 ```
@@ -898,7 +898,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_motion.aq2",
-   "sid":"158d0000f12222",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000},{"lux":50}]
 }
 ```
@@ -928,7 +928,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"weather",
-   "sid":"158d0000f12346",
+   "sid":"xxxxxxxx",
    "params":[{"temperature":2333}]  //温度是23.33度
 }
 ```
@@ -941,7 +941,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"weather",
-   "sid":"112316",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000}, {"temperature":2333},{"humidity":6678},{"pressure":99900}]
    //温度为23.33度，湿度为66.78%，大气气压为99.9KPa。
 }
@@ -968,7 +968,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_wleak.aq1",
-   "sid":"158d0001234567",
+   "sid":"xxxxxxxx",
    "params":[{"wleak_status":"leak"}]  //检测到发生浸水报警
 }
 ```
@@ -979,7 +979,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"sensor_wleak.aq1",
-   "sid":"158d0001234567",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000}]
 }
 ```
@@ -1005,7 +1005,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_switch.aq2",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"button_0":"click"}]  
 }
 ```
@@ -1016,7 +1016,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"sensor_switch.aq2",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000}]
 }
 ```
@@ -1044,7 +1044,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_switch.aq3",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"button_0":"click"}]  //单击无线开关
 }
 ```
@@ -1055,7 +1055,7 @@ JSON报文的基本格式：
 {
    "cmd":"heartbeat",
    "model":"sensor_switch.aq3",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"battery_voltage":3000}]
 }
 ```
@@ -1081,7 +1081,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_86sw1.aq1",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"button_0":"double_click"}]
 }
 ```
@@ -1108,7 +1108,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_86sw2.aq1",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{"button_1":"double_click"}]
 }
 ```
@@ -1136,7 +1136,7 @@ JSON报文的基本格式：
 {
    "cmd":"report",
    "model":"sensor_cube.aqgl01",
-   "sid":"158d0000123456",
+   "sid":"xxxxxxxx",
    "params":[{“cube_status”:”rotate”},{"rotate_degree":-90},{"detect_time ":500}]
 }
 ```
@@ -1147,7 +1147,7 @@ JSON报文的基本格式：
 {
     "cmd":"report",
     "model":"sensor_cube.aqgl01",
-    "sid":"158d0000123456",
+    "sid":"xxxxxxxx",
     "params":[{"cube_status":"flip90"}]
 }
 ```
