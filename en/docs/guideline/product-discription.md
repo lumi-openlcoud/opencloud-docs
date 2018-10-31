@@ -449,7 +449,7 @@ Temperature and Humidity Sensor is an industrial grade sensor that can measure a
 - Detection accuracy: ±0.3℃，±3%RH，±120Pa
 - Wireless type: ZigBee
 - Battery specifications: CR2032
-- Operating temperature: -20℃~+60℃
+- Operating temperature: -20℃~+50℃
 - Operating humidity: 0%~100%RH, non-condensing
 - Pressure detection range and accuracy: 30KPa～110KPa，±120Pa
 - Standard: Q/QLML006-2016
