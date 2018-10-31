@@ -1021,3 +1021,15 @@ Other status report:
 }
 ```
 
+### **Vibration Sensor**
+
+| **Attributes**  | **Description**                          |
+| --------------- | ---------------------------------------- |
+| bed_activity    |                                          |
+| coordination    |                                          |
+| final_tilt_angel |                                          |
+| free_fall       |                                          |
+| tilt            |                                          |
+| vibrate         |                                          |
+| bed_activity    |                                          |
+
