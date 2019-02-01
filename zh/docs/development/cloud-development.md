@@ -5,13 +5,10 @@
 
 ### 概述
 
-AIOT是一个物联网云平台，提供用户管理、设备管理、数据采集与远程控制等服务。通过智能设备采集的数据存储在AIOT云端数据库中，比如：功率、温湿度、开关状态、门窗状态等。同时，AIOT云端可以通过下发控制命令来远程控制设备。那开发者如何获得采集数据呢？又如何远程控制自己的设备呢？
+AIOT是提供设备管理、数据采集与远程控制等服务的物联网云平台。通过智能设备采集的数据存储在AIOT云端数据库中，比如：功率、温湿度、开关状态、门窗状态等。同时，AIOT云端可以通过下发控制命令来远程控制设备。那开发者如何获得采集数据呢？又如何远程控制自己的设备呢？
 
-为了满足这些第三方开发者的需求，AIOT开放平台提供了云端对接方式。通过Open API和消息推送服务，开发者可以从云端采集数据和远程控制设备，从而开发丰富的物联网应用。
+为了满足第三方开发者的需求，AIOT开放平台提供云端对接方式。通过Open API和消息推送服务，可以从云端采集数据和远程控制设备。目前提供如下接口：
 
-AIOT开放平台提供了非常完善的接口，包括：
-
-- 用户管理
 - 位置管理
 - 设备管理
 - 场景管理
@@ -22,11 +19,9 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 下面，本手册将介绍下如何基于云端对接方式开发第三方应用，包括应用的创建、配置和开发等。
 
-### 写在前面
+### 开发流程
 
-一个好的软件开发流程加上一个好的软件系统架构，会给软件开发带来事半功倍的效果。因此，为了帮助开发者开发得更加顺畅，在前面交代些重要的事。如果你是一个经验丰富的开发者，可以跳过这一小节。
-
-在应用正式开发前，开发者需要做些准备工作，可参考如下流程。
+一个好的软件开发流程加上一个好的软件系统架构，会给软件开发带来事半功倍的效果。对于云对接方式，可按照以下流程进行开发。
 
 ![应用开发流程](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/application-development-process.png)
 
@@ -34,7 +29,7 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 ![应用参考架构图](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/application-reference-architecture.png)
 
-如果开发者还不熟悉API的调用方法，推荐使用Web API测试工具[Postman](https://www.getpostman.com/)。Postman是一款优秀的Web API和HTTP请求调试工具，功能强大，界面清晰，操作方便快捷。Postman能够帮助开发者测试AIOT Open API，从而快速掌握API的调用方法。
+如果开发者还不熟悉API的调用方法，推荐使用Web API测试工具[Postman](https://www.getpostman.com/)。
 
 > 注意：使用Postman时请关闭SSL验证（SSL certifacate verification）。
 
@@ -42,55 +37,42 @@ AIOT开放平台提供了非常完善的接口，包括：
 
 ### 创建应用
 
-登录[AIOT开放平台](https://opencloud.aqara.cn/)，单击“新建应用”。创建应用时，开发者需要设置应用的相关参数，包括：
+登录[AIOT开放平台](https://opencloud.aqara.cn/)，单击“新建应用”。根据提示输入“应用名称”、“行业类型”和“应用简介”，单击“完成”后，系统会自动分配**Appid**和**Appkey**。
 
-- 应用名称
-- 行业类型
-- 简介
 
-创建应用成功后平台自动分配AppID和AppKey，其中AppID是应用的唯一标识，而AppKey是应用的秘钥。AppID和AppKey非常重要，在应用开发过程中会被频繁使用，比如：在调用AIOT开放平台Open API时，开发者需要在请求Header中加上AppID和AppKey作为校验参数。
-
-> 注意：请开发者务必妥善保管AppKey，以防泄露，同时建议定期重置AppKey。
 
 ### 申请资源权限
 
-资源是一种抽象的说法，在这里指由设备产生的数据，包括设备的设置参数与实时状态。一个设备具有多个资源，不同的资源表示不同含义的数据。例如，开关状态（plug_status）是智能插座的一个资源，表示智能插座当前是否通电。通过访问该资源，开发者可以查询插座的当前状态和远程开关插座。
+资源是指由设备产生的数据，包括设备的设置参数与实时状态。一个设备具有多个资源，不同的资源表示不同含义的数据。例如，开关状态（plug_status）是智能插座的一个资源，表示智能插座当前是否通电。通过访问该资源，开发者可以查询插座的当前状态和远程开关插座。
 
 访问资源之前，开发者需要先按级别申请资源的权限。资源级别分为1级和2级，1级表示常用的资源，2级表示不常用的资源。获得某个类型设备的1级授权后，开发者可以在应用中访问该类型设备的所有常用资源。
 
-默认情况下，应用会自动分配所有类型设备的1级资源权限。如果需要申请2级资源授权，请访问“应用管理”页面，然后切换到“资源授权”页，如下图所示。
+默认情况下，应用会自动分配所有类型设备的1级资源权限。如果需要申请2级资源授权，请访问“应用管理”页面，然后切换到“资源授权”页。
 
 - 单击每一行右侧的“申请资源”按钮，申请对应设备类型的资源。
 - 选中左侧多个勾选框，然后单击右上角的“批量申请”按钮，可以批量申请多个设备类型的资源。
 
-申请单提交后需等待1到3个工作日，审核结果会以短信或邮件的方式通知到开发者。
+申请单提交后请耐心等待管理员审核，预计1个工作日的处理时间。
 
-![资源授权页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-resource.png)
+
 
 ### 申请API权限
 
-API是AIOT开放平台对外提供数据的接口，也是开发者查询与控制设备的主要方式。在开发应用前，开发者请根据自己的需求来申请API的权限。默认情况下，应用会自动分配常用API的权限。
+API是AIOT开放平台对外提供数据的接口，用于查询、控制设备和配置自动化、场景等信息。目前开放的API接口默认为已授权状态。
 
-如果开发者需要申请API，请访问“应用管理”页面，然后切换到“API访问”页，如下图所示。
 
-- 单击每一行右侧的“申请”按钮，申请对应API的访问权限。
-- 单击右上角的“批量申请”按钮，然后按功能批量申请多个API的访问权限。
-
-申请单提交后需等待1到3个工作日，审核结果会以短信或邮件的方式通知到开发者。
-
-![API访问页](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/apply-api.png)
 
 ## 账号授权
 
-在设备入网后，设备绑定到唯一的AIOT账号，也就是Aqara APP的登录账号。只有获得AIOT账号的授权许可，第三方应用才能访问与控制该账号下的设备，同时AIOT平台才会把设备消息推送到第三方服务器。
+只有获得AIOT账号的授权许可，第三方应用才能访问与控制该账号下的设备，同时AIOT开放平台才会把设备消息推送到第三方服务器。
 
-> 说明：在应用商店或Apple Store搜索“Aqara”，下载安装后注册Aaqra APP账号。
+> 说明：在应用商店或Apple Store搜索“Aqara Home”，下载安装后注册Aaqra账号。
 
-目前，AIOT开放平台提供两种授权方式：OAuth 2.0和签名授权方式。
+目前，AIOT开放平台提供授权方式：OAuth 2.0授权。
 
 ### OAuth2.0
 
-OAuth2.0 是一个开放标准，允许用户让第三方应用访问该用户在某一网站（或物联网平台）上存储的私密资源（如用户信息、照片、视频、设备数据等），而无需将用户名和密码提供给第三方应用。如果您想对OAuth2.0开放标准进行扩展阅读，请参考 [理解OAuth2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html) | [OAuth标准（英文）](https://oauth.net/2/)。
+OAuth2.0 是一个开放标准，允许用户让第三方应用访问该用户在某一网站（或物联网平台）上存储的私密资源（如用户信息、照片、视频、设备数据等），而无需将用户名和密码提供给第三方应用。
 
 AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式，适用于拥有server端的应用。OAuth 2.0 授权流程简单、安全，时序图如下所示，完成授权流程后获得访问令牌（AccessToken）。此后，开发者使用访问令牌来调用接口，获取用户信息或操作用户的设备。
 
@@ -102,7 +84,7 @@ OAuth 2.0 详细授权流程如下：
 
 #### 步骤1 请求授权码
 
-首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara APP账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
+首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
 
 - **URL：**  https://aiot-oauth2.aqara.cn/authorize?client_id=xxx&response_type=code&redirect_uri=xxxx&state=xxx&theme=x
 - **请求方式：** HTTP GET
@@ -114,7 +96,7 @@ OAuth 2.0 详细授权流程如下：
 | response_type | 是    | 返回类型，按照OAuth 2.0 标准，取值为`code` |
 | redirect_uri  | 是    | 第三方应用注册的重定向URI                |
 | state         | 否    | 取值为任意字符串，认证服务器将原样返回该参数        |
-| theme         | 否    | 页面主题，目前支持0、1、2三套主题，默认为主题0     |
+| theme         | 否    | 页面主题，目前支持0、1两套主题，默认为主题0       |
 
 - **返回说明**
 ```
@@ -137,7 +119,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | code          | 是    | 上一步请求获得的授权码                            |
 | redirect_uri  | 是    | 上一步请求中设置的redirect_uri参数                |
 
-- **返回示例（状态码200）**
+- **返回示例**
 ```
 {
     "access_token": "xxxxx", 
@@ -174,7 +156,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | grant_type    | 是    | 根据OAuth 2.0 标准，取值为`refresh_token` |
 | refresh_token | 是    | 上一步请求获得的刷新令牌                      |
 
-- **返回示例（状态码200）**
+- **返回示例**
 ```
 {
     "access_token": "xxxxx", 
@@ -196,64 +178,6 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | refresh_token | 新的刷新令牌，旧的刷新令牌立即作废          |
 | state         | 取值为任意字符串，认证服务器将原样返回该参数     |
 
-> 注意：如果刷新访问令牌时出现非正常返回的情况，请重试！
-
-
-
-### 签名授权
-
-大都数情况下，第三方应用会有自己的账号体系，并希望将此账号体系与AIOT账号体系进行对接，而不像Oauth2.0授权方式一样，需要用户再次注册Aqara账号。签名授权的方式，对用户而言，对Aqara账号是无感知的，只需要注册第三方应用的账号即可。
-
-
-
-#### 步骤1 创建超级账号
-
-登录AIOT开放平台网站，在“应用管理”页面切换到“超级账号”页面，单击页面右上角的“创建账号”，输入用户名和密码，创建成功后，系统会自动生成“Open ID”和“Private Key”。
-
-| 参数名         | 描述                             |
-| ----------- | ------------------------------ |
-| Open ID     | 授权用户的唯一标识                      |
-| Private Key | 密钥，用于生成数字签名                    |
-| 用户名         | 设置的Aqara账号，目前不支持在Aqara APP上登录。 |
-
-
-
-#### 步骤2 生成数字签名
-
-数字签名采用ECDSA算法，代码可[下载](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/ECDSA%E7%AE%97%E6%B3%95%E5%8F%8Ademo.zip)。
-
-> 说明：ECDSA算法及demo.zip文件夹中，ECDSAUtil.java为ECDSA算法代码，OpenEchoTester.java为签名授权接口调用demo。
-
-签名字符串拼接方法如下：
-
-```
-StringBuilder stringBuilder = new StringBuilder();
-stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).append("&").append(openId).append("&").append(nonce);
-```
-
-| 参数名    | 描述                                       |
-| ------ | ---------------------------------------- |
-| uri    | 例如：查询设备接口：https://aiot-open-3rd.aqara.cn/open/device/query/v2，uri即为/open/device/query/v2。 |
-| appId  | 第三方应用ID                                  |
-| appKey | 第三方应用秘钥                                  |
-| openId | 步骤1中生成的Open ID                           |
-| nonce  | 发送请求时的时间戳，单位ms                           |
-
-
-
-#### 步骤3 请求接口
-
-通过签名授权方式认证后，在请求接口时，需在header中携带以下参数：
-
-| 参数名                   | 类型     | 描述             |
-| --------------------- | ------ | -------------- |
-| Authorization-Version | String | 认证方案的版本号。值：v2  |
-| Appid                 | String | 第三方应用ID        |
-| Appkey                | String | 第三方应用秘钥        |
-| Openid或Open-Id        | String | 步骤1中生成的Open ID |
-| _nonce                | String | 发送请求时的时间戳，单位ms |
-| _signature            | String | 步骤2中请求的数字签名    |
-
 
 
 ## API调用
@@ -264,7 +188,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 
 2. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
 
-3. 接口的请求body和返回结果都采用**JSON格式**，如果开发者采用其他格式，会提示“请求参数错误”。
+3. 接口的请求body和返回结果都采用**JSON格式**。
 
 4. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
 
@@ -282,13 +206,13 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 
 - 请求header示例
 
-| Key          | Value                            | 描述（可不填）          |
-| ------------ | -------------------------------- | ---------------- |
-| Appid        | 54a230100006040223478911         | 应用的唯一标识          |
-| Appkey       | oT7kp77v123456siiXISamsPpvaTaWeZ | 应用的秘钥            |
-| Openid       | Yb2bR2btJC6L8EmU5Z3jzh4oQsttie   | 通过OAuth授权获得的用户ID |
-| Access-Token | 12db5a10c49fd289963dbc67a0d13ab5 | 通过OAuth授权获得的访问令牌 |
-| Content-Type | application/json                 | 返回结果采用JSON格式     |
+| Key          | Value                             | 描述（可不填）          |
+| ------------ | --------------------------------- | ---------------- |
+| Appid        | 54a2301000000000000478911         | 应用的唯一标识          |
+| Appkey       | oT7kp77v123456siiXISamsPpvaTaWeZ  | 应用的秘钥            |
+| Openid       | Yb2bR2btJ1234EmU5Z3jzh4oQsttie    | 通过OAuth授权获得的用户ID |
+| Access-Token | 12db5a10c49fd2112233dbc67a0d13ab5 | 通过OAuth授权获得的访问令牌 |
+| Content-Type | application/json                  | 返回结果采用JSON格式     |
 
 > 注意：在请求header时填写的Key和Value值，需注意字母大小写。
 
@@ -296,7 +220,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 
 ```
   {
-  "openId": "Yb2bR2btJC6L8Em123456h4oQsttie",
+  "openId": "Yb2bR2btJ1234EmU5Z3jzh4oQsttie",
   "did": "lumi.158d0001234654"
   }
 ```
@@ -310,7 +234,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
         "chipVersion": "",
         "bindTime": "22:35:18",
         "name": "卧室红外光照传感器",
-        "model": "lumi.sensor_motion.es2",
+        "model": "lumi.sensor_motion.xxx",
         "isOnline": 1,
         "firmwareVersion": "1",
         "did": "lumi.158d0001123454",
@@ -318,26 +242,9 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
     },
     "code": 0,
     "isBytesData": 0,
-    "requestId": "oHjXRtRdnm"
+    "requestId": "1234"
   }
 ```
-
-#### 签名授权
-
-例如，通过调用接口查询一个设备的详细信息，调用方法如下：
-
-- 请求URL：https://aiot-open-3rd.aqara.cn/open/device/query/v2
-- 请求方式： HTTP POST （application/json）
-- 请求header示例
-
-| Key                   | Value                            | 描述（可不填）          |
-| --------------------- | -------------------------------- | ---------------- |
-| Authorization-Version | v2                               | 认证方案的版本号         |
-| Appid                 | 54a230100006040223478911         | 应用的唯一标识          |
-| Appkey                | oT7kp77v123456siiXISamsPpvaTaWeZ | 应用的秘钥            |
-| Openid或Open-Id        | 225997134641850051123456247729   | 通过OAuth授权获得的用户ID |
-| _nonce                | 1532571136000                    | 发送请求时的时间戳，单位ms   |
-| _signature            | MEUCICSJ9WBOXWoNElGFVLR3IyTYso   | 请求的数字签名          |
 
 
 
@@ -347,7 +254,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 
 1. 填写服务器配置；
 2. 验证服务器地址；
-3. 按类型订阅消息；
+3. 调用订阅资源接口，订阅需要推送的资源；
 4. 根据消息格式实现业务逻辑。
 
 特别注意，第三方应用在正常接收消息后必须按照规定的格式返回JSON报文，格式如下：
@@ -366,7 +273,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 1. **URL**：服务器地址，第三方服务器用来接收消息的接口URL；
 2. **Token**：由开发者任意填写，用于生成签名；
 3. **EncodingAESKey：**随机生成或由开发者手动填写，将用来对消息体进行加解密；
-4. **消息加解密方式**：分为明文模式、兼容模式和安全模式，更改消息加解密方式后会立即生效，请开发者谨慎修改。
+4. **消息加解密方式**：分为明文模式、兼容模式和安全模式，更改消息加解密方式后会立即生效，请开发者谨慎修改。For
 
 详细说明下消息加解密方式的区别：
 
@@ -374,9 +281,9 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 - 兼容模式：消息体同时包含明文和密文，方便开发者调试和维护；
 - 安全模式：消息体为纯密文，需要开发者加密和解密，安全系数高。
 
-> 注意：目前仅支持“明文模式”，请开发者使用明文模式。
+> 注意：目前支持“明文模式”和“安全模式”，为了数据安全性，推荐使用“安全模式”。
 
-![消息服务器配置](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/message-subscribe.png)
+
 
 ### 验证服务器
 
@@ -401,20 +308,52 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 }
 ```
 
+
+
 **安全模式**
 
-在安全模式下，服务器验证的方法变得复杂，和微信公众号平台类似。 开发者保存服务器配置后后，AIOT服务器将发送GET请求到填写的服务器地址（URL)，请求携带如下参数：
+在安全模式下，服务器验证的方法变得复杂，和微信公众号平台类似。 开发者保存服务器配置后后，AIOT服务器将发送POST请求到填写的服务器地址（URL)：
 
-* **signature**：加密签名，signature结合了开发者填写的Token参数和请求中的timestamp参数、nonce参数；
-* **timestamp**：时间戳；
-* **nonce**：随机数；
-* **echostr**：随机字符串。
+- Token: header签名token,
+- EncodingAESKey：AES加密密钥(Base64处理),
+- echostr：随机字符串。
 
-若确认此次GET请求来自绿米服务器，请原样返回echostr参数内容，则验证服务器成功，否则验证失败。其中，加密/校验流程如下：
+body加密解密：
+```
+public static String encrypt(String src, byte[] key) throws Exception {
+    SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
+    AlgorithmParameterSpec params = new IvParameterSpec(IV);
+    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+    cipher.init(Cipher.ENCRYPT_MODE, skeySpec, params);
+    byte[] content = src.getBytes("utf-8");
+    byte[] ret = cipher.doFinal(content);
+    return Base64.getEncoder().encodeToString(ret);
+}
 
-1. 将Token、timestamp、nonce三个参数进行字典序排序；
-2. 将三个参数字符串拼接成一个字符串进行sha1加密；
-3. 开发者获得加密后的字符串可与signature对比，标识该请求来源于AIOT服务器。
+public static byte[] decrypt(String src, byte[] key) throws Exception {
+    byte[] srcByte = Base64.getDecoder().decode(src);
+    SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
+    AlgorithmParameterSpec params = new IvParameterSpec(IV);
+    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+    cipher.init(Cipher.DECRYPT_MODE, skeySpec, params);
+    byte[] ret = cipher.doFinal(srcByte);
+    return ret;
+}
+```
+
+
+
+若确认此次POST请求来自绿米服务器，请原样返回echostr参数内容，则验证服务器成功，否则验证失败。
+
+其中，header签名流程如下：
+
+1. 将Appid、Token、Time三个参数进行字典序排序，然后进行拼接；
+  例如：Appid=xxx&Token=xxx&Time=xxx
+2. 拼接开发者配置的EncodingAESKey；
+  例如：Appid=xxx&Token=xxx&Time=xxx&AESKey
+3. 最后对产生的字符做MD5，生成的数即为Sign的值，开发者通过对比Sig的一致性来判断该请求是否来源于AIOT服务器。
+
+
 
 ### 消息格式
 
@@ -432,7 +371,7 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
             "time": "1503556533", 
             "attr": "load_power", 
             "value": "3.93", 
-            "did": "lumi.158d00011234ee"
+            "did": "lumi.xxxxxxxxxx"
         }
     ]
 }
@@ -452,12 +391,12 @@ stringBuilder.append(uri).append("&").append(appId).append("&").append(appKey).a
 {
     "msgType": "device", 
     "data": {
-        "openId": "GoeFrrL7mN9SsGRi1234564YnQpXTS", 
+        "openId": "xxxxxx", 
         "name": "空调伴侣", 
-        "model": "lumi.acpartner.aq1", 
+        "model": "lumi.acpartner.xxx", 
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
-        "did": "lumi.158d00010b1230", 
+        "did": "lumi.xxxxxxx", 
         "parentId": "", 
         "extra": "{"clientId":"xxxx"}"
     }
