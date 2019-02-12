@@ -9,8 +9,6 @@ In 2015, LUMI released its first line of products. Then, in less than one year, 
 
 In 2016, LUMI launched its private brand Aqara which took the first place among numerous international top brands with its beautiful design and outstanding quality. Aqara owned more product varieties, including Hub, Controller and Sensor, that basically covered full-range smart home system and involved industrial automation system. Aqara products adopted self-developed cloud platform of Internet of Things AIOT and mobile application Aqara, thus they are more applicable to enterprise users and their Internet of Things applications. 
 
-This device manual covers Aqara products only. It can help the user quickly understand the basic information of LUMI products, including their functions, parameters and usage methods.  
-
 ![全家福](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi.family.png)
 
 LUMI products have the following advantages: 
@@ -29,6 +27,36 @@ LUMI products have the following advantages:
 ## **Hub**
 
 Hub are central hubs that connect and manage various intelligent sensors and controllers.
+
+### Aqara Hub
+
+![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_gateway.png)
+
+**<u>Function Description</u>**
+
+Aqara Hub is the control center of ZigBee device of smart home. Based on Wi-Fi and ZigBee radio transmission technology communication, it works with various ZigBee sensors and controllers to accomplish a variety of higher-order functions such as control wall switches and RGB night lights, monitor temperature, humidity and atmospheric pressure, sense human movement, and detect water leaks. and support a maximum of 32 Sub-devices. Meanwhile, Aqara Hub is a HomeKit-enabled smart bridge. With the Apple "home" app, you can easily and securely control the gateway and access Aqara devices, as well as set up automation scenarios to allow Aqara devices to control other HomeKit-enabled devices.
+
+The status of Aqara Hub indicator is described below:
+
+|   **Indicator status**   |             **Description**              |
+| :----------------------: | :--------------------------------------: |
+| Yellow light quick blink | It appears when you connect the Hub for the first time or when you reset the Hub |
+| Yellow light slow blink  |            Firmware updating             |
+|  Blue light quick blink  | It appears when Wi-Fi is connecting, the network is disconnected or the Hub reconnects after the plug is re-plugged |
+| Purple light slow blink  |     Allow to add bridge accessories      |
+
+**<u>Basic Parameters</u>**
+
+- Product dimension: 80 x 80 x 41.5 mm
+- Operating temperature:  -10℃ ~ +40℃
+- Operating humidity: 0~95%RH, non-condensing
+- Input voltage: 100~240V AC, 50Hz/60Hz
+- Wireless type:  Wi-Fi IEEE 802.11 b/g/n 2.4GHz，ZigBee
+- CMIIT ID：2017DP5239
+- Standard: Q/QLML001-2015
+- APP support: Apple “Home” app (IOS 10.3 and above)，Aqara Home app (Android 5.0 and above, IOS 10.3 and above)
+
+
 
 ### Air Conditioning Controller
 
@@ -539,7 +567,7 @@ Smoke Alarm is a photoelectric smoke detector with built-in buzzer and LED alarm
 
 **<u>Function Description</u>**
 
-Wireless Mini Switch is a new remote switch with low power consumption. With a compact shape, it can be moved and placed in any position and installed without using any tool. It can set different response plans by four actions which are **single press**, **double press**, **press and hold**, and **shake**, so as to control four or four sets of devices at the same time. 
+Wireless Mini Switch is a new remote switch with low power consumption. With a compact shape, it can be moved and placed in any position and installed without using any tool. It can set different response plans by four actions which are **single press**, **double press**, **press and hold**, and **shake** (only **Wireless Mini Switch advanced** supports shake feature), so as to control four or four sets of devices at the same time. 
 
 - **Intelligent Linkage**: It can work with other intelligent devices to make the ordinary home appliances become intelligent instantly and achieve scene linkage. For example, turn on/off the lamp in the living room by single press the switch, turn on/off the lamp in the bedroom by double press the switch, turn on/off all appliances by press and hold the switch, or turn on/off the air conditioner by shake the switch.  
 - **Local Control**: When the network connection is unstable or even broken, the user can manually control the devices without opening the mobile APP. 
@@ -547,12 +575,12 @@ Wireless Mini Switch is a new remote switch with low power consumption. With a c
 
 **<u>Basic Parameters</u>**
 
-- Product dimension: 56 x 54 x 41mm
-- Key specifications: single press, double press, press and hold, shake
+- Product dimension: 45 x 45 x 12mm
+- Key specifications: single press, double press, press and hold, shake (only **Wireless Mini Switch advanced** supports shake feature)
 - Wireless type: ZigBee
 - Battery specifications: CR2032
 - Operating temperature: -10℃~+50℃
-- Operating humidity: 5%~95%RH, non-condensing
+- Operating humidity: 0%~95%RH, non-condensing
 - Standard: Q/QLML004-2015
 
 
@@ -584,7 +612,7 @@ The status of Wireless Remote Switch indicator is described below:
 - Product dimension: 86 x 86 x 15.12mm
 - Wireless frequency: 2.4GHz（2400~2483.5MHz）
 - Wireless type: ZigBee
-- Operating temperature: -5℃~+60℃
+- Operating temperature: -5℃~+50℃
 - Operating humidity: 5%~95%RH, non-condensing
 - Battery specifications: CR2032
 - Battery life: More than 2 years (depending on the specific use environment)
@@ -619,3 +647,24 @@ FM, rotate 90° to change FM station, rotate 180° to turn on/off the night ligh
 - Operating temperature: -10℃~+50℃
 - Operating humidity: 0~95%RH, non-condensing
 - Standard: Q/QLML008-2016
+
+### Vibration Sensor
+
+![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/guideline/product-discription/lumi_vibration.png)
+
+<u>**Function Description**</u>
+
+Vibration Sensor is embedded with a high precision acceleration sensor and it detects the vibration and movement of objects. It communicates with the Hub via Zigbee protocol. It also works with other smart accessories to set various smart scenes, such as local and remote alarm when it detects glass breaks. 
+
+- **Intelligent linkage**: Through the Hub, it can be combined with other smart accessories to achieve more intelligent scenarios such as automatically turned on light after the vibration is sensed, the linkage Hub will sound and light alarm after sensing the tilt.
+- **Remote Push**: You can remotely send alarm messages to your mobile phone. Users can know the abnormal situation at home even if they are not at home.
+- **Adjustable sensitivity**: Provide high, medium and low sensitivity, can adjust the appropriate gear according to different installation environments, improve detection sensitivity, and effectively reduce false alarms.
+
+**<u>Basic Parameters</u>**
+
+- Product dimension: 36 x 36 x 9mm
+- Wireless type: ZigBee
+- Battery specifications: CR2032
+- Operating temperature: -10℃~+50℃
+- Operating humidity: 0~95%RH, non-condensing
+- Standard: Q/QLML012-2016

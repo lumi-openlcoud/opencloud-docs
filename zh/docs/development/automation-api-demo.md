@@ -142,7 +142,7 @@
 
 ## Trigger和Action列表
 
-### 多功能网关
+### 网关
 
 **Trigger列表**
 
@@ -155,16 +155,13 @@
 
 **Action列表**
 
-| name    | Action                  |
-| ------- | ----------------------- |
-| 开夜灯     | open_corridor_light     |
-| 关夜灯     | close_corridor_light    |
-| 开/关夜灯   | toggle_corridor_light   |
-| 播放电台    | fm_play                 |
-| 暂停电台    | fm_pause                |
-| 播放/暂停电台 | fm_toggle               |
-| 设置夜灯颜色  | set_corridor_light_argb |
-| 播放指定铃声  | play_music              |
+| name   | Action                  |
+| ------ | ----------------------- |
+| 开夜灯    | open_corridor_light     |
+| 关夜灯    | close_corridor_light    |
+| 开/关夜灯  | toggle_corridor_light   |
+| 设置夜灯颜色 | set_corridor_light_argb |
+| 播放指定铃声 | play_music              |
 
 部分Action需要配置具体参数信息：
 
@@ -763,4 +760,16 @@
 | 敲击两下      | tap_twice |
 | 轻推        | move      |
 | 静止1分钟后被触动 | alert     |
+
+
+
+### 动静帖
+
+**Trigger列表**
+
+| name  | Trigger |
+| ----- | ------- |
+| 感应到跌落 | drop    |
+| 感应到倾斜 | tilt    |
+| 感应到震动 | vibrate |
 

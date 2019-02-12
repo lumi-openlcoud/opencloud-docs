@@ -160,9 +160,6 @@ Play specified music when someone passes by.
 | Turn on night light     | open_corridor_light     |
 | Turn off night light    | close_corridor_light    |
 | Turn on/off night light | toggle_corridor_light   |
-| Play FM                 | fm_play                 |
-| Pause FM                | fm_pause                |
-| Play/Pause FM           | fm_toggle               |
 | Set night light color   | set_corridor_light_argb |
 | Play assigned ringtone  | play_music              |
 
@@ -763,4 +760,14 @@ Device model: lumi.sensor_86sw2.aq1和lumi.sensor_86sw2.v1
 | Tap twice                      | tap_twice |
 | Push                           | move      |
 | Motion detected after a minute | alert     |
+
+### Vibration Sensor
+
+**Trigger**
+
+| name               | Trigger |
+| ------------------ | ------- |
+| Drop detected      | drop    |
+| Tilt detected      | tilt    |
+| Vibration detected | vibrate |
 
