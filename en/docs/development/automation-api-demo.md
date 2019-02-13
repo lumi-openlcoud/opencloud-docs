@@ -8,7 +8,7 @@ Example: Turn on light and set the light color to red.
 
 ```
 {
-	"name": "test",
+	"name": "scene-test",
 	"positionId":"real1.xxxxxxxx",	
 	"content": [
 		{

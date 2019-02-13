@@ -18,7 +18,7 @@
 			"model": "lumi.gateway.aq1",
 			"params": [{
 				"paramId":"PD.lightARGB",
-				"value":"118622208"
+				"value":"520028160"
 			}]
 }]
 }
