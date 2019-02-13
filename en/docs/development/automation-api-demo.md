@@ -4,19 +4,24 @@
 
 ### Scene
 
-Example: Turn on air conditioner when you get home.
+Example: Turn on light and set the light color to red.
 
 ```
 {
-	"name": "DEMO-A",
+	"name": "test",
+	"positionId":"real1.xxxxxxxx",	
 	"content": [
 		{
-			"action": "open_acpartner",
+			"action": "AD.lumi.gateway.set_corridor_light_argb",
 			"delayTime": "0",
-			"did": "lumi.158d0001a61234"
+			"did": "lumi.xxxxxxxxxx",
+			"model": "lumi.gateway.aq1",
+			"params": [{
+				"paramId":"PD.lightARGB",
+				"value":"520028160"
+			}]
 }]
 }
-
 ```
 
 
@@ -27,17 +32,23 @@ Example: Turn on light when someone passes by.
 
 ```
 {
-	"name" : "DEMO-B",
+	"name" : "test",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"did": "lumi.158d00010f1234",
-			"trigger": "motion"
+			"trigger": "TD.lumi.sensor_motion.motion",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_motion.aq1",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "open_corridor_light"
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.open_corridor_light",
+				"model": "lumi.gateway.aq1",
+		     	"params": []
 			}
 			]
 }
@@ -51,23 +62,28 @@ Example: Turn on light when temperature is up to 22℃.
 
 ```
 {
-	"name" : "DEMO-C",
+	"name" : "test",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"did": "lumi.158d00010f1234",
-			"trigger": "temp_more_than_instant",
+			"trigger": "TD.lumi.weather.temp_more_than_instant",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.weather.v1",
 			"params": [
                       {
                             "paramId":"PD.temp",
                             "value":"22"
                       }
-                      ]
+			]
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "open_corridor_light"
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.open_corridor_light",
+				"model": "lumi.gateway.aq1",
+		     	"params": []
 			}
 			]
 }
@@ -81,24 +97,26 @@ Example: Turn on light and set the light color to red, when someone passes by.
 
 ```
 {
-	"name" : "DEMO-D",
-	"conditionRelation": "AND",
+	"name" : "test",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"trigger": "motion",
-            "did": "lumi.158d0001241234"
+			"trigger": "TD.lumi.sensor_motion.motion",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_motion.aq1",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "set_corridor_light_argb",
-				"params": [
-                            {
-                            	"paramId":"PD.lightARGB",
-                            	"value":"520028160"
-                            }
-                            ]
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.set_corridor_light_argb",
+				"model": "lumi.gateway.aq1",
+		     	"params": [{
+		     		"paramId":"PD.lightARGB",
+		     		"value":"520028160"
+		     	}]
 			}
 			]
 }
@@ -108,31 +126,34 @@ Example: Turn on light and set the light color to red, when someone passes by.
 
 Configuring multiple parameter information:
 
-Play specified music when someone passes by.
+Play specified music when click switch.
 
 ```
 {
-	"name" : "DEMO-E",
-	"conditionRelation": "AND",
+	"name" : "test",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"trigger": "motion",
-            "did": "lumi.158d0001241234"
+			"trigger": "TD.lumi.sensor_switch.click",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_switch.aq3",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "play_music",
-				"params": [
-                            {
-                            	"paramId":"PD.musicIndex",
-                            	"value":"1"},
-                            	{
-                            	"paramId":"PD.vol",
-                            	"value":"15"
-                            }
-                            ]
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.play_music",
+				"model": "lumi.gateway.aq1",
+		     	"params": [{
+		     		"paramId":"PD.musicIndex",
+		     		"value":"11"
+		     	},
+		     	{
+		     		"paramId":"PD.vol",
+		     		"value":"10"
+		     	}]
 			}
 			]
 }

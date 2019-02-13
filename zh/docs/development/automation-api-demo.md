@@ -4,19 +4,24 @@
 
 ### 场景
 
-例如：回家开空调。
+例如：设置夜灯颜色。
 
 ```
 {
-	"name": "DEMO-A",
+	"name": "测试",
+	"positionId":"real1.xxxxxxxx",	
 	"content": [
 		{
-			"action": "open_acpartner",
+			"action": "AD.lumi.gateway.set_corridor_light_argb",
 			"delayTime": "0",
-			"did": "lumi.158d0001a61234"
+			"did": "lumi.xxxxxxxxxx",
+			"model": "lumi.gateway.aq1",
+			"params": [{
+				"paramId":"PD.lightARGB",
+				"value":"118622208"
+			}]
 }]
 }
-
 ```
 
 
@@ -27,17 +32,23 @@
 
 ```
 {
-	"name" : "DEMO-B",
+	"name" : "这是一条联动",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"did": "lumi.158d00010f1234",
-			"trigger": "motion"
+			"trigger": "TD.lumi.sensor_motion.motion",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_motion.aq1",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "open_corridor_light"
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.open_corridor_light",
+				"model": "lumi.gateway.aq1",
+		     	"params": []
 			}
 			]
 }
@@ -51,23 +62,28 @@
 
 ```
 {
-	"name" : "DEMO-C",
+	"name" : "这是一条联动",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"did": "lumi.158d00010f1234",
-			"trigger": "temp_more_than_instant",
+			"trigger": "TD.lumi.weather.temp_more_than_instant",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.weather.v1",
 			"params": [
                       {
                             "paramId":"PD.temp",
                             "value":"22"
                       }
-                      ]
+			]
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "open_corridor_light"
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.open_corridor_light",
+				"model": "lumi.gateway.aq1",
+		     	"params": []
 			}
 			]
 }
@@ -81,24 +97,26 @@
 
 ```
 {
-	"name" : "DEMO-D",
-	"conditionRelation": "AND",
+	"name" : "这是一条联动",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"trigger": "motion",
-            "did": "lumi.158d0001241234"
+			"trigger": "TD.lumi.sensor_motion.motion",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_motion.aq1",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "set_corridor_light_argb",
-				"params": [
-                            {
-                            	"paramId":"PD.lightARGB",
-                            	"value":"520028160"
-                            }
-                            ]
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.set_corridor_light_argb",
+				"model": "lumi.gateway.aq1",
+		     	"params": [{
+		     		"paramId":"PD.lightARGB",
+		     		"value":"520028160"
+		     	}]
 			}
 			]
 }
@@ -108,31 +126,34 @@
 
 配置多个参数信息：
 
-当有人经过时，播放指定铃声。
+当单击无线开关时，播放指定铃声。
 
 ```
 {
-	"name" : "DEMO-E",
-	"conditionRelation": "AND",
+	"name" : "这是一条联动",
+	"positionId":"real1.xxxxxxxxx",	
+	"conditionRelation": "0",
 	"conditions": [
 		{
-			"trigger": "motion",
-            "did": "lumi.158d0001241234"
+			"trigger": "TD.lumi.sensor_switch.click",
+            "did": "lumi.xxxxxx",
+            "model":"lumi.sensor_switch.aq3",
+			"params": []
 		}
 		],
 		"actions": [
 			{
-				"did": "lumi.158d0001b11234",
-				"action": "play_music",
-				"params": [
-                            {
-                            	"paramId":"PD.musicIndex",
-                            	"value":"1"},
-                            	{
-                            	"paramId":"PD.vol",
-                            	"value":"15"
-                            }
-                            ]
+				"did": "lumi.xxxxx",
+				"action": "AD.lumi.gateway.play_music",
+				"model": "lumi.gateway.aq1",
+		     	"params": [{
+		     		"paramId":"PD.musicIndex",
+		     		"value":"11"
+		     	},
+		     	{
+		     		"paramId":"PD.vol",
+		     		"value":"10"
+		     	}]
 			}
 			]
 }
