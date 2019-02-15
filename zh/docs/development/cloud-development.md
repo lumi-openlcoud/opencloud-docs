@@ -348,10 +348,10 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 其中，header签名流程如下：
 
 1. 将Appid、Token、Time三个参数进行字典序排序，然后进行拼接；
-  例如：Appid=xxx&Token=xxx&Time=xxx
+  例如：appid=xxx&token=xxx&time=xxx
 2. 拼接开发者配置的EncodingAESKey；
-  例如：Appid=xxx&Token=xxx&Time=xxx&AESKey
-3. 最后对产生的字符做MD5，生成的数即为Sign的值，开发者通过对比Sig的一致性来判断该请求是否来源于AIOT服务器。
+  例如：appid=xxx&token=xxx&time=xxx&AESKey
+3. 最后对产生的字符做MD5（32位），生成的数即为Sign的值（小写），开发者通过对比Sig的一致性来判断该请求是否来源于AIOT服务器。
 
 
 
