@@ -370,7 +370,8 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
             "time": "1503556533", 
             "attr": "load_power", 
             "value": "3.93", 
-            "did": "lumi.158d00011c1cee"
+            "did": "lumi.158d00011c1cee",
+            "attach": "xxx"
         }
     ]
 }
@@ -383,6 +384,7 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 | attr           | Resources aliases. Please refer to the "Application Management -> Resource Authorization" page for more details regarding each resource. |
 | value          | The latest value of resources            |
 | did            | Device ID                                |
+| attach         | attachment information                   |
 
 **Device Message**
 

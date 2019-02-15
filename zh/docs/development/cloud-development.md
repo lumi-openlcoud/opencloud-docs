@@ -371,7 +371,8 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
             "time": "1503556533", 
             "attr": "load_power", 
             "value": "3.93", 
-            "did": "lumi.xxxxxxxxxx"
+            "did": "lumi.xxxxxxxxxx",
+            "attach": "xxxx"
         }
     ]
 }
@@ -384,6 +385,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 | attr    | 资源别名，资源别名的含义请参考“应用管理->资源授权”页面 |
 | value   | 资源的最新值                        |
 | did     | 设备ID                          |
+| attach  | 附加信息-推送时带上                    |
 
 **设备消息**
 
