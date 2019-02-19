@@ -145,7 +145,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 由于访问令牌的有效期只有2个小时，所以开发者需要在访问令牌过期前使用刷新令牌进行刷新，建议的刷新周期为1个半小时。
 
-- **URL：** https://aiot-oauth2.aqara.cn/refresh_token
+- **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
 - **请求参数**
 

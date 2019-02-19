@@ -152,7 +152,7 @@ After obtaining the authorization code, the third-party application accesses the
 
 Since the access token is valid for only 2 hours, the developer needs to use a refresh token to refresh the access token before the access token expires. The recommended refresh interval is 1.5 hours (1 hour and 30 minutes).
 
-- **URL：** https://aiot-oauth2.aqara.cn/refresh_token
+- **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **Request method:**   HTTP POST (application/x-www-form-urlencoded)
 - **Request parameters**
 
