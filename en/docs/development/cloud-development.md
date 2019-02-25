@@ -343,11 +343,11 @@ If it is confirmed that the GET request is from the LUMI Server, please return t
 
 1. Arrange the "Appid", "Token", and "Time" parameters in dictionary order, then splice these parameters;
 
-   Example: appid=xxx&token=xxx&time=xxx
+   Example: appid=xxx&time=xxx&token=xxx
 
 2. Splice the EncodingAESKey configured by the developer;
 
-   Example: appid=xxx&token=xxx&time=xxx&AESKey
+   Example: appid=xxx&time=xxx&token=xxx&AESKey
 
 3. MD5(32-bit) for generated characters and the generated number is the value of Sign(lowercase letter). The developer compares the consistency of the Sign to determine if the request originated from the AIOT server.
 
