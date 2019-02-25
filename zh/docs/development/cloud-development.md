@@ -432,31 +432,49 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 
 第三方应用每次调用接口时，可能获得正确或错误的返回码，开发者可以根据返回码信息调试接口以及排查错误。
 
-| 类别            | 返回码  | 表示                                       | 说明                          |
-| ------------- | ---- | ---------------------------------------- | --------------------------- |
-| SUCCESS       | 0    | SUCCESS                                  | 成功                          |
-| ERROR_PACKAGE | 100  | ERROR_TIMEOUT                            | Timeout, 超时                 |
-| ERROR_PACKAGE | 101  | ERROR_PACKAGE_ILLEGAL                    | 数据包非法                       |
-| ERROR_PACKAGE | 102  | ERROR_PACKAGE_DAMAGE                     | 数据包损坏                       |
-| ERROR_REQUEST | 301  | ERROR_REQUEST_PATH                       | 请求路径错误                      |
-| ERROR_REQUEST | 302  | ERROR_REQUEST_PARAMS                     | 请求参数错误                      |
-| ERROR_USER    | 401  | ERROR_USER_NO_REG                        | 用户未注册                       |
-| ERROR_USER    | 402  | ERROR_USER_NO_LOGIN                      | 用户未登录                       |
-| ERROR_USER    | 403  | ERROR_USER_PERMISSION_DENIED             | 拒绝用户访问，没有权限                 |
-| ERROR_USER    | 411  | ERROR_PASSWORD_NOT_CORRECT               | 密码错误                        |
-| ERROR_USER    | 412  | ERROR_TOKEN_FAILED                       | Token失效                     |
-| ERROR_SERVER  | 500  | ERROR_INTERNAL_SERVER                    | Server Error 服务器出错，服务器处理中出错 |
-| ERROR_DEVICE  | 601  | ERROR_DEVICE_NO_REG                      | 设备未注册                       |
-| ERROR_DEVICE  | 602  | ERROR_DEVICE_OFFLINE                     | 设备离线                        |
-| ERROR_DEVICE  | 603  | ERROR_DEVICE_PERMISSION_DENIED           | 拒绝设备访问，没有权限                 |
-| ERROR_DEVICE  | 604  | ERROR_DEVICE_BIND                        | 设备绑定错误，未绑定，或绑定的用户名有误        |
-| ERROR_THIRD   | 801  | ERROR_APP3RD_APPID_OR_APPKEY_ILLEGAL     | AppID或AppKey有误              |
-| ERROR_THIRD   | 802  | ERROR_THIRD_APP_ID_HAS_NO_PERMISSION     | AppID无权限访问该API              |
-| ERROR_THIRD   | 805  | ERROR_APP3RD_OAUTH2_ACCESSTOKEN_ILLEGAL  | AccessToken有误               |
-| ERROR_THIRD   | 806  | ERROR_APP3RD_OAUTH2_ACCESSTOKEN_EXPIRED  | AccessToken过期               |
-| ERROR_THIRD   | 807  | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_ILLEGAL | RefreshToken有误              |
-| ERROR_THIRD   | 808  | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_EXPIRED | RefreshToken过期              |
-| ERROR_OTA     | 901  | ERROR_OTA_FIRMWARE_NOT_EXIST             | 不存在该Firmware                |
+| 返回码  | 描述                              | 说明              |
+| ---- | ------------------------------- | --------------- |
+| 0    | Success                         | 成功              |
+| 100  | Timeout                         | 超时              |
+| 101  | Invalid data package            | 数据包非法           |
+| 102  | Data package has altered        | 数据包损坏           |
+| 103  | Data package may lose           | 数据包丢失           |
+| 104  | Server busy                     | 服务器繁忙           |
+| 105  | Data package has expired        | 数据包过期           |
+| 106  | Invalid sign                    | 无效的签名           |
+| 107  | Illegal appKey                  | 无效的Appkey       |
+| 108  | Token has expired               | Token过期         |
+| 109  | Token is absence                | Token丢失         |
+| 301  | Request path error              | 请求路径错误          |
+| 302  | Params error                    | 参数错误            |
+| 303  | Request params type error       | 请求参数类型错误        |
+| 304  | Request method not support      | 请求方式不支持         |
+| 305  | Header Params error             | 头部参数错误          |
+| 701  | Position not exist              | 位置不存在           |
+| 703  | Position name duplication       | 位置名称重复          |
+| 706  | Device permission denied        | 设备拒绝访问或不存在      |
+| 707  | Ifttt permission denied         | 自动化拒绝访问或不存在     |
+| 708  | Scene permission denied         | 场景拒绝访问或不存在      |
+| 713  | Position not real position      | 不是顶级位置          |
+| 1003 | Resource attr illegal           | 资源attr不合法       |
+| 1005 | Resource subscribe not register | 资源订阅未注册         |
+| 1206 | Delete local linkage failed     | 删除本地自动化失败       |
+| 1207 | Operation failed                | 操作失败            |
+| 2001 | Get developer list error        | 获取开发者列表错误       |
+| 2002 | Appid or Appkey illegal         | appid或appkey不合法 |
+| 2003 | AuthCode incorrect              | authcode错误      |
+| 2004 | AccessToken incorrect           | access token错误  |
+| 2005 | AccessToken expired             | access token过期  |
+| 2006 | RefreshToken incorrect          | refresh token错误 |
+| 2007 | RefreshToken expired            | refresh token过期 |
+| 2008 | Permission denied               | 拒绝访问            |
+| 2009 | Invalid OpenId                  | 无效的openid       |
+| 2010 | Unauthorized user               | 未授权账号           |
+| 2011 | The query result is empty       | 查询结果为空          |
+| 2012 | Invalid apply                   | 无效的申请           |
+| 2013 | Developer Permission denied     | 开发者拒绝访问         |
+| 2014 | Resource Permission denied      | 资源拒绝访问          |
+| 2015 | subscriber faild                | 订阅失败            |
 
 ## 资源定义
 

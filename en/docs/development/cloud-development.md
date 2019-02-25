@@ -430,31 +430,49 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 
 Each time a third-party application calls an interface, it may get a return code indicating it is correct or incorrect. Developers can debug the interface based on the return code information and troubleshoot the error.
 
-| **Category**  | **Return code** | **Status**                               | **Description**                          |
-| ------------- | --------------- | ---------------------------------------- | ---------------------------------------- |
-| SUCCESS       | 0               | SUCCESS                                  | Success                                  |
-| ERROR_PACKAGE | 100             | ERROR_TIMEOUT                            | Timeout, time out                        |
-| ERROR_PACKAGE | 101             | ERROR_PACKAGE_ILLEGAL                    | Illegal packets                          |
-| ERROR_PACKAGE | 102             | ERROR_PACKAGE_DAMAGE                     | Packet is corrupted                      |
-| ERROR_REQUEST | 301             | ERROR_REQUEST_PATH                       | Request path error                       |
-| ERROR_REQUEST | 302             | ERROR_REQUEST_PARAMS                     | Request parameter error                  |
-| ERROR_USER    | 401             | ERROR_USER_NO_REG                        | User not registered                      |
-| ERROR_USER    | 402             | ERROR_USER_NO_LOGIN                      | User is not logged in                    |
-| ERROR_USER    | 403             | ERROR_USER_PERMISSION_DENIED             | Deny access to user, insufficient permissions |
-| ERROR_USER    | 411             | ERROR_PASSWORD_NOT_CORRECT               | Password error                           |
-| ERROR_USER    | 412             | ERROR_TOKEN_FAILED                       | Token failure                            |
-| ERROR_SERVER  | 500             | ERROR_INTERNAL_SERVER                    | Server Error, error during server process |
-| ERROR_DEVICE  | 601             | ERROR_DEVICE_NO_REG                      | Device is not registered                 |
-| ERROR_DEVICE  | 602             | ERROR_DEVICE_OFFLINE                     | Device is offline                        |
-| ERROR_DEVICE  | 603             | ERROR_DEVICE_PERMISSION_DENIED           | Access denied, insufficient permissions. |
-| ERROR_DEVICE  | 604             | ERROR_DEVICE_BIND                        | Device linking error, not linked, or linked user name is incorrect |
-| ERROR_THIRD   | 801             | ERROR_APP3RD_APPID_OR_APPKEY_ILLEGAL     | AppID or AppKey is incorrect             |
-| ERROR_THIRD   | 802             | ERROR_THIRD_APP_ID_HAS_NO_PERMISSION     | The AppID does not have permission to access this API |
-| ERROR_THIRD   | 805             | ERROR_APP3RD_OAUTH2_ACCESSTOKEN_ILLEGAL  | AccessToken error                        |
-| ERROR_THIRD   | 806             | ERROR_APP3RD_OAUTH2_ACCESSTOKEN_EXPIRED  | AccessToken expired                      |
-| ERROR_THIRD   | 807             | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_ILLEGAL | RefreshToken error                       |
-| ERROR_THIRD   | 808             | ERROR_APP3RD_OAUTH2_REFRESHTOKEN_EXPIRED | RefreshToken expired                     |
-| ERROR_OTA     | 901             | ERROR_OTA_FIRMWARE_NOT_EXIST             | The Firmware selected does not exist     |
+| Error Code | Description                     |
+| ---------- | ------------------------------- |
+| 0          | Success                         |
+| 100        | Timeout                         |
+| 101        | Invalid data package            |
+| 102        | Data package has altered        |
+| 103        | Data package may lose           |
+| 104        | Server busy                     |
+| 105        | Data package has expired        |
+| 106        | Invalid sign                    |
+| 107        | Illegal appKey                  |
+| 108        | Token has expired               |
+| 109        | Token is absence                |
+| 301        | Request path error              |
+| 302        | Params error                    |
+| 303        | Request params type error       |
+| 304        | Request method not support      |
+| 305        | Header Params error             |
+| 701        | Position not exist              |
+| 703        | Position name duplication       |
+| 706        | Device permission denied        |
+| 707        | Ifttt permission denied         |
+| 708        | Scene permission denied         |
+| 713        | Position not real position      |
+| 1003       | Resource attr illegal           |
+| 1005       | Resource subscribe not register |
+| 1206       | Delete local linkage failed     |
+| 1207       | Operation failed                |
+| 2001       | Get developer list error        |
+| 2002       | Appid or Appkey illegal         |
+| 2003       | AuthCode incorrect              |
+| 2004       | AccessToken incorrect           |
+| 2005       | AccessToken expired             |
+| 2006       | RefreshToken incorrect          |
+| 2007       | RefreshToken expired            |
+| 2008       | Permission denied               |
+| 2009       | Invalid OpenId                  |
+| 2010       | Unauthorized user               |
+| 2011       | The query result is empty       |
+| 2012       | Invalid apply                   |
+| 2013       | Developer Permission denied     |
+| 2014       | Resource Permission denied      |
+| 2015       | subscriber faild                |
 
 ## Resource definition
 
