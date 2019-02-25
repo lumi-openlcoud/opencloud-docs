@@ -64,7 +64,3 @@ pages:
   - 产品问题: faq/faq-product.md
   - 应用开发: faq/faq-development.md
   - 部署与运维: faq/faq-installation.md
-- 开发者资源: 
-  - SDK下载: sdk/sdk-total.md
-  - Java SDK开发文档: sdk/java-sdk.md
-  - PHP SDK开发文档: sdk/php-sdk.md
