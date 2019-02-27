@@ -372,6 +372,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
             "attr": "load_power", 
             "value": "3.93", 
             "did": "lumi.xxxxxxxxxx",
+            "model": "xxxxxxxxxxx",
             "attach": "xxxx"
         }
     ]
@@ -392,16 +393,15 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 ```
 {
     "msgType": "device", 
-    "data": {
+    "data": [{
         "openId": "xxxxxx", 
         "name": "空调伴侣", 
         "model": "lumi.acpartner.xxx", 
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.xxxxxxx", 
-        "parentId": "", 
-        "extra": "{"clientId":"xxxx"}"
-    }
+        "parentId": ""
+    }]
 }
 ```
 

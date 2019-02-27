@@ -371,6 +371,7 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
             "attr": "load_power", 
             "value": "3.93", 
             "did": "lumi.158d00011c1cee",
+            "model": "xxxx",
             "attach": "xxx"
         }
     ]
@@ -391,16 +392,15 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 ```
 {
     "msgType": "device", 
-    "data": {
+    "data": [{
         "openId": "GoeFrrL7mN9SsGRi8WJn4x4YnQpXTS", 
         "name": "Air Conditioning Controller", 
         "model": "lumi.acpartner.aq1", 
         "time": 1503560767, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.158d00010b4090", 
-        "parentId": "", 
-        "extra": "{"clientId":"xxxx"}"
-    }
+        "parentId": ""
+    }]
 }
 ```
 
