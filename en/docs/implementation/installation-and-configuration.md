@@ -33,19 +33,15 @@ Before installation and configuration , please make sure you have known the para
 
 
 
-## Installation and LogIn Aqara App
+## Installation and LogIn Aqara Home App
 
-Aqara App is a smart home App. All Aqara products are controlled through Aqara App which can achieve functions such as scene linkage and remote control among ZigBee devices. 
+Aqara Home App is a smart home App. All Aqara products are controlled through Aqara App which can achieve functions such as scene linkage and remote control among ZigBee devices. 
 
 Specific operation steps are as follows: 
 
-**Step1** Search "Aqara" in mobile App store or Apple Store, or scan the following QR code to download the App and install it on your phone. 
+**Step1** Search "Aqara Home" in mobile App store or Apple Store, or scan the following QR code to download the App and install it on your phone.  
 
-![appäşçť´ç ](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_app_.png) 
-
-**Step2** Open Aqara App, Click "New User Registration" button, enter your phone number or email address to obtain a verification code, then Click "Next Step".
-
-> **Note:** Aqara App supports login bound to WeChat and Facebook. If WeChat or Facebook is installed on your phone, corresponding icon will Appear. 
+**Step2** Open Aqara Home App, Click "New User Registration" button, enter your phone number or email address to obtain a verification code, then Click "Next Step".
 
 **Step3** Set the login password and Click "Next Step". 
 

@@ -33,19 +33,15 @@ Aqara产品中包含电工类设备，应由具有正式资格的专业人员按
 
 
 
-## 安装与登录Aqara APP
+## 安装与登录Aqara Home APP
 
-Aqara APP是智能家庭应用，Aqara产品均通过Aqara APP进行操控，实现ZigBee设备之间的场景联动、远程控制等功能。
+Aqara Home APP是智能家庭应用，Aqara产品均通过Aqara APP进行操控，实现ZigBee设备之间的场景联动、远程控制等功能。
 
 具体操作步骤如下：
 
-**步骤1** 在手机应用商店或AppleStore中搜索“Aqara”，或者扫描以下二维码，下载安装APP至手机。
+**步骤1** 在手机应用商店或AppleStore中搜索“Aqara Home”，或者扫描以下二维码，下载安装APP至手机。
 
-![app二维码](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/implementation/installation-and-configuration/install_app_.png) 
-
-**步骤2** 打开Aqara APP，单击“新用户注册”按钮，输入手机号或邮箱，获取验证码后，单击“下一步”。
-
-> 说明：Aqara APP支持绑定微信和Facebook登录，若手机安装了微信或Facebook，会出现对应图标。
+**步骤2** 打开Aqara Home APP，单击“新用户注册”按钮，输入手机号或邮箱，获取验证码后，单击“下一步”。
 
 **步骤3** 设置登录密码，单击“下一步”。
 
