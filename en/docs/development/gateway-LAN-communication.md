@@ -34,13 +34,11 @@ The key encryption method is applied in LAN communication, and the APP needs to 
 
 Specific operations for obtaining the gateway KEY are as follows:
 
-1.Open Aqara APP, select the gateway device that needs LAN communication.
+1.Add Hubs on Aqara Home App, then login AIOT Opencloud Website and enter Console.
 
-> **Note:** Only **Air Conditioning Controller(advanced)** supports LAN communication.
+2.Select "Gateway LAN", enter Aqara account and password.
 
-2.This page does not show "LAN Communication Protocol" by default. You need tap on "device type" 10 times and it will appear. 
-
-3.Enable "LAN Communication Protocol" to get a random KEY. Click "OK".
+3.Seclect the Hub to enable "LAN Communication Protocol" to get a random KEY.
 
 
 
@@ -1023,13 +1021,13 @@ Other status report:
 
 ### **Vibration Sensor**
 
-| **Attributes**  | **Description**                          |
-| --------------- | ---------------------------------------- |
-| bed_activity    |                                          |
-| coordination    |                                          |
-| final_tilt_angel |                                          |
-| free_fall       |                                          |
-| tilt            |                                          |
-| vibrate         |                                          |
-| bed_activity    |                                          |
+| **Attributes**   | **Description** |
+| ---------------- | --------------- |
+| bed_activity     |                 |
+| coordination     |                 |
+| final_tilt_angel |                 |
+| free_fall        |                 |
+| tilt             |                 |
+| vibrate          |                 |
+| bed_activity     |                 |
 

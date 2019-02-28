@@ -39,17 +39,11 @@
 
 获取网关KEY的具体操作如下：
 
-1、打开Aqara APP，选择需要进行局域网通信的网关设备；
+1、在Aqara Home App上添加网关后，登录AIOT开放平台网站，进入控制台；
 
-> 注意：当前仅“**升级版空调伴侣**”支持局域网通信协议功能。
+2、选择“网关局域网协议开发”，输入aqara账号和密码；
 
-2、默认情况下，此页面不显示“局域网协议”，需连续点击"设备类型"10次才可显示。
-
-3、开启“局域网协议”，获取随机KEY，单击“确定”。
-
-![](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/gateway-LAN-communication/app-1.png)
-
-
+3、在“设备列表”中，选择对应的网关开启局域网功能，即可获取网关KEY。
 
 
 
