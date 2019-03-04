@@ -403,6 +403,23 @@ The functions of buttons of the Dimmer are described below.
 - Load Capacity: 5A/channel, 180W@12VDC or 360W@24VDC
 
 
+### LED Light Bulb (Dimmable)
+
+**<u>Function Description</u>**
+
+Aqara LED Light Bulb (Dimmable) is a brightness and color temperature adjustable light bulb with Zigbee wireless communication module bulit in. After it is bound to a Hub, smart controls such as, remote control, schedule to switch on or off and other smart opyions are enabled. Different lighting modes are set at different time periods, and the lighting changes with the pace of life. For example: reading mode: brightness 100%, color temperature 4000K; wake up mode: brightness 5%, color temperature 6500K.
+
+**<u>Basic Parameters</u>**
+
+- Wireless type: ZigBee
+- Product dimension: 60 x 120mm
+- Input voltage: 220-240V~50/60Hz
+- Power: 9W
+- Color temperature: 2700K~6500K
+- Luminous flux: 806lm
+- Interface of lamps and lanterns: E27
+- Power factor: 0.7
+
 
 
 
