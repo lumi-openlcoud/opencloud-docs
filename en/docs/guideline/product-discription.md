@@ -421,8 +421,6 @@ Aqara LED Light Bulb (Dimmable) is a brightness and color temperature adjustable
 - Power factor: 0.7
 
 
-
-
 ## **Sensor**
 
 Sensors achieve automatic detection and control mainly through sensing temperature, humidity, photosensitivity and displacement etc. and are mainly used for home automation triggering. 
