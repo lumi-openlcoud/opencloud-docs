@@ -20,7 +20,7 @@
 - **开放数据**：开放API与设备数据，帮助企业快速实现物联网化。
 - **AI与大数据**：提前布局AI与大数据分析技术，助推企业挖掘物联网数据的核心价值。
 
-> - 如需购买产品，请访问[Aqara天猫旗舰店](https://aqara.world.tmall.com/)或[Aqara京东自营店](https://mall.jd.com/index-1000093463.html)。若部分产品无法在线购买，请联系绿米商务部，联系电话：15800503149（胡先生）。
+> - 如需购买产品，请访问[Aqara天猫旗舰店](https://aqara.world.tmall.com/)或[Aqara京东自营店](https://mall.jd.com/index-1000093463.html)。若部分产品无法在线购买，请联系绿米商务部。
 > - 如需使用开放平台的服务，请认准购买Aqara品牌产品，并使用Aqara Home APP。
 
 
