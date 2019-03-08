@@ -351,7 +351,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
   例如：appid=xxx&time=xxx&token=xxx
 2. 拼接开发者配置的EncodingAESKey；
   例如：appid=xxx&time=xxx&token=xxx&AESKey
-3. 最后对产生的字符做MD5（32位），生成的数即为Sign的值（小写），开发者通过对比Sig的一致性来判断该请求是否来源于AIOT服务器。
+3. 最后对产生的字符做MD5（32位），生成的数即为Sign的值（小写），开发者通过对比Sign的一致性来判断该请求是否来源于AIOT服务器。
 
 
 
