@@ -403,6 +403,8 @@ The functions of buttons of the Dimmer are described below.
 - Load Capacity: 5A/channel, 180W@12VDC or 360W@24VDC
 
 
+
+
 ### LED Light Bulb (Dimmable)
 
 **<u>Function Description</u>**
