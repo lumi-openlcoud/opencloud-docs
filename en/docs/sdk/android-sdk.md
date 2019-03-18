@@ -1,4 +1,4 @@
-# Android SDK Development Documentation
+# SDK Development Documentation
 
 The purpose of this document is to explain how to use LumiSDK for the development of bind a gateway device, which is only used for Android mobile phone APP applications.
 
@@ -7,9 +7,9 @@ The purpose of this document is to explain how to use LumiSDK for the developmen
 ## Preparation
 
 1. Login in [AIOT Open Cloud Platform](https://opencloud.aqara.cn/). After create an application, you can get “AppId” and “AppKey” from “Application Management" - "Application Overview" page.
-2. Get openID. From detail, see “OAuth 2.0” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20).
-3. Download and decompress [Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.4_.zip), get LumiSDK.aar in LHSDKLib folder.
-4. Download and install Andriod Studio or other Andriod integrated development environment.
+2. Get openID and positopnId. From detail, see “OAuth 2.0” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20).
+3. Download and decompress [SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/SDK-Build-2019-03-15.zip)。
+4. Download and install Andriod and IOS integrated development environment.
 
 
 
@@ -68,9 +68,9 @@ public interface CallBack {
 
 > Note: It takes a time to bind gateway, please wait 30s.
 
-Fastlink interface: **LumiSDK.gatewayFastLink(String param, new CallBack())**
+Fastlink interface: **Lumisdk.gatewayFastLink(params.toString(), new CallBack()**
 
-- "param" using the **JSON format**, including cid, ssid, passwd, lang, positionId, positionType, longitude, latitude.
+- "param" using the **JSON format**, including cid, ssid, passwd, positionId, country_domain.
 
 
 ```
@@ -78,26 +78,20 @@ Fastlink interface: **LumiSDK.gatewayFastLink(String param, new CallBack())**
   cid: xxxxxxxxxxxxxxxx, 
   ssid：test_123, 
   passwd: 12345678, 
-  lang: zh-CN, 
-  positionId: xxxxxxxxxxxxxxxxxx, 
-  positionType: home, 
-  longitude: 0, 
-  latitude: 0
+  positionId: xxxxxxxxxxxxxxxxxx 
+  country_domain: xxxx
 }
 ```
 
 Detailed sub-parameters are described in the following table.
 
-| Parameter    | Is required? | Description                              |
-| ------------ | ------------ | ---------------------------------------- |
-| cId          | Yes          | Telephone's unique identifier. If not set, you will not receive any messages. |
-| ssid         | Yes          | Wi-Fi name                               |
-| passwd       | Yes          | Wi-Fi password                           |
-| lang         | No           | Language. The default is zh-CN.          |
-| positionId   | Yes          | Position ID, you can query positionId by calling API. |
-| positionType | No           | Position Type, such as home, room.       |
-| longitude    | No           | The longitude of the device's location.  |
-| latitude     | No           | The latitude of the device's location.   |
+| Parameter      | Is required? | Description                              |
+| -------------- | ------------ | ---------------------------------------- |
+| cId            | No           | Telephone's unique identifier. If not set, you will not receive any messages. |
+| ssid           | Yes          | Wi-Fi name                               |
+| passwd         | Yes          | Wi-Fi password                           |
+| positionId     | Yes          | Position ID, you can query positionId by calling API. |
+| country_domain | Yes          | Domain.  Mainland China: aiot-open-3rd.aqara.cn; American regions: aiot-open-usa.aqara.com |
 
 
 

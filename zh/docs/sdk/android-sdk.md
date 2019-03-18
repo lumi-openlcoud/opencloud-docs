@@ -1,6 +1,6 @@
-# Android SDK开发文档
+# SDK开发文档
 
-本文档旨在说明如何使用LumiSDK进行网关设备快联入网的开发，仅用于Android手机APP应用。
+本文档旨在说明如何使用LumiSDK进行网关设备快联入网的开发，适用于Android和IOS手机APP应用。
 
 
 
@@ -8,11 +8,11 @@
 
 1、访问并登录[AIOT开放平台](https://opencloud.aqara.cn/)网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
+2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节和API，获取openID和positionId。
 
-3、下载并解压[Android SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_android_v0.4_.zip)，在LHSDKLib文件夹下可找到LumiSDK.aar库。
+3、下载并解压[SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/SDK-Build-2019-03-15.zip)。
 
-4、下载并安装Andriod Studio或其他Andriod集成开发环境。
+4、下载并安装Andriod和IOS集成开发环境。
 
 
 
@@ -70,9 +70,9 @@ public interface CallBack {
 
 > 注意：网关成功入网需要一点时间，请耐心等待30s。
 
-入网连接接口：**LumiSDK.gatewayFastLink(String param, new CallBack())**
+入网连接接口：**Lumisdk.gatewayFastLink(params.toString(), new CallBack()**
 
-- 参数param采用JSON格式，包含cid, ssid, passwd, lang, positionId, positionType, longitude, latitude。
+- 参数param采用JSON格式，包含cid, ssid, passwd, positionId, country_domain。
 
 
 ```
@@ -80,26 +80,20 @@ public interface CallBack {
   cid: xxxxxxxxxxxxxxxx, 
   ssid：test_123, 
   passwd: 12345678, 
-  lang: zh-CN, 
-  positionId: xxxxxxxxxxxxxxxxxx, 
-  positionType: home, 
-  longitude: 0, 
-  latitude: 0
+  positionId: xxxxxxxxxxxxxxxxxx 
+  country_domain: xxxx
 }
 ```
 
 详细子参数说明如下表。
 
-| 参数           | 是否必须 | 说明                      |
-| ------------ | ---- | ----------------------- |
-| cId          | 是    | 手机的唯一标识。若未设置，将无法收到消息推送。 |
-| ssid         | 是    | 网关需加入的外网网络Wi-Fi名称       |
-| passwd       | 是    | 对应的Wi-Fi密码              |
-| lang         | 否    | 语言设置，默认中文zh-CN          |
-| positionId   | 是    | 位置ID，可通过API接口查询默认位置ID。  |
-| positionType | 否    | 位置类型                    |
-| longitude    | 否    | 设备所在位置的经度               |
-| latitude     | 否    | 设备所在位置的纬度               |
+| 参数             | 是否必须 | 说明                                       |
+| -------------- | ---- | ---------------------------------------- |
+| cId            | 否    | 手机的唯一标识。若未设置，将无法收到消息推送。                  |
+| ssid           | 是    | 网关需加入的外网网络Wi-Fi名称                        |
+| passwd         | 是    | 对应的Wi-Fi密码                               |
+| positionId     | 是    | 位置ID，可通过API接口查询默认位置ID。                   |
+| country_domain | 是    | 域名。大陆地区：aiot-open-3rd.aqara.cn； 美洲地区： aiot-open-usa.aqara.com |
 
 
 
