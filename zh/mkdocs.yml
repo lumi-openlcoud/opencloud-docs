@@ -60,9 +60,9 @@ pages:
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
 - 部署与运维:
   - 安装与配置指南: implementation/installation-and-configuration.md
-#- 常见问题: 
-#  - 产品问题: faq/faq-product.md
-#  - 应用开发: faq/faq-development.md
-#  - 部署与运维: faq/faq-installation.md
+- 常见问题: 
+  - 产品问题: faq/faq-product.md
+  - 应用开发: faq/faq-development.md
+  - 部署与运维: faq/faq-installation.md
 - 开发者资源: 
   - 设备入网SDK: sdk/android-sdk.md
