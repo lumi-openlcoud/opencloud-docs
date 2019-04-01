@@ -200,31 +200,20 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 例如，通过调用接口查询一个设备的详细信息，调用方法如下：
 
-- 请求URL：https://aiot-open-3rd.aqara.cn/open/device/query
+- 请求URL：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
 
 - 请求方式： HTTP POST （application/json）
 
 - 请求header示例
 
-| Key          | Value                             | 描述（可不填）          |
-| ------------ | --------------------------------- | ---------------- |
-| Appid        | 54a2301000000000000478911         | 应用的唯一标识          |
-| Appkey       | oT7kp77v123456siiXISamsPpvaTaWeZ  | 应用的秘钥            |
-| Openid       | Yb2bR2btJ1234EmU5Z3jzh4oQsttie    | 通过OAuth授权获得的用户ID |
-| Access-Token | 12db5a10c49fd2112233dbc67a0d13ab5 | 通过OAuth授权获得的访问令牌 |
-| Content-Type | application/json                  | 返回结果采用JSON格式     |
+| Key          | 描述（可不填）                                  |
+| ------------ | ---------------------------------------- |
+| Appid        | 应用的唯一标识                                  |
+| Sign         | 签名，拼接方式：accesstoken=xxx&appid=xxx&time=xxx&(Appkey的value值) |
+| Access-Token | 通过OAuth授权获得的访问令牌                         |
+| Content-Type | 返回结果采用JSON格式                             |
 
 > 注意：在请求header时填写的Key和Value值，需注意字母大小写。
-
-- 请求body示例
-
-```
-  {
-  "openId": "Yb2bR2btJ1234EmU5Z3jzh4oQsttie",
-  "did": "lumi.158d0001234654"
-  }
-```
-> 说明：参数did表示设备ID，是设备的唯一标识。开发者可以通过调用接口，根据OpenID获得用户下所有设备的did。
 
 - 返回结果示例
 ```

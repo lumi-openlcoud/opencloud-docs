@@ -201,29 +201,18 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 For example, you can query the details of a device by calling the interface using the following methods:
 
-- Request URL：https://aiot-open-3rd.aqara.cn/open/device/query
+- Request URL：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
 - Request mothod:  HTTP POST （application/json）
 - Request header example
 
-| **Key**      | **Value**                        | **Description (optional)**               |
-| ------------ | -------------------------------- | ---------------------------------------- |
-| Appid        | 54a2300000000000000078911        | The application's unique identifier      |
-| Appkey       | oT7kp77vz12356899msPpvaTaWeZ     | Application's Secret Key                 |
-| Openid       | Yb2bR2btJC6L1245332Z3jzh4oQsttie | User ID obtained via OAuth authorization |
-| Access-Token | 12db5a10c4912123416dbc67a0d13ab5 | Access token obtained via OAuth authorization |
-| Content-Type | application/json                 | The result is returned in JSON format    |
+| **Key**      | **Description (optional)**               |
+| ------------ | ---------------------------------------- |
+| Appid        | The application's unique identifier      |
+| Sign         | Signature.                               |
+| Access-Token | Access token obtained via OAuth authorization |
+| Content-Type | The result is returned in JSON format    |
 
 > **Note**: Make sure the Keys and the corresponding Values are filled in request header. Note that they are case sensitive.
-
-- Request body example
-
-```
-  {
-  "openId": "Yb2bR2btJC6L1245332Z3jzh4oQsttie",
-  "did": "lumi.xxxxxxx"
-  }
-```
-> **Note**: The parameter "did" indicates the device ID, which is the unique identifier of the device. Developers can call the interface to obtain all device "did" for an OpenID.
 
 - Returning results example
 ```
