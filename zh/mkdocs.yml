@@ -9,7 +9,7 @@ repo_name: 'aqara/opencloud-docs'
 repo_url: 'https://github.com/aqara/opencloud-docs/'
 
 # Copyright
-copyright: '版权所有 &copy; 2017 - 2018 深圳绿米联创科技有限公司'
+copyright: '版权所有 &copy; 2017 - 2019 深圳绿米联创科技有限公司'
 
 # Theme Configuration 
 theme:
@@ -26,7 +26,7 @@ extra:
   disqus: 
   social:
     - type: 'globe'
-      link: 'https://opencloud.aqara.cn'
+      link: 'https://opencloud.aqara.com'
     - type: 'github'
       link: 'https://github.com/aqara'
     - type: 'weibo'
