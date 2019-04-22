@@ -26,7 +26,7 @@ Introduces the major changes for each version of the Gateway LAN protocol.
 
 ## **Encryption mechanism**
 
-The key encryption method is applied in LAN communication, and the APP needs to obtain a randomly generated gateway KEY. The gateway KEY is encrypted by AES-CBC 128 and is a string of 16 bytes in length. Can only use Gateway LAN Communication after activating the the LAN Communication protocol and obtaining the key for the gateway. 
+The key encryption method is applied in LAN communication. The gateway KEY is encrypted by AES-CBC 128 and is a string of 16 bytes in length. Can only use Gateway LAN Communication after activating the the LAN Communication protocol and obtaining the key for the gateway. 
 
 > **Note:** That the initial vector of the AES-CBC 128 is defined as: unsigned char const AES_KEY_IV [16] = {0x17, 0x99, 0x6d, 0x09, 0x3d, 0x28, 0xdd, 0xb3, 0xba, 0x69, 0x5a, 0x2e, 0x6f, 0x58, 0x56, 0x2e}.
 
