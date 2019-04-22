@@ -210,7 +210,7 @@ This "write_rsp" only represents that the gateway has received the write command
 
 > **Note**: "key" is a 32-byte string. When the encryption mode is enabled on the gateway, the key is decrypted and validated to verify the validity of the write command. The "key" generation rule is as follows: After receiving the 16-byte "token" string in the heartbeat, the user uses the KEY of the gateway (random KEY obtained in the APP) to perform AES-CBC 128 encryption, generating 16 bytes of ciphertext. The ciphertext is then converted to a 32-bytes ASCII coded string.
 >
-> For example, the random KEY with a length of 16 characters in the Mi Smart Home APP is "0987654321qwerty", the token is "1234567890abcdef", and the encrypted ciphertext is 0x3E,0xB4,0x3E,0x37,0xC2,0x0A,0xFF,0x4C,0x58,0x72,0xCC,0x0D,0x04,0xD8,0x13,0x14. So the "key" is: "3EB43E37C20AFF4C5872CC0D04D81314".
+> For example, the random KEY with a length of 16 characters in the opencloud website is "0987654321qwerty", the token is "1234567890abcdef", and the encrypted ciphertext is 0x3E,0xB4,0x3E,0x37,0xC2,0x0A,0xFF,0x4C,0x58,0x72,0xCC,0x0D,0x04,0xD8,0x13,0x14. So the "key" is: "3EB43E37C20AFF4C5872CC0D04D81314".
 
 ## **Device reporting and control message format**
 
