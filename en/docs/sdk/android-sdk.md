@@ -7,7 +7,7 @@ The purpose of this document is to explain how to use LumiSDK for the developmen
 ## Preparation
 
 1. Login in [AIOT Open Cloud Platform](https://opencloud.aqara.cn/). After create an application, you can get “AppId” and “AppKey” from “Application Management" - "Application Overview" page.
-2. Get openID and positopnId. From detail, see “OAuth 2.0” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20).
+2. Get openID and positopnId. From detail, see “OAuth 2.0” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.com/en/development/cloud-development/#oauth20).
 3. Download and decompress [SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/SDK-Build-2019-03-15.zip)。
 4. Download and install Andriod and IOS integrated development environment.
 
@@ -100,4 +100,4 @@ Detailed sub-parameters are described in the following table.
 > 1. The system can't identify Wi-Fi that contains special characteristics. If a Wi-Fi contains special characteristics, please change the name and then reconnect. If the connection failed again, please reset the device or change the Wi-Fi and reconnect. If the Wi-Fi is unstable, it is suggested to use a 4G phone as the Wi-Fi hotspot.
 > 2. The system doesn't support 5G Wi-Fi.
 > 3. Because the network requests in the SDK are synchronous, the call must be invoked in a non-UI thread. For details, refer to DEMO.
-> 4. When you call the interface, you may get the correct or incorrect return result. For the detail about error code, see “Description of Return codes” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.cn/development/cloud-development/#_14).
+> 4. When you call the interface, you may get the correct or incorrect return result. For the detail about error code, see “Description of Return codes” chapter in [Cloud Development Manual](http://docs.opencloud.aqara.com/en/development/cloud-development/#_14).

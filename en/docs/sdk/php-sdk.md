@@ -8,7 +8,7 @@ The purpose of this document is to explain how to use SDK for the development of
 
 1. Login in [AIOT Open Cloud Platform](https://opencloud.aqara.cn/). After create an application, you can get “AppId” and “AppKey” from “Application Management" - "Application Overview" page.
 
-2. In “Push Notification” page, configure server information (URL, Token, EncodingAESKey and Message encryption mode), and set whether to subscribe message. For details, see the "Push Notification" chapter in "Cloud Development Manual".
+2. In “Push Notification” page, configure server information (URL, Token, EncodingAESKey and Message encryption mode), and set whether to subscribe message. For details, see the "[Push Notification](http://docs.opencloud.aqara.com/en/development/cloud-development/#_10)" chapter in "Cloud Development Manual".
 
 3. Download and decompress [PHP SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_php.zip).
 

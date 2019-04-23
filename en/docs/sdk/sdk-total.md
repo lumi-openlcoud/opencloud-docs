@@ -13,9 +13,9 @@
 
 ## Push notification SDK
 
-| Development Language | Download                                 | Instruction                              |
-| -------------------- | ---------------------------------------- | ---------------------------------------- |
-| Java SDK             | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_java_v0.3.zip) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/java-sdk/) |
-| PHP SDK              | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_php.zip) | [Development Documation](http://docs.opencloud.aqara.cn/sdk/php-sdk/) |
+| Development Language | Download                                                     | Instruction                                                  |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Java SDK             | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_java_v0.3.zip) | [Development Documation](http://docs.opencloud.aqara.com/en/sdk/java-sdk/) |
+| PHP SDK              | [Download](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_php.zip) | [Development Documation](http://docs.opencloud.aqara.com/en/sdk/php-sdk/) |
 
 &nbsp;
