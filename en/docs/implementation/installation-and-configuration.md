@@ -22,7 +22,7 @@ Aqara products include electrical devices which should be installed and commissi
 
 ## Preparations before Installation
 
-Before installation and configuration , please make sure you have known the parameters and functions of Aqara products (Refer to [Product Introduction](http://docs.opencloud.aqara.cn/guideline/product-discription/) for details), and prepare the following hardware devices: 
+Before installation and configuration , please make sure you have known the parameters and functions of Aqara products (Refer to [Product Introduction](http://docs.opencloud.aqara.com/en/guideline/product-discription/) for details), and prepare the following hardware devices: 
 
 | No.  | Device name                              | Quantity |
 | ---- | ---------------------------------------- | -------- |
