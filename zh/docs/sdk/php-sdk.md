@@ -8,7 +8,7 @@
 
 1、访问并登录[AIOT开放平台](https://opencloud.aqara.cn/)网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、在“消息推送”页面，配置服务器信息（URL、Token、EncodingAESKey和消息加解密方式），并设置是否订阅消息。详细说明请参见“云端开发手册”的“[消息推送](http://docs.opencloud.aqara.cn/development/cloud-development/#_10)”章节。
+2、在“消息推送”页面，配置服务器信息（URL、Token、EncodingAESKey和消息加解密方式），并设置是否订阅消息。详细说明请参见“云端开发手册”的“[消息推送](http://docs.opencloud.aqara.com/development/cloud-development/#_10)”章节。
 
 3、下载并解压[PHP SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_message_php.zip)。
 

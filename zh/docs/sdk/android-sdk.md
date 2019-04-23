@@ -8,7 +8,7 @@
 
 1、访问并登录[AIOT开放平台](https://opencloud.aqara.cn/)网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节和API，获取openID和positionId。
+2、根据[云端开发手册](http://docs.opencloud.aqara.com/development/cloud-development/#oauth20)中“OAuth 2.0”章节和API，获取openID和positionId。
 
 3、下载并解压[SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/SDK-Build-2019-03-15.zip)。
 
@@ -101,4 +101,4 @@ public interface CallBack {
 >
 > 2、由于SDK中的网络请求是同步的，所以调用时必须在非UI线程中调用，具体可参考DEMO。
 >
-> 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#_14)中“返回码说明”章节排查错误。
+> 3、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.com/development/cloud-development/#_14)中“返回码说明”章节排查错误。

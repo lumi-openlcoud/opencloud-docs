@@ -8,7 +8,7 @@
 
 1、访问并登录[AIOT开放平台](https://opencloud.aqara.cn/)网站，创建新应用后，在“应用管理”-“应用概览”页面获取“AppId”和“AppKey”。
 
-2、根据[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
+2、根据[云端开发手册](http://docs.opencloud.aqara.com/development/cloud-development/#oauth20)中“OAuth 2.0”章节，获取openID。
 
 3、下载并解压[IOS SDK](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/sdk/aiot_sdk_fastlink_ios_v0.3.zip)，在LHSDKLib文件夹下可查看SDK主要文件：libLumiSDK.a、LHOAuthAIOT.h和LHFastLink.h；在LHSDKDemo文件夹可查看Demo。
 
@@ -64,7 +64,7 @@
 
 > 注意：1、系统不识别有特殊字符的Wi-Fi，且不支持5G频段的Wi-Fi。若Wi-Fi包含特殊字符，请先更换Wi-Fi名称或更换其他Wi-Fi尝试。
 >
-> 2、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.cn/development/cloud-development/#_14)中“返回码说明”章节排查错误。
+> 2、调用接口时，可能获得正确或错误的返回结果，可参考[云端开发手册](http://docs.opencloud.aqara.com/development/cloud-development/#_14)中“返回码说明”章节排查错误。
 
 
 
