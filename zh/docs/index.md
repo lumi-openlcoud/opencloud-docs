@@ -16,7 +16,7 @@ AIOT开放平台将一直坚持“开放、利他、共赢”的理念，为第�
 
 ## 数据开放服务
 
-目前.AIOT开放平台提供了两种数据开放方式，开发者根据实际需求来选择合适的方式。
+目前.AIOT开放平台提供了三种对接方式，开发者根据实际需求来选择合适的方式。
 
 - **云端对接方式**
 
@@ -29,6 +29,12 @@ AIOT开放平台提供HTTP API供第三方应用远程调用，实现用户查�
 Aqara网关支持局域网通讯功能，开启此功能后，开发者可以通过局域网通讯来查询与控制ZigBee子设备（传感器、控制器等）。相比HTTP通讯，局域网通讯的速度更快，控制延迟更低。但是，局域网对接方式的开发成本更高，需要一台支持开发的第三方网关，并且开发者有嵌入式开发经验。详细的接入方法请参见《[网关局域网通讯协议](http://docs.opencloud.aqara.com/development/gateway-LAN-communication/)》。
 
 ![局域网对接方式](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/local-network-access.png)
+
+- **赋能对接方式**
+
+AIOT开放平台支持ZigBee模块对接方式，由绿米提供标准的ZigBee模块嵌套至三方厂商产品中，将三方厂商设备接入AIOT云平台，实现设备查询、控制、以及不同厂商设备间的联动控制等功能。目前此对接方式只针对企业客户开放，可登录开放平台网站，选择“硬件接入管理”，提交产品信息，审核通过后，会有绿米工作人员与您联系进行深入沟通。
+
+![赋能对接方式](<http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/zigbee-docking-cn.png> )
 
 ## 全生命周期服务
 
