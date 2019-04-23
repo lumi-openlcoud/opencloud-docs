@@ -22,7 +22,7 @@ Aqara产品中包含电工类设备，应由具有正式资格的专业人员按
 
 ## 安装前准备
 
-在开始安装和配置前，请先了解Aqara各产品参数及功能，详细请参见“[产品介绍](http://docs.opencloud.aqara.cn/guideline/product-discription/)”手册，并准备如下硬件设备：
+在开始安装和配置前，请先了解Aqara各产品参数及功能，详细请参见“[产品介绍](http://docs.opencloud.aqara.com/guideline/product-discription/)”手册，并准备如下硬件设备：
 
 | 序号   | 设备名称                    | 数量   |
 | ---- | ----------------------- | ---- |
