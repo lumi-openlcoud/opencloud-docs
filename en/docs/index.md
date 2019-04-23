@@ -9,7 +9,7 @@ AIOT is the cloud based control behind Aqara’s productline. It is responsible 
 
 The AIOT open cloud platform will always uphold the ideals of “Open, Altruistic, Win-Win”.  The platform provides full life cycle technical service for third party companies, accelerating the development of IoT applications, reducing construction and operating costs and helping companies to make data their core value. Currently, over 100 companies have registered on the AIOT open cloud platform; covering smart homes, smart hotels, new energy sources, firefighting, education and several other fields. 
 
-> **Note:** Lumi's names, signs, products and service names on the platform shall be the intellectual property rights of Lumi. Without written consent of Lumi in advance, you shall not display or use or handle the signs of Lumi in any modes. Any units or individuals shall not use, copy, modify, transmit, transcribe or sell with other products any parts of the intellectual property rights in any modes or with any reasons. For detail, please refer to [Lumi AIOT Open Platform User Agreement](https://opencloud.aqara.cn/opencloud/user-agreement).
+> **Note:** Lumi's names, signs, products and service names on the platform shall be the intellectual property rights of Lumi. Without written consent of Lumi in advance, you shall not display or use or handle the signs of Lumi in any modes. Any units or individuals shall not use, copy, modify, transmit, transcribe or sell with other products any parts of the intellectual property rights in any modes or with any reasons. For detail, please refer to [Lumi AIOT Open Platform User Agreement](https://opencloud.aqara.com/opencloud/user-agreement).
 
 
 
