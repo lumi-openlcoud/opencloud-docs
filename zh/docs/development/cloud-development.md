@@ -80,7 +80,7 @@ AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式�
 
 OAuth 2.0 详细授权流程如下：
 
-> 注意：本章节URL示例以“中国大陆地区（https://aiot-oauth2.aqara.cn/）”为例进行说明，若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.cn/development/region_code)文档更改域名。
+> 注意：本章节URL示例以“中国大陆地区（https://aiot-oauth2.aqara.cn/）”为例进行说明，若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.com/development/region_code)文档更改域名。
 
 #### 步骤1 请求授权码
 
@@ -184,7 +184,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ### API调用规范
 
-1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.cn/development/region_code)文档更改域名。
+1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.com/development/region_code)文档更改域名。
 
 2. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
 
@@ -337,9 +337,9 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 其中，header签名流程如下：
 
 1. 将Appid、Token、Time三个参数进行字典序排序，然后进行拼接；
-  例如：appid=xxx&time=xxx&token=xxx
+    例如：appid=xxx&time=xxx&token=xxx
 2. 拼接开发者配置的EncodingAESKey；
-  例如：appid=xxx&time=xxx&token=xxx&AESKey
+    例如：appid=xxx&time=xxx&token=xxx&AESKey
 3. 最后对产生的字符做MD5（32位），生成的数即为Sign的值（小写），开发者通过对比Sign的一致性来判断该请求是否来源于AIOT服务器。
 
 
