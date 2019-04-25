@@ -191,15 +191,16 @@ Since the access token is valid for only 2 hours, the developer needs to use a r
 
 ### **API call specification**
 
-1. To ensure the security of data transmissions, the API provided by the AIOT Open Cloud Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.com/en/development/region_code) .
-2. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
-3. The body of the request and the results returned through the interface using the **JSON format**.
-4. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
-5. For detailed API definitions of all functions, please visit the "Application Management -> API Access" page in the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/).
+1. Request URL format: domain name / interface address, such as:https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
+2. To ensure the security of data transmissions, the API provided by the AIOT Open Cloud Platform transfers data over the HTTPS protocol. The unified domain name of Mainland China is **https://aiot-open-3rd.aqara.cn**, other area please refer to [Country (area code)](http://docs.opencloud.aqara.com/en/development/region_code) .
+3. OpenID is a third-party application's unique user identifier. It is the result of encrypting the original AIOT account. Each AIOT user is issued a unique OpenID for each third-party application.
+4. The body of the request and the results returned through the interface using the **JSON format**.
+5. When querying the device status or controlling the device through the interface, you need to configure the "resource alias" parameter. The values for different resources are different. For information on all resources (alias, value type, meaning, etc.), please visit the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/) "Application Management -> Resource Authorization" page.
+6. For detailed API definitions of all functions, please visit the "Application Management -> API Access" page in the [AIOT Open Cloud Platform](https://opencloud.aqara.cn/).
 
 ### **Call example**
 
-For example, you can query the details of a device by calling the interface using the following methods:
+you can query the details of a device by calling the interface using the following methods:
 
 - Request URL：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
 - Request mothod:  HTTP POST （application/json）
