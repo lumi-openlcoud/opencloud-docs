@@ -184,21 +184,16 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 ### API调用规范
 
-1. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.com/development/region_code)文档更改域名。
-
-2. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
-
-3. 接口的请求body和返回结果都采用**JSON格式**。
-
-4. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
-
-5. 所有功能的详细API定义请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->API访问”页面。
+1. 请求URL格式：域名/ 接口地址，如：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
+2. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.com/development/region_code)文档更改域名。
+3. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
+4. 接口的请求body和返回结果都采用**JSON格式**。
+5. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
+6. 所有功能的详细API定义请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->API访问”页面。
 
 ### 调用示例
 
-#### OAuth 2.0
-
-例如，通过调用接口查询一个设备的详细信息，调用方法如下：
+通过调用接口查询一个设备的详细信息，调用方法如下：
 
 - 请求URL：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
 
