@@ -22,13 +22,13 @@ AIOT开放平台将一直坚持“开放、利他、共赢”的理念，为第�
 
 AIOT开放平台提供HTTP API供第三方应用远程调用，实现用户查询、设备状态查询和远程控制设备等功能。另外，通过消息推送服务，AIOT开放平台将设备上传的实时数据推送到第三方服务器。云端对接方式简单快速，开发成本低，只需一台服务器即可开发。详细的接入方法请参见《[云端开发手册](http://docs.opencloud.aqara.com/development/cloud-development/)》。
 
-![云端对接方式](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/cloud-access.png)
+![云端对接方式](<http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/join-cloud.jpg>)
 
 - **局域网对接方式**
 
 Aqara网关支持局域网通讯功能，开启此功能后，开发者可以通过局域网通讯来查询与控制ZigBee子设备（传感器、控制器等）。相比HTTP通讯，局域网通讯的速度更快，控制延迟更低。但是，局域网对接方式的开发成本更高，需要一台支持开发的第三方网关，并且开发者有嵌入式开发经验。详细的接入方法请参见《[网关局域网通讯协议](http://docs.opencloud.aqara.com/development/gateway-LAN-communication/)》。
 
-![局域网对接方式](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/local-network-access.png)
+![局域网对接方式](<http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/join-lan.jpg>)
 
 - **赋能对接方式**
 
