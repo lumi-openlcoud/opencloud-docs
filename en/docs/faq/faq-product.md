@@ -126,6 +126,12 @@
 
 &nbsp;
 
+<u>**Q: When the Wall Switch (No Neutral Single/Double Rocker) is connected to the fire line, will the neutral line be electrified?**</u>
+
+**A:** When the fire line is connected, the neutral line will have electricity.
+
+&nbsp;
+
 <u>**Q: How much power does the Wall Switch(With Neutral, Single/Double Rocker)  need to be equipped with to operate normally?**</u> 
 
 **A: **Since there is no minimum load requirement due to the neutral line and the live line, the maximum load of the total number of channels is not to exceed 2500W.
