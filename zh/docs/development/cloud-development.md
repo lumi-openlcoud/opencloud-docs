@@ -401,16 +401,17 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 | parentId | 父设备（网关）ID，如果是网关，该字段为空 |
 | extra    | 附加消息                  |
 
-| 事件类型               | 描述    |
-| :----------------- | :---- |
-| GW\_BIND           | 网关入网  |
-| GW\_UN\_BIND       | 网关解绑  |
-| GW\_ONLINE         | 网关在线  |
-| GW\_OFFLINE        | 网关离线  |
-| SUB\_DEV\_BIND     | 子设备入网 |
-| SUB\_DEV\_UN\_BIND | 子设备解绑 |
-| SUB\_DEV\_ONLINE   | 子设备在线 |
-| SUB\_DEV\_OFFLINE  | 子设备离线 |
+| 事件类型           | 描述         |
+| :----------------- | :----------- |
+| GW\_BIND           | 网关入网     |
+| GW\_UN\_BIND       | 网关解绑     |
+| GW\_ONLINE         | 网关在线     |
+| GW\_OFFLINE        | 网关离线     |
+| SUB\_DEV\_BIND     | 子设备入网   |
+| SUB\_DEV\_UN\_BIND | 子设备解绑   |
+| SUB\_DEV\_ONLINE   | 子设备在线   |
+| SUB\_DEV\_OFFLINE  | 子设备离线   |
+| DEV_INFO_CHANGED   | 设备名称变更 |
 
 ## 返回码说明
 
