@@ -405,16 +405,17 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 | did            | Device ID                                |
 | parentId       | Parent device (gateway) ID. If this is a gateway, this field is left blank |
 
-| **Event type**  | **Description**                |
-| --------------- | ------------------------------ |
-| GW_BIND         | Link to Gateway                |
-| GW_UN_BIND      | Unlink Gateway                 |
-| GW_ONLINE       | Gateway is on-line             |
-| GW_OFFLINE      | Gateway is off-line            |
-| SUB_DEV_BIND    | Link sub-device to network     |
-| SUB_DEV_UN_BIND | Unlink sub-device from network |
-| SUB_DEV_ONLINE  | Sub-device is on-line          |
-| SUB_DEV_OFFLINE | Sub-device is off-line         |
+| **Event type**   | **Description**                |
+| ---------------- | ------------------------------ |
+| GW_BIND          | Link to Gateway                |
+| GW_UN_BIND       | Unlink Gateway                 |
+| GW_ONLINE        | Gateway is on-line             |
+| GW_OFFLINE       | Gateway is off-line            |
+| SUB_DEV_BIND     | Link sub-device to network     |
+| SUB_DEV_UN_BIND  | Unlink sub-device from network |
+| SUB_DEV_ONLINE   | Sub-device is on-line          |
+| SUB_DEV_OFFLINE  | Sub-device is off-line         |
+| DEV_INFO_CHANGED | Device name change             |
 
 ## **Description of Return codes**
 
