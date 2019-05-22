@@ -352,7 +352,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
     "msgType": "resource", 
     "data": [
         {
-            "time": "1503556533", 
+            "time": "1503556533000", 
             "attr": "load_power", 
             "value": "3.93", 
             "did": "lumi.xxxxxxxxxx",
@@ -363,14 +363,14 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 }
 ```
 
-| 参数      | 说明                            |
-| ------- | ----------------------------- |
-| msgType | 消息类型，取值为`resource`            |
-| time    | 时间戳，单位：秒                      |
+| 参数    | 说明                                                   |
+| ------- | ------------------------------------------------------ |
+| msgType | 消息类型，取值为`resource`                             |
+| time    | 时间戳，单位：毫秒                                     |
 | attr    | 资源别名，资源别名的含义请参考“应用管理->资源授权”页面 |
-| value   | 资源的最新值                        |
-| did     | 设备ID                          |
-| attach  | 附加信息-推送时带上                    |
+| value   | 资源的最新值                                           |
+| did     | 设备ID                                                 |
+| attach  | 附加信息-推送时带上                                    |
 
 **设备消息**
 
@@ -381,7 +381,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
         "openId": "xxxxxx", 
         "name": "空调伴侣", 
         "model": "lumi.acpartner.xxx", 
-        "time": 1503560767, 
+        "time": 1503560767000, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.xxxxxxx", 
         "parentId": ""
@@ -389,17 +389,17 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 }
 ```
 
-| 参数       | 说明                    |
-| -------- | --------------------- |
-| msgType  | 消息类型，取值为`device`      |
-| openId   | 用户ID                  |
-| name     | 设备名称                  |
-| model    | 设备类型                  |
-| time     | 时间戳，单位：秒              |
-| event    | 事件类型，详细参数说明见下表        |
-| did      | 设备ID                  |
+| 参数     | 说明                                     |
+| -------- | ---------------------------------------- |
+| msgType  | 消息类型，取值为`device`                 |
+| openId   | 用户ID                                   |
+| name     | 设备名称                                 |
+| model    | 设备类型                                 |
+| time     | 时间戳，单位：毫秒                       |
+| event    | 事件类型，详细参数说明见下表             |
+| did      | 设备ID                                   |
 | parentId | 父设备（网关）ID，如果是网关，该字段为空 |
-| extra    | 附加消息                  |
+| extra    | 附加消息                                 |
 
 | 事件类型           | 描述         |
 | :----------------- | :----------- |
