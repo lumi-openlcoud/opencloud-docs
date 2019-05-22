@@ -357,7 +357,7 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
     "msgType": "resource", 
     "data": [
         {
-            "time": "1503556533", 
+            "time": "1503556533000", 
             "attr": "load_power", 
             "value": "3.93", 
             "did": "lumi.158d00011c1cee",
@@ -368,14 +368,14 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 }
 ```
 
-| **Parameters** | **Description**                          |
-| -------------- | ---------------------------------------- |
-| msgType        | Message type, gets the value of `resource` |
-| time           | Timestamps, units: seconds               |
+| **Parameters** | **Description**                                              |
+| -------------- | ------------------------------------------------------------ |
+| msgType        | Message type, gets the value of `resource`                   |
+| time           | Timestamps, units: millisecond                               |
 | attr           | Resources aliases. Please refer to the "Application Management -> Resource Authorization" page for more details regarding each resource. |
-| value          | The latest value of resources            |
-| did            | Device ID                                |
-| attach         | attachment information                   |
+| value          | The latest value of resources                                |
+| did            | Device ID                                                    |
+| attach         | attachment information                                       |
 
 **Device Message**
 
@@ -386,7 +386,7 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
         "openId": "GoeFrrL7mN9SsGRi8WJn4x4YnQpXTS", 
         "name": "Air Conditioning Controller", 
         "model": "lumi.acpartner.aq1", 
-        "time": 1503560767, 
+        "time": 1503560767000, 
         "event": "DEV_INFO_CHANGED", 
         "did": "lumi.158d00010b4090", 
         "parentId": ""
@@ -394,15 +394,15 @@ At present, the AIOT Open Cloud Platform supports the following two types of mes
 }
 ```
 
-| **Parameters** | **Description**                          |
-| -------------- | ---------------------------------------- |
-| msgType        | Message type, gets the value of `device` |
-| openId         | User ID                                  |
-| name           | Device Name                              |
-| model          | Device Type                              |
-| time           | Timestamps, units: seconds               |
+| **Parameters** | **Description**                                              |
+| -------------- | ------------------------------------------------------------ |
+| msgType        | Message type, gets the value of `device`                     |
+| openId         | User ID                                                      |
+| name           | Device Name                                                  |
+| model          | Device Type                                                  |
+| time           | Timestamps, units:millisecond                                |
 | event          | Event type, please refer to the detailed parameter description in the following table |
-| did            | Device ID                                |
+| did            | Device ID                                                    |
 | parentId       | Parent device (gateway) ID. If this is a gateway, this field is left blank |
 
 | **Event type**   | **Description**                |
