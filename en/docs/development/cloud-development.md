@@ -206,12 +206,12 @@ you can query the details of a device by calling the interface using the followi
 - Request mothod:  HTTP POST （application/json）
 - Request header example
 
-| **Key**      | **Description (optional)**               |
-| ------------ | ---------------------------------------- |
-| Appid        | The application's unique identifier      |
-| Sign         | Signature.                               |
-| Access-Token | Access token obtained via OAuth authorization |
-| Content-Type | The result is returned in JSON format    |
+| **Key**      | **Description (optional)**                                   |
+| ------------ | ------------------------------------------------------------ |
+| Appid        | The application's unique identifier                          |
+| Sign         | Signature.                                                   |
+| Access-Token | Access token obtained via OAuth authorization                |
+| Content-Type | The result is returned in JSON format,such as:application/json |
 
 > **Note**: Make sure the Keys and the corresponding Values are filled in request header. Note that they are case sensitive.
 
