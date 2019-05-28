@@ -201,12 +201,12 @@ Location: https://redirect_uri?code=xxx&state=xxx
 
 - 请求header示例
 
-| Key          | 描述（可不填）                                  |
-| ------------ | ---------------------------------------- |
-| Appid        | 应用的唯一标识                                  |
+| Key          | 描述（可不填）                                               |
+| ------------ | ------------------------------------------------------------ |
+| Appid        | 应用的唯一标识                                               |
 | Sign         | 签名，拼接方式：accesstoken=xxx&appid=xxx&time=xxx&(Appkey的value值) |
-| Access-Token | 通过OAuth授权获得的访问令牌                         |
-| Content-Type | 返回结果采用JSON格式                             |
+| Access-Token | 通过OAuth授权获得的访问令牌                                  |
+| Content-Type | 返回结果采用JSON格式，如：application/json                   |
 
 > 注意：在请求header时填写的Key和Value值，需注意字母大小写。
 
