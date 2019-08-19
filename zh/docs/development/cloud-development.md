@@ -5,9 +5,9 @@
 
 ### 概述
 
-AIOT是提供设备管理、数据采集与远程控制等服务的物联网云平台。通过智能设备采集的数据存储在AIOT云端数据库中，比如：功率、温湿度、开关状态、门窗状态等。同时，AIOT云端可以通过下发控制命令来远程控制设备。那开发者如何获得采集数据呢？又如何远程控制自己的设备呢？
+AIOT是提供设备管理、数据采集与远程控制等服务的物联网云平台。通过智能设备采集的数据存储在AIOT云端数据库中，比如：功率、温湿度、开关状态、门窗状态等。同时，AIOT云端可以通过下发控制命令来远程控制设备。
 
-为了满足第三方开发者的需求，AIOT开放平台提供云端对接方式。通过Open API和消息推送服务，可以从云端采集数据和远程控制设备。目前提供如下接口：
+为了满足开发者的需求，AIOT开放平台提供云云对接方式。通过Open API和消息推送服务，可以从云端采集数据和远程控制设备。目前提供如下接口：
 
 - 位置管理
 - 设备管理
@@ -17,7 +17,6 @@ AIOT是提供设备管理、数据采集与远程控制等服务的物联网云�
 
 另外，AIOT开放平台提供了消息推送服务，支持把设备上报的实时数据推送到第三方服务器，满足了开发者对数据实时性的要求。
 
-下面，本手册将介绍下如何基于云端对接方式开发第三方应用，包括应用的创建、配置和开发等。
 
 ### 开发流程
 
@@ -33,46 +32,44 @@ AIOT是提供设备管理、数据采集与远程控制等服务的物联网云�
 
 > 注意：使用Postman时请关闭SSL验证（SSL certifacate verification）。
 
-## 应用创建与配置
 
-### 创建应用
+## 创建应用
 
-登录[AIOT开放平台](https://opencloud.aqara.cn/)，单击“新建应用”。根据提示输入“应用名称”、“行业类型”和“应用简介”，单击“完成”后，系统会自动分配**Appid**和**Appkey**。
-
+登录[AIOT开放平台](https://opencloud.aqara.cn/)，在右上角点击进入“控制台”。选择“应用管理”-“新建应用”，“应用类型”选择“OAuth2授权接入”，上传应用图标、输入应用名称、行业类型、简介等信息，完成创建。应用审核后，系统会自动分配**Appid**和**Appkey**。
 
 
-### 申请资源权限
+## 资源权限
 
 资源是指由设备产生的数据，包括设备的设置参数与实时状态。一个设备具有多个资源，不同的资源表示不同含义的数据。例如，开关状态（plug_status）是智能插座的一个资源，表示智能插座当前是否通电。通过访问该资源，开发者可以查询插座的当前状态和远程开关插座。
 
-访问资源之前，开发者需要先按级别申请资源的权限。资源级别分为1级和2级，1级表示常用的资源，2级表示不常用的资源。获得某个类型设备的1级授权后，开发者可以在应用中访问该类型设备的所有常用资源。
+登录[AIOT开放平台](https://opencloud.aqara.cn/)，进入控制台，选择“设备资源列表”，即可查看当前已开放的设备资源列表。
 
-默认情况下，应用会自动分配所有类型设备的1级资源权限。如果需要申请2级资源授权，请访问“应用管理”页面，然后切换到“资源授权”页。
-
-- 单击每一行右侧的“申请资源”按钮，申请对应设备类型的资源。
-- 选中左侧多个勾选框，然后单击右上角的“批量申请”按钮，可以批量申请多个设备类型的资源。
-
-申请单提交后请耐心等待管理员审核，预计1个工作日的处理时间。
-
-
-
-### 申请API权限
+## API接口
 
 API是AIOT开放平台对外提供数据的接口，用于查询、控制设备和配置自动化、场景等信息。目前开放的API接口默认为已授权状态。
 
+登录[AIOT开放平台](https://opencloud.aqara.cn/)，进入控制台，展开APi参考菜单栏，选择授权接入API，即可查看接口介绍和进行接口调试。
+
+##添加设备
+
+添加设备目前有两种方式：使用Aaqara Home APP添加设备 和 使用SDK添加设备。
+
+**使用Aaqara Home APP添加设备**
+在应用商店或Apple Store搜索“Aaqara Home”，下载安装后，选择对应的服务器，注册Aqara账号，也可以直接登录AIOT开放平台账号。
+登陆Aqara账号后，可在APP上按照提示先添加网关设备，再添加子设备。
+
+**使用SDK添加设备**
+下载设备入网SDK添加网关设备，详细操作请参考SDK开发手册。
 
 
 ## 账号授权
 
 只有获得AIOT账号的授权许可，第三方应用才能访问与控制该账号下的设备，同时AIOT开放平台才会把设备消息推送到第三方服务器。
 
-> 说明：在应用商店或Apple Store搜索“Aqara Home”，下载安装后注册Aaqra账号。
-
-目前，AIOT开放平台提供授权方式：OAuth 2.0授权。
 
 ### OAuth2.0
 
-OAuth2.0 是一个开放标准，允许用户让第三方应用访问该用户在某一网站（或物联网平台）上存储的私密资源（如用户信息、照片、视频、设备数据等），而无需将用户名和密码提供给第三方应用。
+OAuth2.0 是一个开放标准，允许用户让第三方应用访问该用户在某一网站上存储的私密资源（如用户信息、照片、视频、设备数据等），而无需将用户名和密码提供给第三方应用。
 
 AIOT开放平台采用OAuth 2.0标准的授权码（authorization_code）模式，适用于拥有server端的应用。OAuth 2.0 授权流程简单、安全，时序图如下所示，完成授权流程后获得访问令牌（AccessToken）。此后，开发者使用访问令牌来调用接口，获取用户信息或操作用户的设备。
 
@@ -84,7 +81,7 @@ OAuth 2.0 详细授权流程如下：
 
 #### 步骤1 请求授权码
 
-首先，第三方应用需要通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara账号登录成功后，AIOT开放平台会返回用户的授权码（code）。授权码的有效期为10分钟，请在10分钟内完成后续流程。
+通过浏览器将用户重定向到AIOT OAuth 2.0服务。使用Aqara账号和密码成功登录后，会返回用户的授权码（code）。授权码的有效期为10分钟。
 
 - **URL：**  https://aiot-oauth2.aqara.cn/authorize?client_id=xxx&response_type=code&redirect_uri=xxxx&state=xxx&theme=x
 - **请求方式：** HTTP GET
@@ -105,7 +102,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 ```
 
 #### 步骤2 获取访问令牌
-获得授权码后，第三方应用访问以下URL，用授权码换取访问令牌（AccessToken）。
+获得授权码后，访问以下URL，用授权码换取访问令牌（AccessToken）。
 
 - **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
@@ -119,17 +116,6 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | code          | 是    | 上一步请求获得的授权码                            |
 | redirect_uri  | 是    | 上一步请求中设置的redirect_uri参数                |
 
-- **返回示例**
-```
-{
-    "access_token": "xxxxx", 
-    "expires_in": 7200, 
-    "token_type": "bearer", 
-    "openId": "xxx", 
-    "refresh_token": "xxxxx", 
-    "state": "abcde"
-}
-```
 - **返回参数**
 
 | 参数名           | 描述                         |
@@ -141,9 +127,21 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | refresh_token | 刷新令牌，用于刷新访问令牌，有效期为30天      |
 | state         | 取值为任意字符串，认证服务器将原样返回该参数     |
 
-#### 步骤3 刷新访问令牌
+- **返回示例**
+```
+{
+    "access_token": "xxxxx", 
+    "expires_in": 7200, 
+    "token_type": "bearer", 
+    "openId": "xxx", 
+    "refresh_token": "xxxxx", 
+    "state": "abcde"
+}
+```
 
-由于访问令牌的有效期只有2个小时，所以开发者需要在访问令牌过期前使用刷新令牌进行刷新，建议的刷新周期为1个半小时。
+
+#### 步骤3 刷新访问令牌
+在access_token过期前使用refresh_token进行刷新，获取新的access_token，可设置定时循环刷新。
 
 - **URL：** https://aiot-oauth2.aqara.cn/access_token
 - **请求方式：** HTTP POST (application/x-www-form-urlencoded)
@@ -156,6 +154,17 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | grant_type    | 是    | 根据OAuth 2.0 标准，取值为`refresh_token` |
 | refresh_token | 是    | 上一步请求获得的刷新令牌                      |
 
+- **返回参数**
+
+| 参数名           | 描述                         |
+| ------------- | -------------------------- |
+| access_token  | 访问令牌，第三方应用访问AIOT开放服务的凭证    |
+| expires_in    | 访问令牌的剩余有效时间，单位为秒           |
+| token_type    | 根据OAuth 2.0 标准，取值为`bearer` |
+| openId        | 授权用户的唯一标识                  |
+| refresh_token | 新的刷新令牌，有效期30天，旧的刷新令牌立即作废         |
+| state         | 取值为任意字符串，认证服务器将原样返回该参数     |
+
 - **返回示例**
 ```
 {
@@ -167,48 +176,51 @@ Location: https://redirect_uri?code=xxx&state=xxx
     "state": "abcde"
 }
 ```
-- **返回参数**
-
-| 参数名           | 描述                         |
-| ------------- | -------------------------- |
-| access_token  | 访问令牌，第三方应用访问AIOT开放服务的凭证    |
-| expires_in    | 访问令牌的剩余有效时间，单位为秒           |
-| token_type    | 根据OAuth 2.0 标准，取值为`bearer` |
-| openId        | 授权用户的唯一标识                  |
-| refresh_token | 新的刷新令牌，旧的刷新令牌立即作废          |
-| state         | 取值为任意字符串，认证服务器将原样返回该参数     |
-
 
 
 ## API调用
 
-### API调用规范
+### API调用说明
 
-1. 请求URL格式：域名/ 接口地址，如：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
-2. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议，中国大陆地区域名为：**https://aiot-open-3rd.aqara.cn**。若在其他地区，请参考[国家（地区码）](http://docs.opencloud.aqara.com/development/region_code)文档更改域名。
-3. OpenID 作为第三方应用对用户的唯一标识，是原AIOT账号加密后的结果。每个AIOT用户对每个第三方应用有一个唯一的OpenID。
-4. 接口的请求body和返回结果都采用**JSON格式**。
-5. 通过接口查询设备状态或控制设备时需要设置参数“资源别名”，不同资源的取值类型也不一样。所有资源的信息（别名、取值类型、含义等）请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->资源授权”页面。
-6. 所有功能的详细API定义请访问[AIOT开放平台](https://opencloud.aqara.cn)的“应用管理->API访问”页面。
+1. 请求URL格式：https:// + 域名 + 3rd + API，如：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
+2. 为了保证数据传输的安全，AIOT开放平台对外提供的API均采用HTTPS协议
+3. 接口的请求body和返回结果都采用**JSON格式**。
+
+
+### 请求head参数说明
+
+| 名称             | 类型     | 必填                       | 描述 |
+| -------------- | ------ | ------------------------ | ---- |
+| Appid      | String | 是 | 第三方应用的Appid   |
+| Sign | String | 是 | 签名   |
+| Accesstoken      | String | 是 | 通过OAuth授权获取的访问Token   |
+| Time  | Long  | 是 | 系统当前时间戳，单位毫秒   |
+
+Sign生成说明：
+1. head请求的参数先按照ASSIC码做排序，然后进行拼接；
+   拼接方式：key1=value1&key2=value2
+   例如：accesstoken=xxx&appid=xxx&time=xxx
+2. 对第一步产生的字符串，全部小写处理；
+3. 对第二步产生的字符串拼接Appkey；
+   由AIOT开放平台生成的Appid对应的Appkey的值进行拼接；
+   例如：accesstoken=xxx&appid=xxx&time=xxx&(Appkey的value值)
+4. 最后对第三步产生的字符做MD5（32位），生成的数即为Sign的值（小写）。
+
 
 ### 调用示例
 
-通过调用接口查询一个设备的详细信息，调用方法如下：
+查询设备列表，调用方法如下：
 
 - 请求URL：https://aiot-open-3rd.aqara.cn/3rd/v1.0/open/device/query
-
 - 请求方式： HTTP POST （application/json）
-
 - 请求header示例
 
-| Key          | 描述（可不填）                                               |
+| Key          | 描述                                               |
 | ------------ | ------------------------------------------------------------ |
 | Appid        | 应用的唯一标识                                               |
 | Sign         | 签名，拼接方式：accesstoken=xxx&appid=xxx&time=xxx&(Appkey的value值) |
 | Access-Token | 通过OAuth授权获得的访问令牌                                  |
 | Content-Type | 返回结果采用JSON格式，如：application/json                   |
-
-> 注意：在请求header时填写的Key和Value值，需注意字母大小写。
 
 - 返回结果示例
 ```
@@ -231,60 +243,42 @@ Location: https://redirect_uri?code=xxx&state=xxx
 ```
 
 
-
 ## 消息推送
 
-如果第三方应用需要接收设备消息，开发者需要按照如下步骤启用消息推送功能：
+消息推送目前支持推送设备属性消息和事件消息。用户需提供服务器URL来接收设备属性消息和事件消息。AIOT使用HTTPS请求，将设备属性和事件消息发送到第三方的服务器URL。
+- 设备属性消息：设备属性的变化消息，比如温度变化、功率变化等；
+- 事件消息：设备的事件消息，比如设备在线离线、绑定解绑等。
 
+如需接收设备消息，请按如下步骤启用消息推送功能：
 1. 填写服务器配置；
 2. 验证服务器地址；
-3. 调用订阅资源接口，订阅需要推送的资源；
+3. 调用订阅资源接口（v1.0/open/subscriber/resource），订阅需要推送的资源；
 4. 根据消息格式实现业务逻辑。
-
-特别注意，第三方应用在正常接收消息后必须按照规定的格式返回JSON报文，格式如下：
-
-```
-{
-	"code": 0|ErrorCode,
-	"result": "自定义内容"
-}
-```
 
 ### 服务器配置
 
-访问“应用管理->消息推送”页面，单击右上角的“编辑”按钮，填写配置信息：
-
-1. **URL**：服务器地址，第三方服务器用来接收消息的接口URL；
-2. **Token**：由开发者任意填写，用于生成签名；
-3. **EncodingAESKey：**随机生成或由开发者手动填写，将用来对消息体进行加解密；
-4. **消息加解密方式**：分为明文模式、兼容模式和安全模式，更改消息加解密方式后会立即生效，请开发者谨慎修改。
-
-详细说明下消息加解密方式的区别：
-
-- 明文模式：不对消息体进行加密，安全系数低；
-- 兼容模式：消息体同时包含明文和密文，方便开发者调试和维护；
-- 安全模式：消息体为纯密文，需要开发者加密和解密，安全系数高。
-
-> 注意：目前支持“明文模式”和“安全模式”，为了数据安全性，推荐使用“安全模式”。
-
-
+1. 登录AIOT开放平台，在右上角点击进入“控制台”；
+2. 选择“应用管理”-“消息推送”；
+3. 在服务器配置中，输入“URL”，选择“消息加解密方式”和是否开启“事件消息”推送。
+   - URL：用于接收设备属性数据和事件消息的服务器URL；
+   - 消息加解密方式：支持明文模式和安全模式；
+   - 事件消息：是否开启设备事件消息，如设备在线离线等消息。
+4.  单击“提交”，完成配置。
 
 ### 验证服务器
 
 **明文模式**
 
-在明文模式下，服务器验证的方法很简单。开发者保存服务器配置后，AIOT服务器会发送一个POST请求到开发者设置的服务器地址（URL），请求将携带一个参数echostr（JSON格式），它是一个随机的字符串。如果第三方服务器收到该请求，请原样返回echostr参数内容，则验证服务器成功，否则验证失败。
+在明文模式下，消息体以明文形式传输，数据安全性低，但服务器验证方法很简单。开发者保存服务器配置后，AIOT服务器会发送一个POST请求到开发者设置的服务器地址（URL），请求将携带一个参数echostr（JSON格式），它是一个随机的字符串。如果第三方服务器收到该请求，请原样返回echostr参数内容，则验证服务器成功，否则验证失败。
 
 发送报文格式：
-
 ```
 {
 	"echostr": "jdlfialjf8i"
 }
 ```
 
-返回报文格式如下：
-
+返回报文格式：
 ```
 {
 	"code": 0,
@@ -292,52 +286,28 @@ Location: https://redirect_uri?code=xxx&state=xxx
 }
 ```
 
-
-
 **安全模式**
 
-在安全模式下，服务器验证的方法变得复杂，和微信公众号平台类似。 开发者保存服务器配置后后，AIOT服务器将发送POST请求到填写的服务器地址（URL)：
+在安全模式下，AIOT服务器会发送一个POST请求到开发者设置的服务器地址（URL），请求head参数采用签名校验，用于验证推送数据是否来源于AIOT服务器。
+Body加密方式：body数据体采用AES/CBC/PKCS5Padding加密，密钥长度为16byte(128bit)，密钥和偏移量均为Appkey的前16位。
 
-- Token: header签名token,
-- EncodingAESKey：AES加密密钥(Base64处理),
-- echostr：随机字符串。
+请求head参数说明
 
-body加密解密：
-```
-public static String encrypt(String src, byte[] key) throws Exception {
-    SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
-    AlgorithmParameterSpec params = new IvParameterSpec(IV);
-    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-    cipher.init(Cipher.ENCRYPT_MODE, skeySpec, params);
-    byte[] content = src.getBytes("utf-8");
-    byte[] ret = cipher.doFinal(content);
-    return Base64.getEncoder().encodeToString(ret);
-}
+| 名称             | 类型     | 必填                       | 描述 |
+| -------------- | ------ | ------------------------ | ---- |
+| Appid      | String | 是 | 第三方应用的Appid   |
+| Sign | String | 是 | 签名   |
+| Time  | Long  | 是 | 系统当前时间戳，单位毫秒   |
 
-public static byte[] decrypt(String src, byte[] key) throws Exception {
-    byte[] srcByte = Base64.getDecoder().decode(src);
-    SecretKeySpec skeySpec = new SecretKeySpec(key, "AES");
-    AlgorithmParameterSpec params = new IvParameterSpec(IV);
-    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-    cipher.init(Cipher.DECRYPT_MODE, skeySpec, params);
-    byte[] ret = cipher.doFinal(srcByte);
-    return ret;
-}
-```
-
-
-
-若确认此次POST请求来自绿米服务器，请原样返回echostr参数内容，则验证服务器成功，否则验证失败。
-
-其中，header签名流程如下：
-
-1. 将Appid、Token、Time三个参数进行字典序排序，然后进行拼接；
-    例如：appid=xxx&time=xxx&token=xxx
-2. 拼接开发者配置的EncodingAESKey；
-    例如：appid=xxx&time=xxx&token=xxx&AESKey
-3. 最后对产生的字符做MD5（32位），生成的数即为Sign的值（小写），开发者通过对比Sign的一致性来判断该请求是否来源于AIOT服务器。
-
-
+Sign生成说明：
+1. head请求的参数先按照ASSIC码做排序，然后进行拼接；
+   拼接方式：key1=value1&key2=value2
+   例如：appid=xxx&time=xxx
+2. 对第一步产生的字符串，全部小写处理；
+3. 对第二步产生的字符串拼接Appkey；
+   由AIOT开放平台生成的Appid对应的Appkey的值进行拼接；
+   例如：appid=xxx&time=xxx&(Appkey的value值)
+4. 最后对第三步产生的字符做MD5（32位），生成的数即为Sign的值（小写）。
 
 ### 消息格式
 
@@ -347,6 +317,18 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 
 **资源消息**
 
+| 参数    | 说明                                                   |
+| ------- | ------------------------------------------------------ |
+| msgType | 消息类型，取值为`resource`                             |
+| time    | 时间戳，单位：毫秒                                     |
+| attr    | 资源别名，资源别名的含义请参考“控制台-设备资源管理”页面 |
+| value   | 资源属性值                                          |
+| did     | 设备ID                                                 |
+| model  | 设备模型值                                   |
+| attach  | 附加信息-推送时带上                                    |
+
+
+消息示例
 ```
 {
     "msgType": "resource", 
@@ -363,16 +345,34 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 }
 ```
 
-| 参数    | 说明                                                   |
-| ------- | ------------------------------------------------------ |
-| msgType | 消息类型，取值为`resource`                             |
-| time    | 时间戳，单位：毫秒                                     |
-| attr    | 资源别名，资源别名的含义请参考“应用管理->资源授权”页面 |
-| value   | 资源的最新值                                           |
-| did     | 设备ID                                                 |
-| attach  | 附加信息-推送时带上                                    |
+
 
 **设备消息**
+
+| 参数     | 说明                                     |
+| -------- | ---------------------------------------- |
+| msgType  | 消息类型，取值为`device`                 |
+| openId   | 用户唯一标识，用于区分来自于哪个账号            |
+| name     | 设备名称                                 |
+| model    | 设备模型值                                 |
+| time     | 时间戳，单位：毫秒                       |
+| event    | 事件类型，详细参数说明见下表             |
+| did      | 设备ID                                   |
+| parentId | 父设备（网关）ID，如果是网关，该字段为空 |
+
+目前支持推送的事件类型如下：
+
+| 事件类型           | 描述         |
+| :----------------- | :----------- |
+| GW\_BIND           | 网关入网     |
+| GW\_UN\_BIND       | 网关解绑     |
+| GW\_ONLINE         | 网关在线     |
+| GW\_OFFLINE        | 网关离线     |
+| SUB\_DEV\_BIND     | 子设备入网   |
+| SUB\_DEV\_UN\_BIND | 子设备解绑   |
+| SUB\_DEV\_ONLINE   | 子设备在线   |
+| SUB\_DEV\_OFFLINE  | 子设备离线   |
+| DEV_INFO_CHANGED   | 设备名称变更 |
 
 ```
 {
@@ -389,29 +389,7 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 }
 ```
 
-| 参数     | 说明                                     |
-| -------- | ---------------------------------------- |
-| msgType  | 消息类型，取值为`device`                 |
-| openId   | 用户ID                                   |
-| name     | 设备名称                                 |
-| model    | 设备类型                                 |
-| time     | 时间戳，单位：毫秒                       |
-| event    | 事件类型，详细参数说明见下表             |
-| did      | 设备ID                                   |
-| parentId | 父设备（网关）ID，如果是网关，该字段为空 |
-| extra    | 附加消息                                 |
 
-| 事件类型           | 描述         |
-| :----------------- | :----------- |
-| GW\_BIND           | 网关入网     |
-| GW\_UN\_BIND       | 网关解绑     |
-| GW\_ONLINE         | 网关在线     |
-| GW\_OFFLINE        | 网关离线     |
-| SUB\_DEV\_BIND     | 子设备入网   |
-| SUB\_DEV\_UN\_BIND | 子设备解绑   |
-| SUB\_DEV\_ONLINE   | 子设备在线   |
-| SUB\_DEV\_OFFLINE  | 子设备离线   |
-| DEV_INFO_CHANGED   | 设备名称变更 |
 
 ## 返回码说明
 
@@ -421,9 +399,6 @@ public static byte[] decrypt(String src, byte[] key) throws Exception {
 | ---- | ------------------------------- | --------------- |
 | 0    | Success                         | 成功              |
 | 100  | Timeout                         | 超时              |
-| 101  | Invalid data package            | 数据包非法           |
-| 102  | Data package has altered        | 数据包损坏           |
-| 103  | Data package may lose           | 数据包丢失           |
 | 104  | Server busy                     | 服务器繁忙           |
 | 105  | Data package has expired        | 数据包过期           |
 | 106  | Invalid sign                    | 无效的签名           |
