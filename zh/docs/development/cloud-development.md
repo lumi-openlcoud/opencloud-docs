@@ -61,7 +61,7 @@ API是AIOT开放平台对外提供数据的接口，用于查询、控制设备�
 
 **使用SDK添加设备**
 
-下载设备入网SDK添加网关设备，详细操作请参考SDK开发手册。
+下载设备入网SDK添加网关设备，详细操作请参考[SDK开发手册](http://docs.opencloud.aqara.com/development/sdk-v1.0/)。
 
 
 ## 账号授权
