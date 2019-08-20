@@ -55,10 +55,12 @@ API是AIOT开放平台对外提供数据的接口，用于查询、控制设备�
 添加设备目前有两种方式：使用Aaqara Home APP添加设备 和 使用SDK添加设备。
 
 **使用Aaqara Home APP添加设备**
+
 在应用商店或Apple Store搜索“Aaqara Home”，下载安装后，选择对应的服务器，注册Aqara账号，也可以直接登录AIOT开放平台账号。
 登陆Aqara账号后，可在APP上按照提示先添加网关设备，再添加子设备。
 
 **使用SDK添加设备**
+
 下载设备入网SDK添加网关设备，详细操作请参考SDK开发手册。
 
 

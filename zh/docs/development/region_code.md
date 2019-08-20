@@ -4,9 +4,7 @@
 
 | 中文名  |  代码  |         英文名          |         OAuth认证域名          |         API接口域名         |
 | :--: | :--: | :------------------: | :------------------------: | :---------------------: |
-| 亚太地区 |  AP  | Asia-Pacific regions | aiot-oauth2-ap.aqara.com/  | aiot-open-ap.aqara.com  |
 | 大陆地区 |  CN  |    Mainland China    |   aiot-oauth2.aqara.cn/    | aiot-open-3rd.aqara.cn  |
-| 欧洲地区 |  EU  |   European regions   | aiot-oauth2-eu.aqara.com/  | aiot-open-eu.aqara.com  |
 | 美洲地区 | USA  |   American regions   | aiot-oauth2-usa.aqara.com/ | aiot-open-usa.aqara.com |
 
 > 注意：OAuth2.0认证和API均采用HTTPS协议。

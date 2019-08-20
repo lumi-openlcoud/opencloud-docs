@@ -58,11 +58,10 @@ pages:
   - 场景和自动化接口文档: development/automation-api-demo.md
   - 国家（地区码）: development/region_code.md
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
-- 部署与运维:
-  - 安装与配置指南: implementation/installation-and-configuration.md
+#- 部署与运维:
+#  - 安装与配置指南: implementation/installation-and-configuration.md
 - 常见问题: 
   - 产品问题: faq/faq-product.md
   - 应用开发: faq/faq-development.md
-  - 部署与运维: faq/faq-installation.md
 - 开发者资源: 
-  - 设备入网SDK: sdk/android-sdk.md
+  - 设备入网SDK: sdk/sdk-v1.0.md
