@@ -8,25 +8,35 @@ Aqara设备支持两种配置方式：自动化和场景。
 ## 接口调用说明
 
 ### 查询设备支持的触发器和动作
+
 调用以下接口确认设备支持的trigger和action信息，详细调用参数请参考“控制台”-“API参考”：
 
 OAuth授权接入v1.0接口：
+
 查询指定对象类型有哪些Trigger：/open/ifttt/trigger/query
+
 查询指定的对象类型下有哪些Action：/open/ifttt/action/query
 
 设备接入v2.0接口：
+
 查询指定对象类型下Trigger(IF)：/open/ifttt/trigger/definition/query
+
 查询指定对象类型下Action(Then)：/open/ifttt/action/definition/query
 
 ### 创建自动化和场景
+
 根据设备的trigger和action定义信息，调用以下接口创建自动化和场景，详细调用参数请参考“控制台”-“API参考”：
 
 OAuth授权接入v1.0接口：
+
 创建自动化：/open/ifttt/add
+
 创建场景：/open/scene/add
 
 设备接入v2.0接口：
+
 创建自动化：/open/ifttt/create
+
 创建场景：/open/ifttt/scene/create
 
 ## 示例
