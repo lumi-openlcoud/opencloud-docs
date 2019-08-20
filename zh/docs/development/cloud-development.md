@@ -22,7 +22,7 @@ AIOT是提供设备管理、数据采集与远程控制等服务的物联网云�
 
 一个好的软件开发流程加上一个好的软件系统架构，会给软件开发带来事半功倍的效果。对于云对接方式，可按照以下流程进行开发。
 
-![应用开发流程](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/oauthv1.0.png)
+![应用开发流程](http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/development/doc-cloud-development/oauthv_1.0.png)
 
 一个稳定和高效的应用需要考虑API调用性能、消息处理性能、Access-Token的高可用性等方面，建议参考如下架构图。
 
