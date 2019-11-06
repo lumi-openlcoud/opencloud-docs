@@ -52,7 +52,7 @@ pages:
 - 新手帮助: 
   - AIOT开放平台介绍: index.md
   - 产品介绍: guideline/product-discription.md
-- 云对接开发手册:
+- 开发手册:
   - OAuth2接入开发手册: development/oauth-cloud-development.md
   - 场景和自动化配置说明: development/automation-api-demo.md
   - SDK开发手册: development/sdk-v1.0.md
