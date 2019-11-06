@@ -52,20 +52,19 @@ pages:
 - Newbie Guide: 
   - AIOT Open Cloud Platform Introduction: index.md
   - Product Description: guideline/product-discription.md
-  - Account and Password: guideline/account-and-password.md
 - Development Manual:
   - Cloud Development Manual: development/cloud-development.md
-  - Scene and Automation API Documation: development/automation-api-demo.md
+  - Scene and Automation Configuration Instruction: development/automation-api-demo.md
   - Country (area code): development/region_code.md
   - Gateway LAN Communication Protocol: development/gateway-LAN-communication.md
-- Deployment and maintenance:
-  - Installation and Configuration Guide: implementation/installation-and-configuration.md
+#- Deployment and maintenance:
+#  - Installation and Configuration Guide: implementation/installation-and-configuration.md
 - FAQ:
   - Product: faq/faq-product.md
   - Development: faq/faq-development.md
-- Developer Resource: 
+#- Developer Resource: 
 #  - SDK Download: sdk/sdk-total.md
-  - Add device SDK: sdk/android-sdk.md
+#  - Add device SDK: sdk/android-sdk.md
 #  - IOS SDK: sdk/ios-sdk.md
 #  - Java SDK: sdk/java-sdk.md
 #  - PHP SDK: sdk/php-sdk.md
