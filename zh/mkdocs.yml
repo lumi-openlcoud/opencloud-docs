@@ -53,8 +53,8 @@ pages:
   - AIOT开放平台介绍: index.md
   - 产品介绍: guideline/product-discription.md
 - 开发手册:
-  - OAuth2接入开发手册: development/oauth-cloud-development.md
-  - 场景和自动化配置说明: development/automation-api-demo.md
+  - 云对接开发手册: development/oauth-cloud-development.md
+  - 场景和自动化接口文档: development/automation-api-demo.md
   - SDK开发手册: development/sdk-v1.0.md
   - 国家（地区码）: development/region_code.md
   - 网关局域网通讯协议: development/gateway-LAN-communication.md
