@@ -85,13 +85,13 @@ Fastlink interface: **Lumisdk.gatewayFastLink(params.toString(), new CallBack()*
 
 Detailed sub-parameters are described in the following table.
 
-| Parameter      | Is required? | Description                              |
-| -------------- | ------------ | ---------------------------------------- |
+| Parameter      | Is required? | Description                                                  |
+| -------------- | ------------ | ------------------------------------------------------------ |
 | cId            | No           | Telephone's unique identifier. If not set, you will not receive any messages. |
-| ssid           | Yes          | Wi-Fi name                               |
-| passwd         | Yes          | Wi-Fi password                           |
-| positionId     | Yes          | Position ID, you can query positionId by calling API. |
-| country_domain | Yes          | Domain.  Mainland China: aiot-open-3rd.aqara.cn; American regions: aiot-open-usa.aqara.com |
+| ssid           | Yes          | Wi-Fi name                                                   |
+| passwd         | Yes          | Wi-Fi password                                               |
+| positionId     | Yes          | Position ID, you can query positionId by calling API.        |
+| country_domain | Yes          | Domain.                                                      |
 
 
 
