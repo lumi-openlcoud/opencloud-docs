@@ -188,7 +188,7 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | Appid      | String | 是 | 第三方应用的Appid   |
 | Sign | String | 是 | 签名   |
 | Accesstoken      | String | 是 | 通过OAuth授权获取的访问Token   |
-| Time  | Long  | 是 | 系统当前时间戳，单位毫秒   |
+| Time  | Long  | 是 | 系统当前时间戳，单位毫秒 |
 | Content-Type | application/json | 是 | 返回结果采用JSON格式，如：application/json |
 
 Sign生成说明：
