@@ -189,11 +189,12 @@ Location: https://redirect_uri?code=xxx&state=xxx
 | Sign | String | 是 | 签名   |
 | Accesstoken      | String | 是 | 通过OAuth授权获取的访问Token   |
 | Time  | Long  | 是 | 系统当前时间戳，单位毫秒   |
+| Content-Type | application/json | 是 | 返回结果采用JSON格式，如：application/json |
 
 Sign生成说明：
 
 1）head请求的参数先按照ASSIC码做排序，然后进行拼接；
-   
+
    拼接方式：key1=value1&key2=value2
 
    例如：accesstoken=xxx&appid=xxx&time=xxx
@@ -217,11 +218,12 @@ Sign生成说明：
 - 请求方式： HTTP POST （application/json）
 - 请求header示例
 
-| Key          | 描述                                               |
+| Key          | 描述                                                         |
 | ------------ | ------------------------------------------------------------ |
 | Appid        | 应用的唯一标识                                               |
 | Sign         | 签名，拼接方式：accesstoken=xxx&appid=xxx&time=xxx&(Appkey的value值) |
-| Access-Token | 通过OAuth授权获得的访问令牌                                  |
+| Accesstoken  | 通过OAuth授权获得的访问令牌                                  |
+| Time         | 系统当前时间戳，单位毫秒                                     |
 | Content-Type | 返回结果采用JSON格式，如：application/json                   |
 
 - 返回结果示例
@@ -266,7 +268,7 @@ Sign生成说明：
 2、选择“应用管理”-“消息推送”；
 
 3、在服务器配置中，输入“URL”，选择“消息加解密方式”和是否开启“事件消息”推送。
-   
+
    **URL**：用于接收设备属性数据和事件消息的服务器URL；
 
    **消息加解密方式**：支持明文模式和安全模式；
