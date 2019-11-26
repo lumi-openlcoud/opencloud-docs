@@ -210,7 +210,8 @@ you can query the details of a device by calling the interface using the followi
 | ------------ | ------------------------------------------------------------ |
 | Appid        | The application's unique identifier                          |
 | Sign         | Signature.                                                   |
-| Access-Token | Access token obtained via OAuth authorization                |
+| Accesstoken  | Access token obtained via OAuth authorization                |
+| Time         | System current timestamp,unit: ms                            |
 | Content-Type | The result is returned in JSON format,such as:application/json |
 
 > **Note**: Make sure the Keys and the corresponding Values are filled in request header. Note that they are case sensitive.
