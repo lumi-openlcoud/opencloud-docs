@@ -20,7 +20,7 @@ AIOT开放平台将一直坚持“开放、利他、共赢”的理念，为第�
 
 - **云端对接方式**
 
-AIOT开放平台提供HTTP API供第三方应用远程调用，实现用户查询、设备状态查询和远程控制设备等功能。另外，通过消息推送服务，AIOT开放平台将设备上传的实时数据推送到第三方服务器。云端对接方式简单快速，开发成本低，只需一台服务器即可开发。详细的接入方法请参见《[云端开发手册](http://docs.opencloud.aqara.com/zh/development/oauth-cloud-development/)》。
+AIOT开放平台提供HTTP API供第三方应用远程调用，实现用户查询、设备状态查询和远程控制设备等功能。另外，通过消息推送服务，AIOT开放平台将设备上传的实时数据推送到第三方服务器。云端对接方式简单快速，开发成本低，只需一台服务器即可开发。详细的接入方法请参考《[云端开发手册](http://docs.opencloud.aqara.com/zh/development/oauth-cloud-development/)》。
 
 ![云端对接方式](<http://cdn.cnbj2.fds.api.mi-img.com/cdn/aiot/doc-images/zh/doc-index/join-cloud.jpg>)
 
