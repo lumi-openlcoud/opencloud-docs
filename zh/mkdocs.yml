@@ -57,7 +57,7 @@ pages:
   - 场景和自动化接口文档: development/automation-api-demo.md
   - SDK开发手册: development/sdk-v1.0.md
   - 国家（地区码）: development/region_code.md
-  - 网关局域网通讯协议: development/gateway-LAN-communication.md
+  #- 网关局域网通讯协议: development/gateway-LAN-communication.md
 #- 部署与运维:
 #  - 安装与配置指南: implementation/installation-and-configuration.md
 - 常见问题: 
